@@ -56,25 +56,25 @@
   <PropertyGroup Label="UserMacros" />
   <PropertyGroup>
     <_ProjectFileVersion>10.0.20506.1</_ProjectFileVersion>
-    <OutDir Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">F:\G\workplace\obs-studio\build\plugins\obs-ffmpeg\Debug\</OutDir>
+    <OutDir Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">$(Configuration)\</OutDir>
     <IntDir Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">obs-ffmpeg.dir\Debug\</IntDir>
     <TargetName Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">obs-ffmpeg</TargetName>
     <TargetExt Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">.dll</TargetExt>
     <LinkIncremental Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">true</LinkIncremental>
     <GenerateManifest Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">true</GenerateManifest>
-    <OutDir Condition="'$(Configuration)|$(Platform)'=='Release|x64'">F:\G\workplace\obs-studio\build\plugins\obs-ffmpeg\Release\</OutDir>
+    <OutDir Condition="'$(Configuration)|$(Platform)'=='Release|x64'">$(Configuration)\</OutDir>
     <IntDir Condition="'$(Configuration)|$(Platform)'=='Release|x64'">obs-ffmpeg.dir\Release\</IntDir>
     <TargetName Condition="'$(Configuration)|$(Platform)'=='Release|x64'">obs-ffmpeg</TargetName>
     <TargetExt Condition="'$(Configuration)|$(Platform)'=='Release|x64'">.dll</TargetExt>
     <LinkIncremental Condition="'$(Configuration)|$(Platform)'=='Release|x64'">false</LinkIncremental>
     <GenerateManifest Condition="'$(Configuration)|$(Platform)'=='Release|x64'">true</GenerateManifest>
-    <OutDir Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">F:\G\workplace\obs-studio\build\plugins\obs-ffmpeg\MinSizeRel\</OutDir>
+    <OutDir Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">$(Configuration)\</OutDir>
     <IntDir Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">obs-ffmpeg.dir\MinSizeRel\</IntDir>
     <TargetName Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">obs-ffmpeg</TargetName>
     <TargetExt Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">.dll</TargetExt>
     <LinkIncremental Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">false</LinkIncremental>
     <GenerateManifest Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">true</GenerateManifest>
-    <OutDir Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">F:\G\workplace\obs-studio\build\plugins\obs-ffmpeg\RelWithDebInfo\</OutDir>
+    <OutDir Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">$(Configuration)\</OutDir>
     <IntDir Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">obs-ffmpeg.dir\RelWithDebInfo\</IntDir>
     <TargetName Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">obs-ffmpeg</TargetName>
     <TargetExt Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">.dll</TargetExt>
@@ -83,7 +83,7 @@
   </PropertyGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
     <ClCompile>
-      <AdditionalIncludeDirectories>D:\Qt\dependencies2015\win64\include;F:\G\workplace\obs-studio\libobs;F:\G\workplace\obs-studio\build\config;F:\G\workplace\obs-studio\deps\media-playback\.;F:\G\workplace\obs-studio\deps\w32-pthreads;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AdditionalIncludeDirectories>..\..\deps\dependencies2015\win64\include;..\..\libobs;..\..\build\config;..\..\deps\media-playback\.;..\..\deps\w32-pthreads;..\..\config;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
       <AssemblerListingLocation>Debug/</AssemblerListingLocation>
       <BasicRuntimeChecks>EnableFastChecks</BasicRuntimeChecks>
       <CompileAs>CompileAsC</CompileAs>
@@ -111,7 +111,8 @@
       <ProxyFileName>%(Filename)_p.c</ProxyFileName>
     </Midl>
     <PostBuildEvent>
-      <Message>			</Message>
+      <Message>
+      </Message>
       <Command>setlocal
 "C:\Program Files\CMake\bin\cmake.exe" -E copy F:/G/workplace/obs-studio/build/plugins/obs-ffmpeg/Debug/obs-ffmpeg.dll F:/G/workplace/obs-studio/build/rundir/Debug/obs-plugins/64bit/obs-ffmpeg.dll
 if %errorlevel% neq 0 goto :cmEnd
@@ -150,12 +151,12 @@ exit /b %1
 if %errorlevel% neq 0 goto :VCEnd</Command>
     </PostBuildEvent>
     <Link>
-      <AdditionalDependencies>..\..\libobs\Debug\obs.lib;..\..\deps\media-playback\Debug\media-playback.lib;..\..\deps\w32-pthreads\Debug\w32-pthreads.lib;D:\Qt\dependencies2015\win64\include\..\bin\avcodec.lib;D:\Qt\dependencies2015\win64\include\..\bin\avfilter.lib;D:\Qt\dependencies2015\win64\include\..\bin\avdevice.lib;D:\Qt\dependencies2015\win64\include\..\bin\avutil.lib;D:\Qt\dependencies2015\win64\include\..\bin\swscale.lib;D:\Qt\dependencies2015\win64\include\..\bin\avformat.lib;D:\Qt\dependencies2015\win64\include\..\bin\swresample.lib;kernel32.lib;user32.lib;gdi32.lib;winspool.lib;shell32.lib;ole32.lib;oleaut32.lib;uuid.lib;comdlg32.lib;advapi32.lib</AdditionalDependencies>
+      <AdditionalDependencies>..\..\libobs\$(Configuration)\obs.lib;..\..\deps\media-playback\Debug\media-playback.lib;..\..\deps\w32-pthreads\Debug\w32-pthreads.lib;D:\Qt\dependencies2015\win64\include\..\bin\avcodec.lib;D:\Qt\dependencies2015\win64\include\..\bin\avfilter.lib;D:\Qt\dependencies2015\win64\include\..\bin\avdevice.lib;D:\Qt\dependencies2015\win64\include\..\bin\avutil.lib;D:\Qt\dependencies2015\win64\include\..\bin\swscale.lib;D:\Qt\dependencies2015\win64\include\..\bin\avformat.lib;D:\Qt\dependencies2015\win64\include\..\bin\swresample.lib;kernel32.lib;user32.lib;gdi32.lib;winspool.lib;shell32.lib;ole32.lib;oleaut32.lib;uuid.lib;comdlg32.lib;advapi32.lib</AdditionalDependencies>
       <AdditionalLibraryDirectories>%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
       <AdditionalOptions>%(AdditionalOptions) /machine:x64</AdditionalOptions>
       <GenerateDebugInformation>true</GenerateDebugInformation>
       <IgnoreSpecificDefaultLibraries>%(IgnoreSpecificDefaultLibraries)</IgnoreSpecificDefaultLibraries>
-      <ImportLibrary>F:/G/workplace/obs-studio/build/plugins/obs-ffmpeg/Debug/obs-ffmpeg.lib</ImportLibrary>
+      <ImportLibrary>$(OutputPath)$(ProjectName).lib</ImportLibrary>
       <ProgramDataBaseFile>F:/G/workplace/obs-studio/build/plugins/obs-ffmpeg/Debug/obs-ffmpeg.pdb</ProgramDataBaseFile>
       <SubSystem>Console</SubSystem>
     </Link>
@@ -165,7 +166,7 @@ if %errorlevel% neq 0 goto :VCEnd</Command>
   </ItemDefinitionGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
     <ClCompile>
-      <AdditionalIncludeDirectories>D:\Qt\dependencies2015\win64\include;F:\G\workplace\obs-studio\libobs;F:\G\workplace\obs-studio\build\config;F:\G\workplace\obs-studio\deps\media-playback\.;F:\G\workplace\obs-studio\deps\w32-pthreads;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AdditionalIncludeDirectories>..\..\deps\dependencies2015\win64\include;..\..\libobs;..\..\build\config;..\..\deps\media-playback\.;..\..\deps\w32-pthreads;..\..\config;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
       <AssemblerListingLocation>Release/</AssemblerListingLocation>
       <CompileAs>CompileAsC</CompileAs>
       <ExceptionHandling>
@@ -193,7 +194,8 @@ if %errorlevel% neq 0 goto :VCEnd</Command>
       <ProxyFileName>%(Filename)_p.c</ProxyFileName>
     </Midl>
     <PostBuildEvent>
-      <Message>			</Message>
+      <Message>
+      </Message>
       <Command>setlocal
 "C:\Program Files\CMake\bin\cmake.exe" -E copy F:/G/workplace/obs-studio/build/plugins/obs-ffmpeg/Release/obs-ffmpeg.dll F:/G/workplace/obs-studio/build/rundir/Release/obs-plugins/64bit/obs-ffmpeg.dll
 if %errorlevel% neq 0 goto :cmEnd
@@ -232,12 +234,12 @@ exit /b %1
 if %errorlevel% neq 0 goto :VCEnd</Command>
     </PostBuildEvent>
     <Link>
-      <AdditionalDependencies>..\..\libobs\Release\obs.lib;..\..\deps\media-playback\Release\media-playback.lib;..\..\deps\w32-pthreads\Release\w32-pthreads.lib;D:\Qt\dependencies2015\win64\include\..\bin\avcodec.lib;D:\Qt\dependencies2015\win64\include\..\bin\avfilter.lib;D:\Qt\dependencies2015\win64\include\..\bin\avdevice.lib;D:\Qt\dependencies2015\win64\include\..\bin\avutil.lib;D:\Qt\dependencies2015\win64\include\..\bin\swscale.lib;D:\Qt\dependencies2015\win64\include\..\bin\avformat.lib;D:\Qt\dependencies2015\win64\include\..\bin\swresample.lib;kernel32.lib;user32.lib;gdi32.lib;winspool.lib;shell32.lib;ole32.lib;oleaut32.lib;uuid.lib;comdlg32.lib;advapi32.lib</AdditionalDependencies>
+      <AdditionalDependencies>..\..\libobs\$(Configuration)\obs.lib;..\..\deps\media-playback\Release\media-playback.lib;..\..\deps\w32-pthreads\Release\w32-pthreads.lib;D:\Qt\dependencies2015\win64\include\..\bin\avcodec.lib;D:\Qt\dependencies2015\win64\include\..\bin\avfilter.lib;D:\Qt\dependencies2015\win64\include\..\bin\avdevice.lib;D:\Qt\dependencies2015\win64\include\..\bin\avutil.lib;D:\Qt\dependencies2015\win64\include\..\bin\swscale.lib;D:\Qt\dependencies2015\win64\include\..\bin\avformat.lib;D:\Qt\dependencies2015\win64\include\..\bin\swresample.lib;kernel32.lib;user32.lib;gdi32.lib;winspool.lib;shell32.lib;ole32.lib;oleaut32.lib;uuid.lib;comdlg32.lib;advapi32.lib</AdditionalDependencies>
       <AdditionalLibraryDirectories>%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
       <AdditionalOptions>%(AdditionalOptions) /machine:x64</AdditionalOptions>
       <GenerateDebugInformation>false</GenerateDebugInformation>
       <IgnoreSpecificDefaultLibraries>%(IgnoreSpecificDefaultLibraries)</IgnoreSpecificDefaultLibraries>
-      <ImportLibrary>F:/G/workplace/obs-studio/build/plugins/obs-ffmpeg/Release/obs-ffmpeg.lib</ImportLibrary>
+      <ImportLibrary>$(OutputPath)$(ProjectName).lib</ImportLibrary>
       <ProgramDataBaseFile>F:/G/workplace/obs-studio/build/plugins/obs-ffmpeg/Release/obs-ffmpeg.pdb</ProgramDataBaseFile>
       <SubSystem>Console</SubSystem>
     </Link>
@@ -247,7 +249,7 @@ if %errorlevel% neq 0 goto :VCEnd</Command>
   </ItemDefinitionGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">
     <ClCompile>
-      <AdditionalIncludeDirectories>D:\Qt\dependencies2015\win64\include;F:\G\workplace\obs-studio\libobs;F:\G\workplace\obs-studio\build\config;F:\G\workplace\obs-studio\deps\media-playback\.;F:\G\workplace\obs-studio\deps\w32-pthreads;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AdditionalIncludeDirectories>..\..\deps\dependencies2015\win64\include;..\..\libobs;..\..\build\config;..\..\deps\media-playback\.;..\..\deps\w32-pthreads;..\..\config;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
       <AssemblerListingLocation>MinSizeRel/</AssemblerListingLocation>
       <CompileAs>CompileAsC</CompileAs>
       <ExceptionHandling>
@@ -275,7 +277,8 @@ if %errorlevel% neq 0 goto :VCEnd</Command>
       <ProxyFileName>%(Filename)_p.c</ProxyFileName>
     </Midl>
     <PostBuildEvent>
-      <Message>			</Message>
+      <Message>
+      </Message>
       <Command>setlocal
 "C:\Program Files\CMake\bin\cmake.exe" -E copy F:/G/workplace/obs-studio/build/plugins/obs-ffmpeg/MinSizeRel/obs-ffmpeg.dll F:/G/workplace/obs-studio/build/rundir/MinSizeRel/obs-plugins/64bit/obs-ffmpeg.dll
 if %errorlevel% neq 0 goto :cmEnd
@@ -319,7 +322,7 @@ if %errorlevel% neq 0 goto :VCEnd</Command>
       <AdditionalOptions>%(AdditionalOptions) /machine:x64</AdditionalOptions>
       <GenerateDebugInformation>false</GenerateDebugInformation>
       <IgnoreSpecificDefaultLibraries>%(IgnoreSpecificDefaultLibraries)</IgnoreSpecificDefaultLibraries>
-      <ImportLibrary>F:/G/workplace/obs-studio/build/plugins/obs-ffmpeg/MinSizeRel/obs-ffmpeg.lib</ImportLibrary>
+      <ImportLibrary>$(OutputPath)$(ProjectName).lib</ImportLibrary>
       <ProgramDataBaseFile>F:/G/workplace/obs-studio/build/plugins/obs-ffmpeg/MinSizeRel/obs-ffmpeg.pdb</ProgramDataBaseFile>
       <SubSystem>Console</SubSystem>
     </Link>
@@ -329,7 +332,7 @@ if %errorlevel% neq 0 goto :VCEnd</Command>
   </ItemDefinitionGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">
     <ClCompile>
-      <AdditionalIncludeDirectories>D:\Qt\dependencies2015\win64\include;F:\G\workplace\obs-studio\libobs;F:\G\workplace\obs-studio\build\config;F:\G\workplace\obs-studio\deps\media-playback\.;F:\G\workplace\obs-studio\deps\w32-pthreads;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AdditionalIncludeDirectories>..\..\deps\dependencies2015\win64\include;..\..\libobs;..\..\build\config;..\..\deps\media-playback\.;..\..\deps\w32-pthreads;..\..\config;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
       <AssemblerListingLocation>RelWithDebInfo/</AssemblerListingLocation>
       <CompileAs>CompileAsC</CompileAs>
       <DebugInformationFormat>ProgramDatabase</DebugInformationFormat>
@@ -356,7 +359,8 @@ if %errorlevel% neq 0 goto :VCEnd</Command>
       <ProxyFileName>%(Filename)_p.c</ProxyFileName>
     </Midl>
     <PostBuildEvent>
-      <Message>			</Message>
+      <Message>
+      </Message>
       <Command>setlocal
 "C:\Program Files\CMake\bin\cmake.exe" -E copy F:/G/workplace/obs-studio/build/plugins/obs-ffmpeg/RelWithDebInfo/obs-ffmpeg.dll F:/G/workplace/obs-studio/build/rundir/RelWithDebInfo/obs-plugins/64bit/obs-ffmpeg.dll
 if %errorlevel% neq 0 goto :cmEnd
@@ -400,7 +404,7 @@ if %errorlevel% neq 0 goto :VCEnd</Command>
       <AdditionalOptions>%(AdditionalOptions) /machine:x64</AdditionalOptions>
       <GenerateDebugInformation>true</GenerateDebugInformation>
       <IgnoreSpecificDefaultLibraries>%(IgnoreSpecificDefaultLibraries)</IgnoreSpecificDefaultLibraries>
-      <ImportLibrary>F:/G/workplace/obs-studio/build/plugins/obs-ffmpeg/RelWithDebInfo/obs-ffmpeg.lib</ImportLibrary>
+      <ImportLibrary>$(OutputPath)$(ProjectName).lib</ImportLibrary>
       <ProgramDataBaseFile>F:/G/workplace/obs-studio/build/plugins/obs-ffmpeg/RelWithDebInfo/obs-ffmpeg.pdb</ProgramDataBaseFile>
       <SubSystem>Console</SubSystem>
     </Link>
@@ -409,71 +413,15 @@ if %errorlevel% neq 0 goto :VCEnd</Command>
     </ProjectReference>
   </ItemDefinitionGroup>
   <ItemGroup>
-    <CustomBuild Include="F:\G\workplace\obs-studio\plugins\obs-ffmpeg\CMakeLists.txt">
-      <Message Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">Building Custom Rule F:/G/workplace/obs-studio/plugins/obs-ffmpeg/CMakeLists.txt</Message>
-      <Command Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">setlocal
-"C:\Program Files\CMake\bin\cmake.exe" -HF:/G/workplace/obs-studio -BF:/G/workplace/obs-studio/build --check-stamp-file F:/G/workplace/obs-studio/build/plugins/obs-ffmpeg/CMakeFiles/generate.stamp
-if %errorlevel% neq 0 goto :cmEnd
-:cmEnd
-endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
-:cmErrorLevel
-exit /b %1
-:cmDone
-if %errorlevel% neq 0 goto :VCEnd</Command>
-      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">F:/G/workplace/obs-studio/plugins/obs-ffmpeg/CMakeLists.txt;C:\Program Files\CMake\share\cmake-3.12\Modules\FindPackageHandleStandardArgs.cmake;C:\Program Files\CMake\share\cmake-3.12\Modules\FindPackageMessage.cmake;C:\Program Files\CMake\share\cmake-3.12\Modules\FindPkgConfig.cmake;F:\G\workplace\obs-studio\cmake\Modules\FindFFmpeg.cmake;F:\G\workplace\obs-studio\plugins\obs-ffmpeg\CMakeLists.txt;F:\G\workplace\obs-studio\plugins\obs-ffmpeg\CMakeLists.txt;%(AdditionalInputs)</AdditionalInputs>
-      <Outputs Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">F:\G\workplace\obs-studio\build\plugins\obs-ffmpeg\CMakeFiles\generate.stamp</Outputs>
-      <LinkObjects Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">false</LinkObjects>
-      <Message Condition="'$(Configuration)|$(Platform)'=='Release|x64'">Building Custom Rule F:/G/workplace/obs-studio/plugins/obs-ffmpeg/CMakeLists.txt</Message>
-      <Command Condition="'$(Configuration)|$(Platform)'=='Release|x64'">setlocal
-"C:\Program Files\CMake\bin\cmake.exe" -HF:/G/workplace/obs-studio -BF:/G/workplace/obs-studio/build --check-stamp-file F:/G/workplace/obs-studio/build/plugins/obs-ffmpeg/CMakeFiles/generate.stamp
-if %errorlevel% neq 0 goto :cmEnd
-:cmEnd
-endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
-:cmErrorLevel
-exit /b %1
-:cmDone
-if %errorlevel% neq 0 goto :VCEnd</Command>
-      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Release|x64'">F:/G/workplace/obs-studio/plugins/obs-ffmpeg/CMakeLists.txt;C:\Program Files\CMake\share\cmake-3.12\Modules\FindPackageHandleStandardArgs.cmake;C:\Program Files\CMake\share\cmake-3.12\Modules\FindPackageMessage.cmake;C:\Program Files\CMake\share\cmake-3.12\Modules\FindPkgConfig.cmake;F:\G\workplace\obs-studio\cmake\Modules\FindFFmpeg.cmake;F:\G\workplace\obs-studio\plugins\obs-ffmpeg\CMakeLists.txt;F:\G\workplace\obs-studio\plugins\obs-ffmpeg\CMakeLists.txt;%(AdditionalInputs)</AdditionalInputs>
-      <Outputs Condition="'$(Configuration)|$(Platform)'=='Release|x64'">F:\G\workplace\obs-studio\build\plugins\obs-ffmpeg\CMakeFiles\generate.stamp</Outputs>
-      <LinkObjects Condition="'$(Configuration)|$(Platform)'=='Release|x64'">false</LinkObjects>
-      <Message Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">Building Custom Rule F:/G/workplace/obs-studio/plugins/obs-ffmpeg/CMakeLists.txt</Message>
-      <Command Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">setlocal
-"C:\Program Files\CMake\bin\cmake.exe" -HF:/G/workplace/obs-studio -BF:/G/workplace/obs-studio/build --check-stamp-file F:/G/workplace/obs-studio/build/plugins/obs-ffmpeg/CMakeFiles/generate.stamp
-if %errorlevel% neq 0 goto :cmEnd
-:cmEnd
-endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
-:cmErrorLevel
-exit /b %1
-:cmDone
-if %errorlevel% neq 0 goto :VCEnd</Command>
-      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">F:/G/workplace/obs-studio/plugins/obs-ffmpeg/CMakeLists.txt;C:\Program Files\CMake\share\cmake-3.12\Modules\FindPackageHandleStandardArgs.cmake;C:\Program Files\CMake\share\cmake-3.12\Modules\FindPackageMessage.cmake;C:\Program Files\CMake\share\cmake-3.12\Modules\FindPkgConfig.cmake;F:\G\workplace\obs-studio\cmake\Modules\FindFFmpeg.cmake;F:\G\workplace\obs-studio\plugins\obs-ffmpeg\CMakeLists.txt;F:\G\workplace\obs-studio\plugins\obs-ffmpeg\CMakeLists.txt;%(AdditionalInputs)</AdditionalInputs>
-      <Outputs Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">F:\G\workplace\obs-studio\build\plugins\obs-ffmpeg\CMakeFiles\generate.stamp</Outputs>
-      <LinkObjects Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">false</LinkObjects>
-      <Message Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">Building Custom Rule F:/G/workplace/obs-studio/plugins/obs-ffmpeg/CMakeLists.txt</Message>
-      <Command Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">setlocal
-"C:\Program Files\CMake\bin\cmake.exe" -HF:/G/workplace/obs-studio -BF:/G/workplace/obs-studio/build --check-stamp-file F:/G/workplace/obs-studio/build/plugins/obs-ffmpeg/CMakeFiles/generate.stamp
-if %errorlevel% neq 0 goto :cmEnd
-:cmEnd
-endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
-:cmErrorLevel
-exit /b %1
-:cmDone
-if %errorlevel% neq 0 goto :VCEnd</Command>
-      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">F:/G/workplace/obs-studio/plugins/obs-ffmpeg/CMakeLists.txt;C:\Program Files\CMake\share\cmake-3.12\Modules\FindPackageHandleStandardArgs.cmake;C:\Program Files\CMake\share\cmake-3.12\Modules\FindPackageMessage.cmake;C:\Program Files\CMake\share\cmake-3.12\Modules\FindPkgConfig.cmake;F:\G\workplace\obs-studio\cmake\Modules\FindFFmpeg.cmake;F:\G\workplace\obs-studio\plugins\obs-ffmpeg\CMakeLists.txt;F:\G\workplace\obs-studio\plugins\obs-ffmpeg\CMakeLists.txt;%(AdditionalInputs)</AdditionalInputs>
-      <Outputs Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">F:\G\workplace\obs-studio\build\plugins\obs-ffmpeg\CMakeFiles\generate.stamp</Outputs>
-      <LinkObjects Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">false</LinkObjects>
-    </CustomBuild>
-  </ItemGroup>
-  <ItemGroup>
-    <ClInclude Include="F:\G\workplace\obs-studio\plugins\obs-ffmpeg\obs-ffmpeg-formats.h" />
-    <ClInclude Include="F:\G\workplace\obs-studio\plugins\obs-ffmpeg\obs-ffmpeg-compat.h" />
-    <ClInclude Include="F:\G\workplace\obs-studio\plugins\obs-ffmpeg\closest-pixel-format.h" />
-    <ClCompile Include="F:\G\workplace\obs-studio\plugins\obs-ffmpeg\obs-ffmpeg.c" />
-    <ClCompile Include="F:\G\workplace\obs-studio\plugins\obs-ffmpeg\obs-ffmpeg-audio-encoders.c" />
-    <ClCompile Include="F:\G\workplace\obs-studio\plugins\obs-ffmpeg\obs-ffmpeg-nvenc.c" />
-    <ClCompile Include="F:\G\workplace\obs-studio\plugins\obs-ffmpeg\obs-ffmpeg-output.c" />
-    <ClCompile Include="F:\G\workplace\obs-studio\plugins\obs-ffmpeg\obs-ffmpeg-mux.c" />
-    <ClCompile Include="F:\G\workplace\obs-studio\plugins\obs-ffmpeg\obs-ffmpeg-source.c" />
+    <ClCompile Include="obs-ffmpeg-audio-encoders.c" />
+    <ClCompile Include="obs-ffmpeg-mux.c" />
+    <ClCompile Include="obs-ffmpeg-nvenc.c" />
+    <ClCompile Include="obs-ffmpeg-output.c" />
+    <ClCompile Include="obs-ffmpeg-source.c" />
+    <ClCompile Include="obs-ffmpeg.c" />
+    <ClInclude Include="closest-pixel-format.h" />
+    <ClInclude Include="obs-ffmpeg-compat.h" />
+    <ClInclude Include="obs-ffmpeg-formats.h" />
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="F:\G\workplace\obs-studio\build\ZERO_CHECK.vcxproj">

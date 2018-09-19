@@ -1,7 +1,7 @@
 #pragma once
 
 #if defined(_WIN32)
-#include <DeckLinkAPI.h>
+#include "DeckLinkAPI.h"
 typedef BOOL decklink_bool_t;
 typedef BSTR decklink_string_t;
 IDeckLinkDiscovery *CreateDeckLinkDiscoveryInstance(void);

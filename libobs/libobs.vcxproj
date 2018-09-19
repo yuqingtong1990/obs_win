@@ -38,13 +38,13 @@
   <PropertyGroup Label="UserMacros" />
   <PropertyGroup>
     <_ProjectFileVersion>10.0.20506.1</_ProjectFileVersion>
-    <OutDir Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">$(SolutionDir)build\libobs\$(Configuration)</OutDir>
+    <OutDir Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">$(Configuration)</OutDir>
     <IntDir Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">libobj.dir\$(Configuration)</IntDir>
     <TargetName Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">obs</TargetName>
     <TargetExt Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">.dll</TargetExt>
     <LinkIncremental Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">true</LinkIncremental>
     <GenerateManifest Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">true</GenerateManifest>
-    <OutDir Condition="'$(Configuration)|$(Platform)'=='Release|x64'">$(SolutionDir)build\libobs\$(Configuration)</OutDir>
+    <OutDir Condition="'$(Configuration)|$(Platform)'=='Release|x64'">$(Configuration)</OutDir>
     <IntDir Condition="'$(Configuration)|$(Platform)'=='Release|x64'">libobj.dir\$(Configuration)</IntDir>
     <TargetName Condition="'$(Configuration)|$(Platform)'=='Release|x64'">obs</TargetName>
     <TargetExt Condition="'$(Configuration)|$(Platform)'=='Release|x64'">.dll</TargetExt>
@@ -194,13 +194,13 @@ exit /b %1
 if %errorlevel% neq 0 goto :VCEnd</Command>
     </PostBuildEvent>
     <Link>
-      <AdditionalDependencies>winmm.lib;psapi.lib;..\deps\w32-pthreads\Debug\w32-pthreads.lib;..\deps\dependencies2015\win64\bin\avcodec.lib;..\deps\jansson\lib\Debug\jansson_d.lib;..\deps\dependencies2015\win64\bin\avformat.lib;..\deps\dependencies2015\win64\bin\avutil.lib;..\deps\dependencies2015\win64\bin\swscale.lib;..\deps\dependencies2015\win64\bin\swresample.lib;..\deps\dependencies2015\win64\bin\bin\zlib.lib;kernel32.lib;user32.lib;gdi32.lib;winspool.lib;shell32.lib;ole32.lib;oleaut32.lib;uuid.lib;comdlg32.lib;advapi32.lib</AdditionalDependencies>
+      <AdditionalDependencies>winmm.lib;psapi.lib;..\deps\jansson\$(Configuration)\jansson.lib;..\deps\w32-pthreads\$(Configuration)\w32-pthreads.lib;..\deps\dependencies2015\win64\bin\avcodec.lib;..\deps\dependencies2015\win64\bin\avformat.lib;..\deps\dependencies2015\win64\bin\avutil.lib;..\deps\dependencies2015\win64\bin\swscale.lib;..\deps\dependencies2015\win64\bin\swresample.lib;..\deps\dependencies2015\win64\bin\zlib.lib;kernel32.lib;user32.lib;gdi32.lib;winspool.lib;shell32.lib;ole32.lib;oleaut32.lib;uuid.lib;comdlg32.lib;advapi32.lib</AdditionalDependencies>
       <AdditionalLibraryDirectories>%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
       <AdditionalOptions>%(AdditionalOptions) /machine:x64</AdditionalOptions>
       <GenerateDebugInformation>true</GenerateDebugInformation>
       <IgnoreSpecificDefaultLibraries>%(IgnoreSpecificDefaultLibraries)</IgnoreSpecificDefaultLibraries>
       <ImageHasSafeExceptionHandlers>false</ImageHasSafeExceptionHandlers>
-      <ImportLibrary>F:/G/workplace/obs-studio/build/libobs/Debug/obs.lib</ImportLibrary>
+      <ImportLibrary>$(OutDir)obs.lib</ImportLibrary>
       <ProgramDataBaseFile>F:/G/workplace/obs-studio/build/libobs/Debug/obs.pdb</ProgramDataBaseFile>
       <SubSystem>Console</SubSystem>
     </Link>
@@ -351,13 +351,13 @@ exit /b %1
 if %errorlevel% neq 0 goto :VCEnd</Command>
     </PostBuildEvent>
     <Link>
-      <AdditionalDependencies>winmm.lib;psapi.lib;..\deps\w32-pthreads\Release\w32-pthreads.lib;..\deps\dependencies2015\win64\bin\avcodec.lib;..\deps\jansson\lib\Release\jansson.lib;..\deps\dependencies2015\win64\bin\avformat.lib;..\deps\dependencies2015\win64\bin\avutil.lib;..\deps\dependencies2015\win64\bin\swscale.lib;D:\Qt\dependencies2015\win64\include\..\bin\swresample.lib;D:\Qt\dependencies2015\win64\include\..\bin\zlib.lib;kernel32.lib;user32.lib;gdi32.lib;winspool.lib;shell32.lib;ole32.lib;oleaut32.lib;uuid.lib;comdlg32.lib;advapi32.lib</AdditionalDependencies>
+      <AdditionalDependencies>winmm.lib;psapi.lib;..\deps\jansson\$(Configuration)\jansson.lib;..\deps\w32-pthreads\$(Configuration)\w32-pthreads.lib;..\deps\dependencies2015\win64\bin\avcodec.lib;..\deps\dependencies2015\win64\bin\avformat.lib;..\deps\dependencies2015\win64\bin\avutil.lib;..\deps\dependencies2015\win64\bin\swscale.lib;..\deps\dependencies2015\win64\bin\swresample.lib;..\deps\dependencies2015\win64\bin\zlib.lib;kernel32.lib;user32.lib;gdi32.lib;winspool.lib;shell32.lib;ole32.lib;oleaut32.lib;uuid.lib;comdlg32.lib;advapi32.lib</AdditionalDependencies>
       <AdditionalLibraryDirectories>%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
       <AdditionalOptions>%(AdditionalOptions) /machine:x64</AdditionalOptions>
       <GenerateDebugInformation>false</GenerateDebugInformation>
       <IgnoreSpecificDefaultLibraries>%(IgnoreSpecificDefaultLibraries)</IgnoreSpecificDefaultLibraries>
       <ImageHasSafeExceptionHandlers>false</ImageHasSafeExceptionHandlers>
-      <ImportLibrary>F:/G/workplace/obs-studio/build/libobs/Release/obs.lib</ImportLibrary>
+      <ImportLibrary>$(OutDir)obs.lib</ImportLibrary>
       <ProgramDataBaseFile>F:/G/workplace/obs-studio/build/libobs/Release/obs.pdb</ProgramDataBaseFile>
       <SubSystem>Console</SubSystem>
     </Link>
@@ -463,9 +463,11 @@ if %errorlevel% neq 0 goto :VCEnd</Command>
     <ClCompile Include="util\file-serializer.c" />
     <ClCompile Include="util\lexer.c" />
     <ClCompile Include="util\pipe-windows.c" />
+    <ClCompile Include="util\platform-windows.c" />
     <ClCompile Include="util\platform.c" />
     <ClCompile Include="util\profiler.c" />
     <ClCompile Include="util\text-lookup.c" />
+    <ClCompile Include="util\threading-windows.c" />
     <ClCompile Include="util\utf8.c" />
     <ClInclude Include="audio-monitoring\wasapi-output.h" />
     <ClInclude Include="callback\calldata.h" />
@@ -544,6 +546,7 @@ if %errorlevel% neq 0 goto :VCEnd</Command>
     <ClInclude Include="util\profiler.hpp" />
     <ClInclude Include="util\serializer.h" />
     <ClInclude Include="util\text-lookup.h" />
+    <ClInclude Include="util\threading-windows.h" />
     <ClInclude Include="util\threading.h" />
     <ClInclude Include="util\utf8.h" />
     <ClInclude Include="util\util.hpp" />

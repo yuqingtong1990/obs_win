@@ -9,7 +9,7 @@ int check_buffer(struct audio_repack *repack,
 			+ repack->extra_dst_size;
 
 	if (repack->packet_size < new_size) {
-		repack->packet_buffer = brealloc(
+		repack->packet_buffer = (uint8_t*)brealloc(
 				repack->packet_buffer, new_size);
 		if (!repack->packet_buffer)
 			return -1;
