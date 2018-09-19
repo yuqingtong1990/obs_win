@@ -70,16 +70,7 @@
     </ClCompile>
     <ResourceCompile>
       <PreprocessorDefinitions>WIN32;_DEBUG;_WINDOWS;DEBUG=1;_DEBUG=1;UNICODE;_UNICODE;_CRT_SECURE_NO_WARNINGS;_CRT_NONSTDC_NO_WARNINGS;LIBOBS_EXPORTS;HAVE_OBSCONFIG_H;CMAKE_INTDIR=\"Debug\";libobs_opengl_EXPORTS;%(PreprocessorDefinitions)</PreprocessorDefinitions>
-      <AdditionalIncludeDirectories>F:\G\workplace\obs-studio\libobs;F:\G\workplace\obs-studio\build\config;F:\G\workplace\obs-studio\deps\glad\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
     </ResourceCompile>
-    <Midl>
-      <AdditionalIncludeDirectories>F:\G\workplace\obs-studio\libobs;F:\G\workplace\obs-studio\build\config;F:\G\workplace\obs-studio\deps\glad\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
-      <OutputDirectory>$(ProjectDir)/$(IntDir)</OutputDirectory>
-      <HeaderFileName>%(Filename).h</HeaderFileName>
-      <TypeLibraryName>%(Filename).tlb</TypeLibraryName>
-      <InterfaceIdentifierFileName>%(Filename)_i.c</InterfaceIdentifierFileName>
-      <ProxyFileName>%(Filename)_p.c</ProxyFileName>
-    </Midl>
     <PostBuildEvent>
       <Message>
       </Message>
@@ -92,8 +83,8 @@
       <AdditionalOptions>%(AdditionalOptions) /machine:x64</AdditionalOptions>
       <GenerateDebugInformation>true</GenerateDebugInformation>
       <IgnoreSpecificDefaultLibraries>%(IgnoreSpecificDefaultLibraries)</IgnoreSpecificDefaultLibraries>
-      <ImportLibrary>F:/G/workplace/obs-studio/build/libobs-opengl/Debug/libobs-opengl.lib</ImportLibrary>
-      <ProgramDataBaseFile>F:/G/workplace/obs-studio/build/libobs-opengl/Debug/libobs-opengl.pdb</ProgramDataBaseFile>
+      <ImportLibrary>$(OutDir)libobs-opengl.lib</ImportLibrary>
+      <ProgramDataBaseFile>$(OutDir)libobs-opengl.pdb</ProgramDataBaseFile>
       <SubSystem>Console</SubSystem>
     </Link>
     <ProjectReference>
@@ -119,16 +110,7 @@
     </ClCompile>
     <ResourceCompile>
       <PreprocessorDefinitions>WIN32;_WINDOWS;NDEBUG;UNICODE;_UNICODE;_CRT_SECURE_NO_WARNINGS;_CRT_NONSTDC_NO_WARNINGS;LIBOBS_EXPORTS;HAVE_OBSCONFIG_H;CMAKE_INTDIR=\"Release\";libobs_opengl_EXPORTS;%(PreprocessorDefinitions)</PreprocessorDefinitions>
-      <AdditionalIncludeDirectories>F:\G\workplace\obs-studio\libobs;F:\G\workplace\obs-studio\build\config;F:\G\workplace\obs-studio\deps\glad\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
     </ResourceCompile>
-    <Midl>
-      <AdditionalIncludeDirectories>F:\G\workplace\obs-studio\libobs;F:\G\workplace\obs-studio\build\config;F:\G\workplace\obs-studio\deps\glad\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
-      <OutputDirectory>$(ProjectDir)/$(IntDir)</OutputDirectory>
-      <HeaderFileName>%(Filename).h</HeaderFileName>
-      <TypeLibraryName>%(Filename).tlb</TypeLibraryName>
-      <InterfaceIdentifierFileName>%(Filename)_i.c</InterfaceIdentifierFileName>
-      <ProxyFileName>%(Filename)_p.c</ProxyFileName>
-    </Midl>
     <PostBuildEvent>
       <Message>
       </Message>
@@ -141,8 +123,8 @@
       <AdditionalOptions>%(AdditionalOptions) /machine:x64</AdditionalOptions>
       <GenerateDebugInformation>false</GenerateDebugInformation>
       <IgnoreSpecificDefaultLibraries>%(IgnoreSpecificDefaultLibraries)</IgnoreSpecificDefaultLibraries>
-      <ImportLibrary>F:/G/workplace/obs-studio/build/libobs-opengl/Release/libobs-opengl.lib</ImportLibrary>
-      <ProgramDataBaseFile>F:/G/workplace/obs-studio/build/libobs-opengl/Release/libobs-opengl.pdb</ProgramDataBaseFile>
+      <ImportLibrary>$(OutDir)libobs-opengl.lib</ImportLibrary>
+      <ProgramDataBaseFile>$(OutDir)libobs-opengl.pdb</ProgramDataBaseFile>
       <SubSystem>Console</SubSystem>
     </Link>
     <ProjectReference>

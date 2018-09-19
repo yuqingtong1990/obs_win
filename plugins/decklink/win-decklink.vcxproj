@@ -71,16 +71,7 @@
     </ClCompile>
     <ResourceCompile>
       <PreprocessorDefinitions>WIN32;_DEBUG;_WINDOWS;DEBUG=1;_DEBUG=1;UNICODE;_UNICODE;_CRT_SECURE_NO_WARNINGS;_CRT_NONSTDC_NO_WARNINGS;HAVE_OBSCONFIG_H;CMAKE_INTDIR=\"Debug\";win_decklink_EXPORTS;%(PreprocessorDefinitions)</PreprocessorDefinitions>
-      <AdditionalIncludeDirectories>F:\G\workplace\obs-studio\build\plugins\decklink\win;F:\G\workplace\obs-studio\libobs;F:\G\workplace\obs-studio\build\config;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
     </ResourceCompile>
-    <Midl>
-      <AdditionalIncludeDirectories>F:\G\workplace\obs-studio\build\plugins\decklink\win;F:\G\workplace\obs-studio\libobs;F:\G\workplace\obs-studio\build\config;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
-      <OutputDirectory>$(ProjectDir)/$(IntDir)</OutputDirectory>
-      <HeaderFileName>%(Filename).h</HeaderFileName>
-      <TypeLibraryName>%(Filename).tlb</TypeLibraryName>
-      <InterfaceIdentifierFileName>%(Filename)_i.c</InterfaceIdentifierFileName>
-      <ProxyFileName>%(Filename)_p.c</ProxyFileName>
-    </Midl>
     <PostBuildEvent>
       <Message>
       </Message>
@@ -94,7 +85,7 @@
       <GenerateDebugInformation>true</GenerateDebugInformation>
       <IgnoreSpecificDefaultLibraries>%(IgnoreSpecificDefaultLibraries)</IgnoreSpecificDefaultLibraries>
       <ImportLibrary>$(OutputPath)$(ProjectName).lib</ImportLibrary>
-      <ProgramDataBaseFile>F:/G/workplace/obs-studio/build/plugins/decklink/win/Debug/win-decklink.pdb</ProgramDataBaseFile>
+      <ProgramDataBaseFile>$(OutDir)/win-decklink.pdb</ProgramDataBaseFile>
       <SubSystem>Console</SubSystem>
     </Link>
     <ProjectReference>
@@ -121,16 +112,7 @@
     </ClCompile>
     <ResourceCompile>
       <PreprocessorDefinitions>WIN32;_WINDOWS;NDEBUG;UNICODE;_UNICODE;_CRT_SECURE_NO_WARNINGS;_CRT_NONSTDC_NO_WARNINGS;HAVE_OBSCONFIG_H;CMAKE_INTDIR=\"Release\";win_decklink_EXPORTS;%(PreprocessorDefinitions)</PreprocessorDefinitions>
-      <AdditionalIncludeDirectories>F:\G\workplace\obs-studio\build\plugins\decklink\win;F:\G\workplace\obs-studio\libobs;F:\G\workplace\obs-studio\build\config;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
     </ResourceCompile>
-    <Midl>
-      <AdditionalIncludeDirectories>F:\G\workplace\obs-studio\build\plugins\decklink\win;F:\G\workplace\obs-studio\libobs;F:\G\workplace\obs-studio\build\config;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
-      <OutputDirectory>$(ProjectDir)/$(IntDir)</OutputDirectory>
-      <HeaderFileName>%(Filename).h</HeaderFileName>
-      <TypeLibraryName>%(Filename).tlb</TypeLibraryName>
-      <InterfaceIdentifierFileName>%(Filename)_i.c</InterfaceIdentifierFileName>
-      <ProxyFileName>%(Filename)_p.c</ProxyFileName>
-    </Midl>
     <PostBuildEvent>
       <Message>
       </Message>
@@ -144,7 +126,7 @@
       <GenerateDebugInformation>false</GenerateDebugInformation>
       <IgnoreSpecificDefaultLibraries>%(IgnoreSpecificDefaultLibraries)</IgnoreSpecificDefaultLibraries>
       <ImportLibrary>$(OutputPath)$(ProjectName).lib</ImportLibrary>
-      <ProgramDataBaseFile>F:/G/workplace/obs-studio/build/plugins/decklink/win/Release/win-decklink.pdb</ProgramDataBaseFile>
+      <ProgramDataBaseFile>$(OutDir)/win-decklink.pdb</ProgramDataBaseFile>
       <SubSystem>Console</SubSystem>
     </Link>
     <ProjectReference>

@@ -72,16 +72,7 @@
     </ClCompile>
     <ResourceCompile>
       <PreprocessorDefinitions>WIN32;_DEBUG;_WINDOWS;DEBUG=1;_DEBUG=1;HAVE_OBSCONFIG_H;UNICODE;_UNICODE;_CRT_SECURE_NO_WARNINGS;_CRT_NONSTDC_NO_WARNINGS;LIBOBS_EXPORTS;CMAKE_INTDIR=\"Debug\";libobs_EXPORTS;%(PreprocessorDefinitions)</PreprocessorDefinitions>
-      <AdditionalIncludeDirectories>F:\G\workplace\obs-studio\libobs;F:\G\workplace\obs-studio\build\config;F:\G\workplace\obs-studio\deps\w32-pthreads;F:\G\workplace\obs-studio\deps\jansson\src;F:\G\workplace\obs-studio\build\deps\jansson\include;D:\Qt\dependencies2015\win64\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
     </ResourceCompile>
-    <Midl>
-      <AdditionalIncludeDirectories>F:\G\workplace\obs-studio\libobs;F:\G\workplace\obs-studio\build\config;F:\G\workplace\obs-studio\deps\w32-pthreads;F:\G\workplace\obs-studio\deps\jansson\src;F:\G\workplace\obs-studio\build\deps\jansson\include;D:\Qt\dependencies2015\win64\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
-      <OutputDirectory>$(ProjectDir)/$(IntDir)</OutputDirectory>
-      <HeaderFileName>%(Filename).h</HeaderFileName>
-      <TypeLibraryName>%(Filename).tlb</TypeLibraryName>
-      <InterfaceIdentifierFileName>%(Filename)_i.c</InterfaceIdentifierFileName>
-      <ProxyFileName>%(Filename)_p.c</ProxyFileName>
-    </Midl>
     <PostBuildEvent>
       <Message>
       </Message>
@@ -96,7 +87,7 @@
       <IgnoreSpecificDefaultLibraries>%(IgnoreSpecificDefaultLibraries)</IgnoreSpecificDefaultLibraries>
       <ImageHasSafeExceptionHandlers>false</ImageHasSafeExceptionHandlers>
       <ImportLibrary>$(OutDir)obs.lib</ImportLibrary>
-      <ProgramDataBaseFile>F:/G/workplace/obs-studio/build/libobs/Debug/obs.pdb</ProgramDataBaseFile>
+      <ProgramDataBaseFile>$(OutDir)obs.pdb</ProgramDataBaseFile>
       <SubSystem>Console</SubSystem>
     </Link>
     <ProjectReference>
@@ -124,16 +115,7 @@
     </ClCompile>
     <ResourceCompile>
       <PreprocessorDefinitions>WIN32;_WINDOWS;NDEBUG;HAVE_OBSCONFIG_H;UNICODE;_UNICODE;_CRT_SECURE_NO_WARNINGS;_CRT_NONSTDC_NO_WARNINGS;LIBOBS_EXPORTS;CMAKE_INTDIR=\"Release\";libobs_EXPORTS;%(PreprocessorDefinitions)</PreprocessorDefinitions>
-      <AdditionalIncludeDirectories>F:\G\workplace\obs-studio\libobs;F:\G\workplace\obs-studio\build\config;F:\G\workplace\obs-studio\deps\w32-pthreads;F:\G\workplace\obs-studio\deps\jansson\src;F:\G\workplace\obs-studio\build\deps\jansson\include;D:\Qt\dependencies2015\win64\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
     </ResourceCompile>
-    <Midl>
-      <AdditionalIncludeDirectories>F:\G\workplace\obs-studio\libobs;F:\G\workplace\obs-studio\build\config;F:\G\workplace\obs-studio\deps\w32-pthreads;F:\G\workplace\obs-studio\deps\jansson\src;F:\G\workplace\obs-studio\build\deps\jansson\include;D:\Qt\dependencies2015\win64\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
-      <OutputDirectory>$(ProjectDir)/$(IntDir)</OutputDirectory>
-      <HeaderFileName>%(Filename).h</HeaderFileName>
-      <TypeLibraryName>%(Filename).tlb</TypeLibraryName>
-      <InterfaceIdentifierFileName>%(Filename)_i.c</InterfaceIdentifierFileName>
-      <ProxyFileName>%(Filename)_p.c</ProxyFileName>
-    </Midl>
     <PostBuildEvent>
       <Message>
       </Message>
@@ -148,7 +130,7 @@
       <IgnoreSpecificDefaultLibraries>%(IgnoreSpecificDefaultLibraries)</IgnoreSpecificDefaultLibraries>
       <ImageHasSafeExceptionHandlers>false</ImageHasSafeExceptionHandlers>
       <ImportLibrary>$(OutDir)obs.lib</ImportLibrary>
-      <ProgramDataBaseFile>F:/G/workplace/obs-studio/build/libobs/Release/obs.pdb</ProgramDataBaseFile>
+      <ProgramDataBaseFile>$(OutDir)obs.pdb</ProgramDataBaseFile>
       <SubSystem>Console</SubSystem>
     </Link>
     <ProjectReference>

@@ -92,16 +92,7 @@
     </ClCompile>
     <ResourceCompile>
       <PreprocessorDefinitions>WIN32;_DEBUG;_WINDOWS;DEBUG=1;_DEBUG=1;UNICODE;_UNICODE;_CRT_SECURE_NO_WARNINGS;_CRT_NONSTDC_NO_WARNINGS;HAVE_OBSCONFIG_H;CMAKE_INTDIR=\"Debug\";%(PreprocessorDefinitions)</PreprocessorDefinitions>
-      <AdditionalIncludeDirectories>D:\Qt\dependencies2015\win64\include;F:\G\workplace\obs-studio\deps\file-updater\..\w32-pthreads;F:\G\workplace\obs-studio\deps\file-updater\.;F:\G\workplace\obs-studio\deps\w32-pthreads;F:\G\workplace\obs-studio\libobs;F:\G\workplace\obs-studio\build\config;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
     </ResourceCompile>
-    <Midl>
-      <AdditionalIncludeDirectories>D:\Qt\dependencies2015\win64\include;F:\G\workplace\obs-studio\deps\file-updater\..\w32-pthreads;F:\G\workplace\obs-studio\deps\file-updater\.;F:\G\workplace\obs-studio\deps\w32-pthreads;F:\G\workplace\obs-studio\libobs;F:\G\workplace\obs-studio\build\config;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
-      <OutputDirectory>$(ProjectDir)/$(IntDir)</OutputDirectory>
-      <HeaderFileName>%(Filename).h</HeaderFileName>
-      <TypeLibraryName>%(Filename).tlb</TypeLibraryName>
-      <InterfaceIdentifierFileName>%(Filename)_i.c</InterfaceIdentifierFileName>
-      <ProxyFileName>%(Filename)_p.c</ProxyFileName>
-    </Midl>
     <Lib>
       <AdditionalOptions>%(AdditionalOptions) /machine:x64</AdditionalOptions>
     </Lib>
@@ -125,16 +116,7 @@
     </ClCompile>
     <ResourceCompile>
       <PreprocessorDefinitions>WIN32;_WINDOWS;NDEBUG;UNICODE;_UNICODE;_CRT_SECURE_NO_WARNINGS;_CRT_NONSTDC_NO_WARNINGS;HAVE_OBSCONFIG_H;CMAKE_INTDIR=\"Release\";%(PreprocessorDefinitions)</PreprocessorDefinitions>
-      <AdditionalIncludeDirectories>D:\Qt\dependencies2015\win64\include;F:\G\workplace\obs-studio\deps\file-updater\..\w32-pthreads;F:\G\workplace\obs-studio\deps\file-updater\.;F:\G\workplace\obs-studio\deps\w32-pthreads;F:\G\workplace\obs-studio\libobs;F:\G\workplace\obs-studio\build\config;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
     </ResourceCompile>
-    <Midl>
-      <AdditionalIncludeDirectories>D:\Qt\dependencies2015\win64\include;F:\G\workplace\obs-studio\deps\file-updater\..\w32-pthreads;F:\G\workplace\obs-studio\deps\file-updater\.;F:\G\workplace\obs-studio\deps\w32-pthreads;F:\G\workplace\obs-studio\libobs;F:\G\workplace\obs-studio\build\config;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
-      <OutputDirectory>$(ProjectDir)/$(IntDir)</OutputDirectory>
-      <HeaderFileName>%(Filename).h</HeaderFileName>
-      <TypeLibraryName>%(Filename).tlb</TypeLibraryName>
-      <InterfaceIdentifierFileName>%(Filename)_i.c</InterfaceIdentifierFileName>
-      <ProxyFileName>%(Filename)_p.c</ProxyFileName>
-    </Midl>
     <Lib>
       <AdditionalOptions>%(AdditionalOptions) /machine:x64</AdditionalOptions>
     </Lib>
@@ -158,16 +140,7 @@
     </ClCompile>
     <ResourceCompile>
       <PreprocessorDefinitions>WIN32;_WINDOWS;NDEBUG;UNICODE;_UNICODE;_CRT_SECURE_NO_WARNINGS;_CRT_NONSTDC_NO_WARNINGS;HAVE_OBSCONFIG_H;CMAKE_INTDIR=\"MinSizeRel\";%(PreprocessorDefinitions)</PreprocessorDefinitions>
-      <AdditionalIncludeDirectories>D:\Qt\dependencies2015\win64\include;F:\G\workplace\obs-studio\deps\file-updater\..\w32-pthreads;F:\G\workplace\obs-studio\deps\file-updater\.;F:\G\workplace\obs-studio\deps\w32-pthreads;F:\G\workplace\obs-studio\libobs;F:\G\workplace\obs-studio\build\config;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
     </ResourceCompile>
-    <Midl>
-      <AdditionalIncludeDirectories>D:\Qt\dependencies2015\win64\include;F:\G\workplace\obs-studio\deps\file-updater\..\w32-pthreads;F:\G\workplace\obs-studio\deps\file-updater\.;F:\G\workplace\obs-studio\deps\w32-pthreads;F:\G\workplace\obs-studio\libobs;F:\G\workplace\obs-studio\build\config;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
-      <OutputDirectory>$(ProjectDir)/$(IntDir)</OutputDirectory>
-      <HeaderFileName>%(Filename).h</HeaderFileName>
-      <TypeLibraryName>%(Filename).tlb</TypeLibraryName>
-      <InterfaceIdentifierFileName>%(Filename)_i.c</InterfaceIdentifierFileName>
-      <ProxyFileName>%(Filename)_p.c</ProxyFileName>
-    </Midl>
     <Lib>
       <AdditionalOptions>%(AdditionalOptions) /machine:x64</AdditionalOptions>
     </Lib>
@@ -190,16 +163,7 @@
     </ClCompile>
     <ResourceCompile>
       <PreprocessorDefinitions>WIN32;_WINDOWS;NDEBUG;UNICODE;_UNICODE;_CRT_SECURE_NO_WARNINGS;_CRT_NONSTDC_NO_WARNINGS;HAVE_OBSCONFIG_H;CMAKE_INTDIR=\"RelWithDebInfo\";%(PreprocessorDefinitions)</PreprocessorDefinitions>
-      <AdditionalIncludeDirectories>D:\Qt\dependencies2015\win64\include;F:\G\workplace\obs-studio\deps\file-updater\..\w32-pthreads;F:\G\workplace\obs-studio\deps\file-updater\.;F:\G\workplace\obs-studio\deps\w32-pthreads;F:\G\workplace\obs-studio\libobs;F:\G\workplace\obs-studio\build\config;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
     </ResourceCompile>
-    <Midl>
-      <AdditionalIncludeDirectories>D:\Qt\dependencies2015\win64\include;F:\G\workplace\obs-studio\deps\file-updater\..\w32-pthreads;F:\G\workplace\obs-studio\deps\file-updater\.;F:\G\workplace\obs-studio\deps\w32-pthreads;F:\G\workplace\obs-studio\libobs;F:\G\workplace\obs-studio\build\config;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
-      <OutputDirectory>$(ProjectDir)/$(IntDir)</OutputDirectory>
-      <HeaderFileName>%(Filename).h</HeaderFileName>
-      <TypeLibraryName>%(Filename).tlb</TypeLibraryName>
-      <InterfaceIdentifierFileName>%(Filename)_i.c</InterfaceIdentifierFileName>
-      <ProxyFileName>%(Filename)_p.c</ProxyFileName>
-    </Midl>
     <Lib>
       <AdditionalOptions>%(AdditionalOptions) /machine:x64</AdditionalOptions>
     </Lib>

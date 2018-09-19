@@ -28,7 +28,6 @@ EndProject
 Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "file-updater", "deps\file-updater\file-updater.vcxproj", "{3F2867F7-4263-39F7-97E6-99108A8566A2}"
 	ProjectSection(ProjectDependencies) = postProject
 		{88F21624-48A7-3014-934F-495DF4DAD2A2} = {88F21624-48A7-3014-934F-495DF4DAD2A2}
-		{0AE9526A-10B0-3980-A7DB-6EE8599DC4E3} = {0AE9526A-10B0-3980-A7DB-6EE8599DC4E3}
 	EndProjectSection
 EndProject
 Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "glad", "deps\glad\glad.vcxproj", "{3AFE22CD-34B1-3814-8E3D-CD8893FB2AED}"
