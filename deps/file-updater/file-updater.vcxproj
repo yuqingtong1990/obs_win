@@ -75,7 +75,7 @@
   </PropertyGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
     <ClCompile>
-      <AdditionalIncludeDirectories>D:\Qt\dependencies2015\win64\include;F:\G\workplace\obs-studio\deps\file-updater\..\w32-pthreads;F:\G\workplace\obs-studio\deps\file-updater\.;F:\G\workplace\obs-studio\deps\w32-pthreads;F:\G\workplace\obs-studio\libobs;F:\G\workplace\obs-studio\build\config;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AdditionalIncludeDirectories>..\dependencies2015\win64\include;..\file-updater\..\w32-pthreads;..\file-updater\.;..\w32-pthreads;..\..\libobs;..\..\config;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
       <AssemblerListingLocation>Debug/</AssemblerListingLocation>
       <BasicRuntimeChecks>EnableFastChecks</BasicRuntimeChecks>
       <CompileAs>CompileAsC</CompileAs>
@@ -108,7 +108,7 @@
   </ItemDefinitionGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
     <ClCompile>
-      <AdditionalIncludeDirectories>D:\Qt\dependencies2015\win64\include;F:\G\workplace\obs-studio\deps\file-updater\..\w32-pthreads;F:\G\workplace\obs-studio\deps\file-updater\.;F:\G\workplace\obs-studio\deps\w32-pthreads;F:\G\workplace\obs-studio\libobs;F:\G\workplace\obs-studio\build\config;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AdditionalIncludeDirectories>..\dependencies2015\win64\include;..\file-updater\..\w32-pthreads;..\file-updater\.;..\w32-pthreads;..\..\libobs;..\..\config;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
       <AssemblerListingLocation>Release/</AssemblerListingLocation>
       <CompileAs>CompileAsC</CompileAs>
       <ExceptionHandling>
@@ -141,7 +141,7 @@
   </ItemDefinitionGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">
     <ClCompile>
-      <AdditionalIncludeDirectories>D:\Qt\dependencies2015\win64\include;F:\G\workplace\obs-studio\deps\file-updater\..\w32-pthreads;F:\G\workplace\obs-studio\deps\file-updater\.;F:\G\workplace\obs-studio\deps\w32-pthreads;F:\G\workplace\obs-studio\libobs;F:\G\workplace\obs-studio\build\config;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AdditionalIncludeDirectories>..\dependencies2015\win64\include;..\file-updater\..\w32-pthreads;..\file-updater\.;..\w32-pthreads;..\..\libobs;..\..\config;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
       <AssemblerListingLocation>MinSizeRel/</AssemblerListingLocation>
       <CompileAs>CompileAsC</CompileAs>
       <ExceptionHandling>
@@ -174,7 +174,7 @@
   </ItemDefinitionGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">
     <ClCompile>
-      <AdditionalIncludeDirectories>D:\Qt\dependencies2015\win64\include;F:\G\workplace\obs-studio\deps\file-updater\..\w32-pthreads;F:\G\workplace\obs-studio\deps\file-updater\.;F:\G\workplace\obs-studio\deps\w32-pthreads;F:\G\workplace\obs-studio\libobs;F:\G\workplace\obs-studio\build\config;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AdditionalIncludeDirectories>..\dependencies2015\win64\include;..\file-updater\..\w32-pthreads;..\file-updater\.;..\w32-pthreads;..\..\libobs;..\..\config;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
       <AssemblerListingLocation>RelWithDebInfo/</AssemblerListingLocation>
       <CompileAs>CompileAsC</CompileAs>
       <DebugInformationFormat>ProgramDatabase</DebugInformationFormat>

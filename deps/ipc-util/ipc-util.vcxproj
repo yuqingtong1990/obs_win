@@ -205,66 +205,7 @@
     </Lib>
   </ItemDefinitionGroup>
   <ItemGroup>
-    <CustomBuild Include="F:\G\workplace\obs-studio\deps\ipc-util\CMakeLists.txt">
-      <Message Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">Building Custom Rule F:/G/workplace/obs-studio/deps/ipc-util/CMakeLists.txt</Message>
-      <Command Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">setlocal
-"C:\Program Files\CMake\bin\cmake.exe" -HF:/G/workplace/obs-studio -BF:/G/workplace/obs-studio/build --check-stamp-file F:/G/workplace/obs-studio/build/deps/ipc-util/CMakeFiles/generate.stamp
-if %errorlevel% neq 0 goto :cmEnd
-:cmEnd
-endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
-:cmErrorLevel
-exit /b %1
-:cmDone
-if %errorlevel% neq 0 goto :VCEnd</Command>
-      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">F:/G/workplace/obs-studio/deps/ipc-util/CMakeLists.txt;F:\G\workplace\obs-studio\deps\ipc-util\CMakeLists.txt;F:\G\workplace\obs-studio\deps\ipc-util\CMakeLists.txt;%(AdditionalInputs)</AdditionalInputs>
-      <Outputs Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">F:\G\workplace\obs-studio\build\deps\ipc-util\CMakeFiles\generate.stamp</Outputs>
-      <LinkObjects Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">false</LinkObjects>
-      <Message Condition="'$(Configuration)|$(Platform)'=='Release|x64'">Building Custom Rule F:/G/workplace/obs-studio/deps/ipc-util/CMakeLists.txt</Message>
-      <Command Condition="'$(Configuration)|$(Platform)'=='Release|x64'">setlocal
-"C:\Program Files\CMake\bin\cmake.exe" -HF:/G/workplace/obs-studio -BF:/G/workplace/obs-studio/build --check-stamp-file F:/G/workplace/obs-studio/build/deps/ipc-util/CMakeFiles/generate.stamp
-if %errorlevel% neq 0 goto :cmEnd
-:cmEnd
-endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
-:cmErrorLevel
-exit /b %1
-:cmDone
-if %errorlevel% neq 0 goto :VCEnd</Command>
-      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Release|x64'">F:/G/workplace/obs-studio/deps/ipc-util/CMakeLists.txt;F:\G\workplace\obs-studio\deps\ipc-util\CMakeLists.txt;F:\G\workplace\obs-studio\deps\ipc-util\CMakeLists.txt;%(AdditionalInputs)</AdditionalInputs>
-      <Outputs Condition="'$(Configuration)|$(Platform)'=='Release|x64'">F:\G\workplace\obs-studio\build\deps\ipc-util\CMakeFiles\generate.stamp</Outputs>
-      <LinkObjects Condition="'$(Configuration)|$(Platform)'=='Release|x64'">false</LinkObjects>
-      <Message Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">Building Custom Rule F:/G/workplace/obs-studio/deps/ipc-util/CMakeLists.txt</Message>
-      <Command Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">setlocal
-"C:\Program Files\CMake\bin\cmake.exe" -HF:/G/workplace/obs-studio -BF:/G/workplace/obs-studio/build --check-stamp-file F:/G/workplace/obs-studio/build/deps/ipc-util/CMakeFiles/generate.stamp
-if %errorlevel% neq 0 goto :cmEnd
-:cmEnd
-endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
-:cmErrorLevel
-exit /b %1
-:cmDone
-if %errorlevel% neq 0 goto :VCEnd</Command>
-      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">F:/G/workplace/obs-studio/deps/ipc-util/CMakeLists.txt;F:\G\workplace\obs-studio\deps\ipc-util\CMakeLists.txt;F:\G\workplace\obs-studio\deps\ipc-util\CMakeLists.txt;%(AdditionalInputs)</AdditionalInputs>
-      <Outputs Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">F:\G\workplace\obs-studio\build\deps\ipc-util\CMakeFiles\generate.stamp</Outputs>
-      <LinkObjects Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">false</LinkObjects>
-      <Message Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">Building Custom Rule F:/G/workplace/obs-studio/deps/ipc-util/CMakeLists.txt</Message>
-      <Command Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">setlocal
-"C:\Program Files\CMake\bin\cmake.exe" -HF:/G/workplace/obs-studio -BF:/G/workplace/obs-studio/build --check-stamp-file F:/G/workplace/obs-studio/build/deps/ipc-util/CMakeFiles/generate.stamp
-if %errorlevel% neq 0 goto :cmEnd
-:cmEnd
-endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
-:cmErrorLevel
-exit /b %1
-:cmDone
-if %errorlevel% neq 0 goto :VCEnd</Command>
-      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">F:/G/workplace/obs-studio/deps/ipc-util/CMakeLists.txt;F:\G\workplace\obs-studio\deps\ipc-util\CMakeLists.txt;F:\G\workplace\obs-studio\deps\ipc-util\CMakeLists.txt;%(AdditionalInputs)</AdditionalInputs>
-      <Outputs Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">F:\G\workplace\obs-studio\build\deps\ipc-util\CMakeFiles\generate.stamp</Outputs>
-      <LinkObjects Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">false</LinkObjects>
-    </CustomBuild>
-  </ItemGroup>
-  <ItemGroup>
-    <ClCompile Include="F:\G\workplace\obs-studio\deps\ipc-util\ipc-util\pipe-windows.c" />
     <ClCompile Include="ipc-util\pipe-windows.c" />
-    <ClInclude Include="F:\G\workplace\obs-studio\deps\ipc-util\ipc-util\pipe.h" />
-    <ClInclude Include="F:\G\workplace\obs-studio\deps\ipc-util\ipc-util\pipe-windows.h" />
     <ClInclude Include="ipc-util\pipe-windows.h" />
     <ClInclude Include="ipc-util\pipe.h" />
   </ItemGroup>

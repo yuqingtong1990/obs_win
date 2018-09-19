@@ -75,7 +75,7 @@
   </PropertyGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
     <ClCompile>
-      <AdditionalIncludeDirectories>F:\G\workplace\obs-studio\deps\lzma;F:\G\workplace\obs-studio\deps\lzma\liblzma\api;F:\G\workplace\obs-studio\deps\lzma\common;F:\G\workplace\obs-studio\deps\lzma\liblzma\check;F:\G\workplace\obs-studio\deps\lzma\liblzma\common;F:\G\workplace\obs-studio\deps\lzma\liblzma\delta;F:\G\workplace\obs-studio\deps\lzma\liblzma\lz;F:\G\workplace\obs-studio\deps\lzma\liblzma\lzma;F:\G\workplace\obs-studio\deps\lzma\liblzma\rangecoder;F:\G\workplace\obs-studio\deps\lzma\liblzma\simple;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AdditionalIncludeDirectories>.;.\liblzma\api;.\common;.\liblzma\check;.\liblzma\common;.\liblzma\delta;.\liblzma\lz;.\liblzma\lzma;.\liblzma\rangecoder;.\liblzma\simple;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
       <AssemblerListingLocation>Debug/</AssemblerListingLocation>
       <BasicRuntimeChecks>EnableFastChecks</BasicRuntimeChecks>
       <CompileAs>CompileAsC</CompileAs>
@@ -109,7 +109,7 @@
   </ItemDefinitionGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
     <ClCompile>
-      <AdditionalIncludeDirectories>F:\G\workplace\obs-studio\deps\lzma;F:\G\workplace\obs-studio\deps\lzma\liblzma\api;F:\G\workplace\obs-studio\deps\lzma\common;F:\G\workplace\obs-studio\deps\lzma\liblzma\check;F:\G\workplace\obs-studio\deps\lzma\liblzma\common;F:\G\workplace\obs-studio\deps\lzma\liblzma\delta;F:\G\workplace\obs-studio\deps\lzma\liblzma\lz;F:\G\workplace\obs-studio\deps\lzma\liblzma\lzma;F:\G\workplace\obs-studio\deps\lzma\liblzma\rangecoder;F:\G\workplace\obs-studio\deps\lzma\liblzma\simple;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AdditionalIncludeDirectories>.;.\liblzma\api;.\common;.\liblzma\check;.\liblzma\common;.\liblzma\delta;.\liblzma\lz;.\liblzma\lzma;.\liblzma\rangecoder;.\liblzma\simple;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
       <AssemblerListingLocation>Release/</AssemblerListingLocation>
       <CompileAs>CompileAsC</CompileAs>
       <DisableSpecificWarnings>4244;4267</DisableSpecificWarnings>
@@ -143,7 +143,7 @@
   </ItemDefinitionGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">
     <ClCompile>
-      <AdditionalIncludeDirectories>F:\G\workplace\obs-studio\deps\lzma;F:\G\workplace\obs-studio\deps\lzma\liblzma\api;F:\G\workplace\obs-studio\deps\lzma\common;F:\G\workplace\obs-studio\deps\lzma\liblzma\check;F:\G\workplace\obs-studio\deps\lzma\liblzma\common;F:\G\workplace\obs-studio\deps\lzma\liblzma\delta;F:\G\workplace\obs-studio\deps\lzma\liblzma\lz;F:\G\workplace\obs-studio\deps\lzma\liblzma\lzma;F:\G\workplace\obs-studio\deps\lzma\liblzma\rangecoder;F:\G\workplace\obs-studio\deps\lzma\liblzma\simple;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AdditionalIncludeDirectories>.;.\liblzma\api;.\common;.\liblzma\check;.\liblzma\common;.\liblzma\delta;.\liblzma\lz;.\liblzma\lzma;.\liblzma\rangecoder;.\liblzma\simple;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
       <AssemblerListingLocation>MinSizeRel/</AssemblerListingLocation>
       <CompileAs>CompileAsC</CompileAs>
       <DisableSpecificWarnings>4244;4267</DisableSpecificWarnings>
@@ -177,7 +177,7 @@
   </ItemDefinitionGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">
     <ClCompile>
-      <AdditionalIncludeDirectories>F:\G\workplace\obs-studio\deps\lzma;F:\G\workplace\obs-studio\deps\lzma\liblzma\api;F:\G\workplace\obs-studio\deps\lzma\common;F:\G\workplace\obs-studio\deps\lzma\liblzma\check;F:\G\workplace\obs-studio\deps\lzma\liblzma\common;F:\G\workplace\obs-studio\deps\lzma\liblzma\delta;F:\G\workplace\obs-studio\deps\lzma\liblzma\lz;F:\G\workplace\obs-studio\deps\lzma\liblzma\lzma;F:\G\workplace\obs-studio\deps\lzma\liblzma\rangecoder;F:\G\workplace\obs-studio\deps\lzma\liblzma\simple;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AdditionalIncludeDirectories>.;.\liblzma\api;.\common;.\liblzma\check;.\liblzma\common;.\liblzma\delta;.\liblzma\lz;.\liblzma\lzma;.\liblzma\rangecoder;.\liblzma\simple;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
       <AssemblerListingLocation>RelWithDebInfo/</AssemblerListingLocation>
       <CompileAs>CompileAsC</CompileAs>
       <DebugInformationFormat>ProgramDatabase</DebugInformationFormat>

@@ -479,9 +479,6 @@
     </ClInclude>
   </ItemGroup>
   <ItemGroup>
-    <CustomBuild Include="F:\G\workplace\obs-studio\libobs\CMakeLists.txt" />
-  </ItemGroup>
-  <ItemGroup>
     <Filter Include="audio-monitoring">
       <UniqueIdentifier>{B030AD91-415B-335C-A01D-2E7BCA90777A}</UniqueIdentifier>
     </Filter>
