@@ -205,18 +205,6 @@
     </Lib>
   </ItemDefinitionGroup>
   <ItemGroup>
-    <ProjectReference Include="F:\G\workplace\obs-studio\build\ZERO_CHECK.vcxproj">
-      <Project>{31E55BC9-E0DA-357D-BE36-742F4964C680}</Project>
-      <Name>ZERO_CHECK</Name>
-    </ProjectReference>
-    <ProjectReference Include="F:\G\workplace\obs-studio\build\libobs\libobs.vcxproj">
-      <Project>{0AE9526A-10B0-3980-A7DB-6EE8599DC4E3}</Project>
-      <Name>libobs</Name>
-    </ProjectReference>
-    <ProjectReference Include="F:\G\workplace\obs-studio\build\deps\w32-pthreads\w32-pthreads.vcxproj">
-      <Project>{88F21624-48A7-3014-934F-495DF4DAD2A2}</Project>
-      <Name>w32-pthreads</Name>
-    </ProjectReference>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="file-updater\file-updater.c" />

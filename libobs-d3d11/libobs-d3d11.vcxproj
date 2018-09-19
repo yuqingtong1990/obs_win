@@ -83,7 +83,7 @@
   </PropertyGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
     <ClCompile>
-      <AdditionalIncludeDirectories>F:\G\workplace\obs-studio\build\config;F:\G\workplace\obs-studio\libobs;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AdditionalIncludeDirectories>..\config;..\libobs;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
       <AssemblerListingLocation>Debug/</AssemblerListingLocation>
       <BasicRuntimeChecks>EnableFastChecks</BasicRuntimeChecks>
       <CompileAs>CompileAsCpp</CompileAs>
@@ -114,33 +114,8 @@
     <PostBuildEvent>
       <Message>
       </Message>
-      <Command>setlocal
-"C:\Program Files\CMake\bin\cmake.exe" -E copy F:/G/workplace/obs-studio/build/libobs-d3d11/Debug/libobs-d3d11.dll F:/G/workplace/obs-studio/build/rundir/Debug/bin/64bit/libobs-d3d11.dll
-if %errorlevel% neq 0 goto :cmEnd
-:cmEnd
-endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
-:cmErrorLevel
-exit /b %1
-:cmDone
-if %errorlevel% neq 0 goto :VCEnd
-setlocal
-"C:\Program Files\CMake\bin\cmake.exe" -DCONFIG=Debug -DFNAME=libobs-d3d11.dll -DINPUT=F:/G/workplace/obs-studio/build/libobs-d3d11/Debug -DOUTPUT=F:/G/workplace/obs-studio/build/libobs-d3d11/pdbs -P F:/G/workplace/obs-studio/cmake/copy_on_debug_helper.cmake
-if %errorlevel% neq 0 goto :cmEnd
-:cmEnd
-endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
-:cmErrorLevel
-exit /b %1
-:cmDone
-if %errorlevel% neq 0 goto :VCEnd
-setlocal
-"C:\Program Files\CMake\bin\cmake.exe" -DCONFIG=Debug -DFNAME=libobs-d3d11.dll -DINPUT=F:/G/workplace/obs-studio/build/libobs-d3d11/Debug -DOUTPUT=F:/G/workplace/obs-studio/build/rundir/Debug/bin/64bit -P F:/G/workplace/obs-studio/cmake/copy_on_debug_helper.cmake
-if %errorlevel% neq 0 goto :cmEnd
-:cmEnd
-endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
-:cmErrorLevel
-exit /b %1
-:cmDone
-if %errorlevel% neq 0 goto :VCEnd</Command>
+      <Command>
+      </Command>
     </PostBuildEvent>
     <Link>
       <AdditionalDependencies>..\libobs\Debug\obs.lib;d3d11.lib;dxgi.lib;kernel32.lib;user32.lib;gdi32.lib;winspool.lib;shell32.lib;ole32.lib;oleaut32.lib;uuid.lib;comdlg32.lib;advapi32.lib</AdditionalDependencies>
@@ -158,7 +133,7 @@ if %errorlevel% neq 0 goto :VCEnd</Command>
   </ItemDefinitionGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
     <ClCompile>
-      <AdditionalIncludeDirectories>F:\G\workplace\obs-studio\build\config;F:\G\workplace\obs-studio\libobs;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AdditionalIncludeDirectories>..\config;..\libobs;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
       <AssemblerListingLocation>Release/</AssemblerListingLocation>
       <CompileAs>CompileAsCpp</CompileAs>
       <DisableSpecificWarnings>4127;4201;4456;4457;4458;4459;4595</DisableSpecificWarnings>
@@ -189,33 +164,8 @@ if %errorlevel% neq 0 goto :VCEnd</Command>
     <PostBuildEvent>
       <Message>
       </Message>
-      <Command>setlocal
-"C:\Program Files\CMake\bin\cmake.exe" -E copy F:/G/workplace/obs-studio/build/libobs-d3d11/Release/libobs-d3d11.dll F:/G/workplace/obs-studio/build/rundir/Release/bin/64bit/libobs-d3d11.dll
-if %errorlevel% neq 0 goto :cmEnd
-:cmEnd
-endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
-:cmErrorLevel
-exit /b %1
-:cmDone
-if %errorlevel% neq 0 goto :VCEnd
-setlocal
-"C:\Program Files\CMake\bin\cmake.exe" -DCONFIG=Release -DFNAME=libobs-d3d11.dll -DINPUT=F:/G/workplace/obs-studio/build/libobs-d3d11/Release -DOUTPUT=F:/G/workplace/obs-studio/build/libobs-d3d11/pdbs -P F:/G/workplace/obs-studio/cmake/copy_on_debug_helper.cmake
-if %errorlevel% neq 0 goto :cmEnd
-:cmEnd
-endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
-:cmErrorLevel
-exit /b %1
-:cmDone
-if %errorlevel% neq 0 goto :VCEnd
-setlocal
-"C:\Program Files\CMake\bin\cmake.exe" -DCONFIG=Release -DFNAME=libobs-d3d11.dll -DINPUT=F:/G/workplace/obs-studio/build/libobs-d3d11/Release -DOUTPUT=F:/G/workplace/obs-studio/build/rundir/Release/bin/64bit -P F:/G/workplace/obs-studio/cmake/copy_on_debug_helper.cmake
-if %errorlevel% neq 0 goto :cmEnd
-:cmEnd
-endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
-:cmErrorLevel
-exit /b %1
-:cmDone
-if %errorlevel% neq 0 goto :VCEnd</Command>
+      <Command>
+      </Command>
     </PostBuildEvent>
     <Link>
       <AdditionalDependencies>..\libobs\Release\obs.lib;d3d11.lib;dxgi.lib;kernel32.lib;user32.lib;gdi32.lib;winspool.lib;shell32.lib;ole32.lib;oleaut32.lib;uuid.lib;comdlg32.lib;advapi32.lib</AdditionalDependencies>
@@ -233,7 +183,7 @@ if %errorlevel% neq 0 goto :VCEnd</Command>
   </ItemDefinitionGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">
     <ClCompile>
-      <AdditionalIncludeDirectories>F:\G\workplace\obs-studio\build\config;F:\G\workplace\obs-studio\libobs;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AdditionalIncludeDirectories>..\config;..\libobs;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
       <AssemblerListingLocation>MinSizeRel/</AssemblerListingLocation>
       <CompileAs>CompileAsCpp</CompileAs>
       <DisableSpecificWarnings>4127;4201;4456;4457;4458;4459;4595</DisableSpecificWarnings>
@@ -264,33 +214,8 @@ if %errorlevel% neq 0 goto :VCEnd</Command>
     <PostBuildEvent>
       <Message>
       </Message>
-      <Command>setlocal
-"C:\Program Files\CMake\bin\cmake.exe" -E copy F:/G/workplace/obs-studio/build/libobs-d3d11/MinSizeRel/libobs-d3d11.dll F:/G/workplace/obs-studio/build/rundir/MinSizeRel/bin/64bit/libobs-d3d11.dll
-if %errorlevel% neq 0 goto :cmEnd
-:cmEnd
-endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
-:cmErrorLevel
-exit /b %1
-:cmDone
-if %errorlevel% neq 0 goto :VCEnd
-setlocal
-"C:\Program Files\CMake\bin\cmake.exe" -DCONFIG=MinSizeRel -DFNAME=libobs-d3d11.dll -DINPUT=F:/G/workplace/obs-studio/build/libobs-d3d11/MinSizeRel -DOUTPUT=F:/G/workplace/obs-studio/build/libobs-d3d11/pdbs -P F:/G/workplace/obs-studio/cmake/copy_on_debug_helper.cmake
-if %errorlevel% neq 0 goto :cmEnd
-:cmEnd
-endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
-:cmErrorLevel
-exit /b %1
-:cmDone
-if %errorlevel% neq 0 goto :VCEnd
-setlocal
-"C:\Program Files\CMake\bin\cmake.exe" -DCONFIG=MinSizeRel -DFNAME=libobs-d3d11.dll -DINPUT=F:/G/workplace/obs-studio/build/libobs-d3d11/MinSizeRel -DOUTPUT=F:/G/workplace/obs-studio/build/rundir/MinSizeRel/bin/64bit -P F:/G/workplace/obs-studio/cmake/copy_on_debug_helper.cmake
-if %errorlevel% neq 0 goto :cmEnd
-:cmEnd
-endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
-:cmErrorLevel
-exit /b %1
-:cmDone
-if %errorlevel% neq 0 goto :VCEnd</Command>
+      <Command>
+      </Command>
     </PostBuildEvent>
     <Link>
       <AdditionalDependencies>..\libobs\MinSizeRel\obs.lib;d3d11.lib;dxgi.lib;kernel32.lib;user32.lib;gdi32.lib;winspool.lib;shell32.lib;ole32.lib;oleaut32.lib;uuid.lib;comdlg32.lib;advapi32.lib</AdditionalDependencies>
@@ -308,7 +233,7 @@ if %errorlevel% neq 0 goto :VCEnd</Command>
   </ItemDefinitionGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">
     <ClCompile>
-      <AdditionalIncludeDirectories>F:\G\workplace\obs-studio\build\config;F:\G\workplace\obs-studio\libobs;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AdditionalIncludeDirectories>..\config;..\libobs;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
       <AssemblerListingLocation>RelWithDebInfo/</AssemblerListingLocation>
       <CompileAs>CompileAsCpp</CompileAs>
       <DebugInformationFormat>ProgramDatabase</DebugInformationFormat>
@@ -338,33 +263,8 @@ if %errorlevel% neq 0 goto :VCEnd</Command>
     <PostBuildEvent>
       <Message>
       </Message>
-      <Command>setlocal
-"C:\Program Files\CMake\bin\cmake.exe" -E copy F:/G/workplace/obs-studio/build/libobs-d3d11/RelWithDebInfo/libobs-d3d11.dll F:/G/workplace/obs-studio/build/rundir/RelWithDebInfo/bin/64bit/libobs-d3d11.dll
-if %errorlevel% neq 0 goto :cmEnd
-:cmEnd
-endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
-:cmErrorLevel
-exit /b %1
-:cmDone
-if %errorlevel% neq 0 goto :VCEnd
-setlocal
-"C:\Program Files\CMake\bin\cmake.exe" -DCONFIG=RelWithDebInfo -DFNAME=libobs-d3d11.dll -DINPUT=F:/G/workplace/obs-studio/build/libobs-d3d11/RelWithDebInfo -DOUTPUT=F:/G/workplace/obs-studio/build/libobs-d3d11/pdbs -P F:/G/workplace/obs-studio/cmake/copy_on_debug_helper.cmake
-if %errorlevel% neq 0 goto :cmEnd
-:cmEnd
-endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
-:cmErrorLevel
-exit /b %1
-:cmDone
-if %errorlevel% neq 0 goto :VCEnd
-setlocal
-"C:\Program Files\CMake\bin\cmake.exe" -DCONFIG=RelWithDebInfo -DFNAME=libobs-d3d11.dll -DINPUT=F:/G/workplace/obs-studio/build/libobs-d3d11/RelWithDebInfo -DOUTPUT=F:/G/workplace/obs-studio/build/rundir/RelWithDebInfo/bin/64bit -P F:/G/workplace/obs-studio/cmake/copy_on_debug_helper.cmake
-if %errorlevel% neq 0 goto :cmEnd
-:cmEnd
-endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
-:cmErrorLevel
-exit /b %1
-:cmDone
-if %errorlevel% neq 0 goto :VCEnd</Command>
+      <Command>
+      </Command>
     </PostBuildEvent>
     <Link>
       <AdditionalDependencies>..\libobs\RelWithDebInfo\obs.lib;d3d11.lib;dxgi.lib;kernel32.lib;user32.lib;gdi32.lib;winspool.lib;shell32.lib;ole32.lib;oleaut32.lib;uuid.lib;comdlg32.lib;advapi32.lib</AdditionalDependencies>
@@ -380,16 +280,6 @@ if %errorlevel% neq 0 goto :VCEnd</Command>
       <LinkLibraryDependencies>false</LinkLibraryDependencies>
     </ProjectReference>
   </ItemDefinitionGroup>
-  <ItemGroup>
-    <ProjectReference Include="F:\G\workplace\obs-studio\build\ZERO_CHECK.vcxproj">
-      <Project>{31E55BC9-E0DA-357D-BE36-742F4964C680}</Project>
-      <Name>ZERO_CHECK</Name>
-    </ProjectReference>
-    <ProjectReference Include="F:\G\workplace\obs-studio\build\libobs\libobs.vcxproj">
-      <Project>{0AE9526A-10B0-3980-A7DB-6EE8599DC4E3}</Project>
-      <Name>libobs</Name>
-    </ProjectReference>
-  </ItemGroup>
   <ItemGroup>
     <ClCompile Include="d3d11-duplicator.cpp" />
     <ClCompile Include="d3d11-indexbuffer.cpp" />

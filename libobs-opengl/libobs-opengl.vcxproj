@@ -53,7 +53,7 @@
   </PropertyGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
     <ClCompile>
-      <AdditionalIncludeDirectories>F:\G\workplace\obs-studio\libobs;F:\G\workplace\obs-studio\build\config;F:\G\workplace\obs-studio\deps\glad\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AdditionalIncludeDirectories>..\libobs;..\config;..\deps\glad\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
       <AssemblerListingLocation>Debug/</AssemblerListingLocation>
       <BasicRuntimeChecks>EnableFastChecks</BasicRuntimeChecks>
       <CompileAs>CompileAsC</CompileAs>
@@ -102,7 +102,7 @@
   </ItemDefinitionGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
     <ClCompile>
-      <AdditionalIncludeDirectories>F:\G\workplace\obs-studio\libobs;F:\G\workplace\obs-studio\build\config;F:\G\workplace\obs-studio\deps\glad\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AdditionalIncludeDirectories>..\libobs;..\config;..\deps\glad\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
       <AssemblerListingLocation>Release/</AssemblerListingLocation>
       <CompileAs>CompileAsC</CompileAs>
       <ExceptionHandling>
@@ -150,64 +150,20 @@
     </ProjectReference>
   </ItemDefinitionGroup>
   <ItemGroup>
-    <CustomBuild Include="F:\G\workplace\obs-studio\libobs-opengl\CMakeLists.txt">
-      <Message Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">Building Custom Rule F:/G/workplace/obs-studio/libobs-opengl/CMakeLists.txt</Message>
-      <Command Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">setlocal
-"C:\Program Files\CMake\bin\cmake.exe" -HF:/G/workplace/obs-studio -BF:/G/workplace/obs-studio/build --check-stamp-file F:/G/workplace/obs-studio/build/libobs-opengl/CMakeFiles/generate.stamp
-if %errorlevel% neq 0 goto :cmEnd
-:cmEnd
-endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
-:cmErrorLevel
-exit /b %1
-:cmDone
-if %errorlevel% neq 0 goto :VCEnd</Command>
-      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">F:/G/workplace/obs-studio/libobs-opengl/CMakeLists.txt;C:\Program Files\CMake\share\cmake-3.12\Modules\FindOpenGL.cmake;C:\Program Files\CMake\share\cmake-3.12\Modules\FindPackageHandleStandardArgs.cmake;C:\Program Files\CMake\share\cmake-3.12\Modules\FindPackageMessage.cmake;F:\G\workplace\obs-studio\libobs-opengl\CMakeLists.txt;F:\G\workplace\obs-studio\libobs-opengl\CMakeLists.txt;%(AdditionalInputs)</AdditionalInputs>
-      <Outputs Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">F:\G\workplace\obs-studio\build\libobs-opengl\CMakeFiles\generate.stamp</Outputs>
-      <LinkObjects Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">false</LinkObjects>
-      <Message Condition="'$(Configuration)|$(Platform)'=='Release|x64'">Building Custom Rule F:/G/workplace/obs-studio/libobs-opengl/CMakeLists.txt</Message>
-      <Command Condition="'$(Configuration)|$(Platform)'=='Release|x64'">setlocal
-"C:\Program Files\CMake\bin\cmake.exe" -HF:/G/workplace/obs-studio -BF:/G/workplace/obs-studio/build --check-stamp-file F:/G/workplace/obs-studio/build/libobs-opengl/CMakeFiles/generate.stamp
-if %errorlevel% neq 0 goto :cmEnd
-:cmEnd
-endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
-:cmErrorLevel
-exit /b %1
-:cmDone
-if %errorlevel% neq 0 goto :VCEnd</Command>
-      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Release|x64'">F:/G/workplace/obs-studio/libobs-opengl/CMakeLists.txt;C:\Program Files\CMake\share\cmake-3.12\Modules\FindOpenGL.cmake;C:\Program Files\CMake\share\cmake-3.12\Modules\FindPackageHandleStandardArgs.cmake;C:\Program Files\CMake\share\cmake-3.12\Modules\FindPackageMessage.cmake;F:\G\workplace\obs-studio\libobs-opengl\CMakeLists.txt;F:\G\workplace\obs-studio\libobs-opengl\CMakeLists.txt;%(AdditionalInputs)</AdditionalInputs>
-      <Outputs Condition="'$(Configuration)|$(Platform)'=='Release|x64'">F:\G\workplace\obs-studio\build\libobs-opengl\CMakeFiles\generate.stamp</Outputs>
-      <LinkObjects Condition="'$(Configuration)|$(Platform)'=='Release|x64'">false</LinkObjects>
-    </CustomBuild>
-  </ItemGroup>
-  <ItemGroup>
-    <ClCompile Include="F:\G\workplace\obs-studio\libobs-opengl\gl-windows.c" />
-    <ClCompile Include="F:\G\workplace\obs-studio\libobs-opengl\gl-helpers.c" />
-    <ClCompile Include="F:\G\workplace\obs-studio\libobs-opengl\gl-indexbuffer.c" />
-    <ClCompile Include="F:\G\workplace\obs-studio\libobs-opengl\gl-shader.c" />
-    <ClCompile Include="F:\G\workplace\obs-studio\libobs-opengl\gl-shaderparser.c" />
-    <ClCompile Include="F:\G\workplace\obs-studio\libobs-opengl\gl-stagesurf.c" />
-    <ClCompile Include="F:\G\workplace\obs-studio\libobs-opengl\gl-subsystem.c" />
-    <ClCompile Include="F:\G\workplace\obs-studio\libobs-opengl\gl-texture2d.c" />
-    <ClCompile Include="F:\G\workplace\obs-studio\libobs-opengl\gl-texturecube.c" />
-    <ClCompile Include="F:\G\workplace\obs-studio\libobs-opengl\gl-vertexbuffer.c" />
-    <ClCompile Include="F:\G\workplace\obs-studio\libobs-opengl\gl-zstencil.c" />
-    <ClInclude Include="F:\G\workplace\obs-studio\libobs-opengl\gl-helpers.h" />
-    <ClInclude Include="F:\G\workplace\obs-studio\libobs-opengl\gl-shaderparser.h" />
-    <ClInclude Include="F:\G\workplace\obs-studio\libobs-opengl\gl-subsystem.h" />
-  </ItemGroup>
-  <ItemGroup>
-    <ProjectReference Include="F:\G\workplace\obs-studio\build\ZERO_CHECK.vcxproj">
-      <Project>{31E55BC9-E0DA-357D-BE36-742F4964C680}</Project>
-      <Name>ZERO_CHECK</Name>
-    </ProjectReference>
-    <ProjectReference Include="F:\G\workplace\obs-studio\build\deps\glad\glad.vcxproj">
-      <Project>{3AFE22CD-34B1-3814-8E3D-CD8893FB2AED}</Project>
-      <Name>glad</Name>
-    </ProjectReference>
-    <ProjectReference Include="F:\G\workplace\obs-studio\build\libobs\libobs.vcxproj">
-      <Project>{0AE9526A-10B0-3980-A7DB-6EE8599DC4E3}</Project>
-      <Name>libobs</Name>
-    </ProjectReference>
+    <ClCompile Include="gl-helpers.c" />
+    <ClCompile Include="gl-indexbuffer.c" />
+    <ClCompile Include="gl-shader.c" />
+    <ClCompile Include="gl-shaderparser.c" />
+    <ClCompile Include="gl-stagesurf.c" />
+    <ClCompile Include="gl-subsystem.c" />
+    <ClCompile Include="gl-texture2d.c" />
+    <ClCompile Include="gl-texturecube.c" />
+    <ClCompile Include="gl-vertexbuffer.c" />
+    <ClCompile Include="gl-windows.c" />
+    <ClCompile Include="gl-zstencil.c" />
+    <ClInclude Include="gl-helpers.h" />
+    <ClInclude Include="gl-shaderparser.h" />
+    <ClInclude Include="gl-subsystem.h" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">

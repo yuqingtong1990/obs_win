@@ -97,6 +97,7 @@
       <WarningLevel>Level3</WarningLevel>
       <PreprocessorDefinitions>WIN32;_WINDOWS;DEBUG=1;_DEBUG=1;UNICODE;_UNICODE;_CRT_SECURE_NO_WARNINGS;_CRT_NONSTDC_NO_WARNINGS;HAVE_OBSCONFIG_H;CMAKE_INTDIR="Debug";obs_ffmpeg_EXPORTS;%(PreprocessorDefinitions)</PreprocessorDefinitions>
       <ObjectFileName>$(IntDir)</ObjectFileName>
+      <DisableSpecificWarnings>4819</DisableSpecificWarnings>
     </ClCompile>
     <ResourceCompile>
       <PreprocessorDefinitions>WIN32;_DEBUG;_WINDOWS;DEBUG=1;_DEBUG=1;UNICODE;_UNICODE;_CRT_SECURE_NO_WARNINGS;_CRT_NONSTDC_NO_WARNINGS;HAVE_OBSCONFIG_H;CMAKE_INTDIR=\"Debug\";obs_ffmpeg_EXPORTS;%(PreprocessorDefinitions)</PreprocessorDefinitions>
@@ -113,42 +114,8 @@
     <PostBuildEvent>
       <Message>
       </Message>
-      <Command>setlocal
-"C:\Program Files\CMake\bin\cmake.exe" -E copy F:/G/workplace/obs-studio/build/plugins/obs-ffmpeg/Debug/obs-ffmpeg.dll F:/G/workplace/obs-studio/build/rundir/Debug/obs-plugins/64bit/obs-ffmpeg.dll
-if %errorlevel% neq 0 goto :cmEnd
-:cmEnd
-endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
-:cmErrorLevel
-exit /b %1
-:cmDone
-if %errorlevel% neq 0 goto :VCEnd
-setlocal
-"C:\Program Files\CMake\bin\cmake.exe" -DCONFIG=Debug -DFNAME=obs-ffmpeg.dll -DINPUT=F:/G/workplace/obs-studio/build/plugins/obs-ffmpeg/Debug -DOUTPUT=F:/G/workplace/obs-studio/build/plugins/obs-ffmpeg/pdbs -P F:/G/workplace/obs-studio/cmake/copy_on_debug_helper.cmake
-if %errorlevel% neq 0 goto :cmEnd
-:cmEnd
-endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
-:cmErrorLevel
-exit /b %1
-:cmDone
-if %errorlevel% neq 0 goto :VCEnd
-setlocal
-"C:\Program Files\CMake\bin\cmake.exe" -DCONFIG=Debug -DFNAME=obs-ffmpeg.dll -DINPUT=F:/G/workplace/obs-studio/build/plugins/obs-ffmpeg/Debug -DOUTPUT=F:/G/workplace/obs-studio/build/rundir/Debug/obs-plugins/64bit -P F:/G/workplace/obs-studio/cmake/copy_on_debug_helper.cmake
-if %errorlevel% neq 0 goto :cmEnd
-:cmEnd
-endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
-:cmErrorLevel
-exit /b %1
-:cmDone
-if %errorlevel% neq 0 goto :VCEnd
-setlocal
-"C:\Program Files\CMake\bin\cmake.exe" -E copy_directory F:/G/workplace/obs-studio/plugins/obs-ffmpeg/data F:/G/workplace/obs-studio/build/rundir/Debug/data/obs-plugins/obs-ffmpeg
-if %errorlevel% neq 0 goto :cmEnd
-:cmEnd
-endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
-:cmErrorLevel
-exit /b %1
-:cmDone
-if %errorlevel% neq 0 goto :VCEnd</Command>
+      <Command>
+      </Command>
     </PostBuildEvent>
     <Link>
       <AdditionalDependencies>..\..\libobs\$(Configuration)\obs.lib;..\..\deps\media-playback\Debug\media-playback.lib;..\..\deps\w32-pthreads\Debug\w32-pthreads.lib;D:\Qt\dependencies2015\win64\include\..\bin\avcodec.lib;D:\Qt\dependencies2015\win64\include\..\bin\avfilter.lib;D:\Qt\dependencies2015\win64\include\..\bin\avdevice.lib;D:\Qt\dependencies2015\win64\include\..\bin\avutil.lib;D:\Qt\dependencies2015\win64\include\..\bin\swscale.lib;D:\Qt\dependencies2015\win64\include\..\bin\avformat.lib;D:\Qt\dependencies2015\win64\include\..\bin\swresample.lib;kernel32.lib;user32.lib;gdi32.lib;winspool.lib;shell32.lib;ole32.lib;oleaut32.lib;uuid.lib;comdlg32.lib;advapi32.lib</AdditionalDependencies>
@@ -180,6 +147,7 @@ if %errorlevel% neq 0 goto :VCEnd</Command>
       <ObjectFileName>$(IntDir)</ObjectFileName>
       <DebugInformationFormat>
       </DebugInformationFormat>
+      <DisableSpecificWarnings>4819</DisableSpecificWarnings>
     </ClCompile>
     <ResourceCompile>
       <PreprocessorDefinitions>WIN32;_WINDOWS;NDEBUG;UNICODE;_UNICODE;_CRT_SECURE_NO_WARNINGS;_CRT_NONSTDC_NO_WARNINGS;HAVE_OBSCONFIG_H;CMAKE_INTDIR=\"Release\";obs_ffmpeg_EXPORTS;%(PreprocessorDefinitions)</PreprocessorDefinitions>
@@ -196,42 +164,8 @@ if %errorlevel% neq 0 goto :VCEnd</Command>
     <PostBuildEvent>
       <Message>
       </Message>
-      <Command>setlocal
-"C:\Program Files\CMake\bin\cmake.exe" -E copy F:/G/workplace/obs-studio/build/plugins/obs-ffmpeg/Release/obs-ffmpeg.dll F:/G/workplace/obs-studio/build/rundir/Release/obs-plugins/64bit/obs-ffmpeg.dll
-if %errorlevel% neq 0 goto :cmEnd
-:cmEnd
-endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
-:cmErrorLevel
-exit /b %1
-:cmDone
-if %errorlevel% neq 0 goto :VCEnd
-setlocal
-"C:\Program Files\CMake\bin\cmake.exe" -DCONFIG=Release -DFNAME=obs-ffmpeg.dll -DINPUT=F:/G/workplace/obs-studio/build/plugins/obs-ffmpeg/Release -DOUTPUT=F:/G/workplace/obs-studio/build/plugins/obs-ffmpeg/pdbs -P F:/G/workplace/obs-studio/cmake/copy_on_debug_helper.cmake
-if %errorlevel% neq 0 goto :cmEnd
-:cmEnd
-endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
-:cmErrorLevel
-exit /b %1
-:cmDone
-if %errorlevel% neq 0 goto :VCEnd
-setlocal
-"C:\Program Files\CMake\bin\cmake.exe" -DCONFIG=Release -DFNAME=obs-ffmpeg.dll -DINPUT=F:/G/workplace/obs-studio/build/plugins/obs-ffmpeg/Release -DOUTPUT=F:/G/workplace/obs-studio/build/rundir/Release/obs-plugins/64bit -P F:/G/workplace/obs-studio/cmake/copy_on_debug_helper.cmake
-if %errorlevel% neq 0 goto :cmEnd
-:cmEnd
-endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
-:cmErrorLevel
-exit /b %1
-:cmDone
-if %errorlevel% neq 0 goto :VCEnd
-setlocal
-"C:\Program Files\CMake\bin\cmake.exe" -E copy_directory F:/G/workplace/obs-studio/plugins/obs-ffmpeg/data F:/G/workplace/obs-studio/build/rundir/Release/data/obs-plugins/obs-ffmpeg
-if %errorlevel% neq 0 goto :cmEnd
-:cmEnd
-endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
-:cmErrorLevel
-exit /b %1
-:cmDone
-if %errorlevel% neq 0 goto :VCEnd</Command>
+      <Command>
+      </Command>
     </PostBuildEvent>
     <Link>
       <AdditionalDependencies>..\..\libobs\$(Configuration)\obs.lib;..\..\deps\media-playback\Release\media-playback.lib;..\..\deps\w32-pthreads\Release\w32-pthreads.lib;D:\Qt\dependencies2015\win64\include\..\bin\avcodec.lib;D:\Qt\dependencies2015\win64\include\..\bin\avfilter.lib;D:\Qt\dependencies2015\win64\include\..\bin\avdevice.lib;D:\Qt\dependencies2015\win64\include\..\bin\avutil.lib;D:\Qt\dependencies2015\win64\include\..\bin\swscale.lib;D:\Qt\dependencies2015\win64\include\..\bin\avformat.lib;D:\Qt\dependencies2015\win64\include\..\bin\swresample.lib;kernel32.lib;user32.lib;gdi32.lib;winspool.lib;shell32.lib;ole32.lib;oleaut32.lib;uuid.lib;comdlg32.lib;advapi32.lib</AdditionalDependencies>
@@ -263,6 +197,7 @@ if %errorlevel% neq 0 goto :VCEnd</Command>
       <ObjectFileName>$(IntDir)</ObjectFileName>
       <DebugInformationFormat>
       </DebugInformationFormat>
+      <DisableSpecificWarnings>4819</DisableSpecificWarnings>
     </ClCompile>
     <ResourceCompile>
       <PreprocessorDefinitions>WIN32;_WINDOWS;NDEBUG;UNICODE;_UNICODE;_CRT_SECURE_NO_WARNINGS;_CRT_NONSTDC_NO_WARNINGS;HAVE_OBSCONFIG_H;CMAKE_INTDIR=\"MinSizeRel\";obs_ffmpeg_EXPORTS;%(PreprocessorDefinitions)</PreprocessorDefinitions>
@@ -279,42 +214,8 @@ if %errorlevel% neq 0 goto :VCEnd</Command>
     <PostBuildEvent>
       <Message>
       </Message>
-      <Command>setlocal
-"C:\Program Files\CMake\bin\cmake.exe" -E copy F:/G/workplace/obs-studio/build/plugins/obs-ffmpeg/MinSizeRel/obs-ffmpeg.dll F:/G/workplace/obs-studio/build/rundir/MinSizeRel/obs-plugins/64bit/obs-ffmpeg.dll
-if %errorlevel% neq 0 goto :cmEnd
-:cmEnd
-endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
-:cmErrorLevel
-exit /b %1
-:cmDone
-if %errorlevel% neq 0 goto :VCEnd
-setlocal
-"C:\Program Files\CMake\bin\cmake.exe" -DCONFIG=MinSizeRel -DFNAME=obs-ffmpeg.dll -DINPUT=F:/G/workplace/obs-studio/build/plugins/obs-ffmpeg/MinSizeRel -DOUTPUT=F:/G/workplace/obs-studio/build/plugins/obs-ffmpeg/pdbs -P F:/G/workplace/obs-studio/cmake/copy_on_debug_helper.cmake
-if %errorlevel% neq 0 goto :cmEnd
-:cmEnd
-endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
-:cmErrorLevel
-exit /b %1
-:cmDone
-if %errorlevel% neq 0 goto :VCEnd
-setlocal
-"C:\Program Files\CMake\bin\cmake.exe" -DCONFIG=MinSizeRel -DFNAME=obs-ffmpeg.dll -DINPUT=F:/G/workplace/obs-studio/build/plugins/obs-ffmpeg/MinSizeRel -DOUTPUT=F:/G/workplace/obs-studio/build/rundir/MinSizeRel/obs-plugins/64bit -P F:/G/workplace/obs-studio/cmake/copy_on_debug_helper.cmake
-if %errorlevel% neq 0 goto :cmEnd
-:cmEnd
-endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
-:cmErrorLevel
-exit /b %1
-:cmDone
-if %errorlevel% neq 0 goto :VCEnd
-setlocal
-"C:\Program Files\CMake\bin\cmake.exe" -E copy_directory F:/G/workplace/obs-studio/plugins/obs-ffmpeg/data F:/G/workplace/obs-studio/build/rundir/MinSizeRel/data/obs-plugins/obs-ffmpeg
-if %errorlevel% neq 0 goto :cmEnd
-:cmEnd
-endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
-:cmErrorLevel
-exit /b %1
-:cmDone
-if %errorlevel% neq 0 goto :VCEnd</Command>
+      <Command>
+      </Command>
     </PostBuildEvent>
     <Link>
       <AdditionalDependencies>..\..\libobs\MinSizeRel\obs.lib;..\..\deps\media-playback\MinSizeRel\media-playback.lib;..\..\deps\w32-pthreads\MinSizeRel\w32-pthreads.lib;D:\Qt\dependencies2015\win64\include\..\bin\avcodec.lib;D:\Qt\dependencies2015\win64\include\..\bin\avfilter.lib;D:\Qt\dependencies2015\win64\include\..\bin\avdevice.lib;D:\Qt\dependencies2015\win64\include\..\bin\avutil.lib;D:\Qt\dependencies2015\win64\include\..\bin\swscale.lib;D:\Qt\dependencies2015\win64\include\..\bin\avformat.lib;D:\Qt\dependencies2015\win64\include\..\bin\swresample.lib;kernel32.lib;user32.lib;gdi32.lib;winspool.lib;shell32.lib;ole32.lib;oleaut32.lib;uuid.lib;comdlg32.lib;advapi32.lib</AdditionalDependencies>
@@ -345,6 +246,7 @@ if %errorlevel% neq 0 goto :VCEnd</Command>
       <WarningLevel>Level3</WarningLevel>
       <PreprocessorDefinitions>WIN32;_WINDOWS;NDEBUG;UNICODE;_UNICODE;_CRT_SECURE_NO_WARNINGS;_CRT_NONSTDC_NO_WARNINGS;HAVE_OBSCONFIG_H;CMAKE_INTDIR="RelWithDebInfo";obs_ffmpeg_EXPORTS;%(PreprocessorDefinitions)</PreprocessorDefinitions>
       <ObjectFileName>$(IntDir)</ObjectFileName>
+      <DisableSpecificWarnings>4819</DisableSpecificWarnings>
     </ClCompile>
     <ResourceCompile>
       <PreprocessorDefinitions>WIN32;_WINDOWS;NDEBUG;UNICODE;_UNICODE;_CRT_SECURE_NO_WARNINGS;_CRT_NONSTDC_NO_WARNINGS;HAVE_OBSCONFIG_H;CMAKE_INTDIR=\"RelWithDebInfo\";obs_ffmpeg_EXPORTS;%(PreprocessorDefinitions)</PreprocessorDefinitions>
@@ -361,42 +263,8 @@ if %errorlevel% neq 0 goto :VCEnd</Command>
     <PostBuildEvent>
       <Message>
       </Message>
-      <Command>setlocal
-"C:\Program Files\CMake\bin\cmake.exe" -E copy F:/G/workplace/obs-studio/build/plugins/obs-ffmpeg/RelWithDebInfo/obs-ffmpeg.dll F:/G/workplace/obs-studio/build/rundir/RelWithDebInfo/obs-plugins/64bit/obs-ffmpeg.dll
-if %errorlevel% neq 0 goto :cmEnd
-:cmEnd
-endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
-:cmErrorLevel
-exit /b %1
-:cmDone
-if %errorlevel% neq 0 goto :VCEnd
-setlocal
-"C:\Program Files\CMake\bin\cmake.exe" -DCONFIG=RelWithDebInfo -DFNAME=obs-ffmpeg.dll -DINPUT=F:/G/workplace/obs-studio/build/plugins/obs-ffmpeg/RelWithDebInfo -DOUTPUT=F:/G/workplace/obs-studio/build/plugins/obs-ffmpeg/pdbs -P F:/G/workplace/obs-studio/cmake/copy_on_debug_helper.cmake
-if %errorlevel% neq 0 goto :cmEnd
-:cmEnd
-endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
-:cmErrorLevel
-exit /b %1
-:cmDone
-if %errorlevel% neq 0 goto :VCEnd
-setlocal
-"C:\Program Files\CMake\bin\cmake.exe" -DCONFIG=RelWithDebInfo -DFNAME=obs-ffmpeg.dll -DINPUT=F:/G/workplace/obs-studio/build/plugins/obs-ffmpeg/RelWithDebInfo -DOUTPUT=F:/G/workplace/obs-studio/build/rundir/RelWithDebInfo/obs-plugins/64bit -P F:/G/workplace/obs-studio/cmake/copy_on_debug_helper.cmake
-if %errorlevel% neq 0 goto :cmEnd
-:cmEnd
-endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
-:cmErrorLevel
-exit /b %1
-:cmDone
-if %errorlevel% neq 0 goto :VCEnd
-setlocal
-"C:\Program Files\CMake\bin\cmake.exe" -E copy_directory F:/G/workplace/obs-studio/plugins/obs-ffmpeg/data F:/G/workplace/obs-studio/build/rundir/RelWithDebInfo/data/obs-plugins/obs-ffmpeg
-if %errorlevel% neq 0 goto :cmEnd
-:cmEnd
-endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
-:cmErrorLevel
-exit /b %1
-:cmDone
-if %errorlevel% neq 0 goto :VCEnd</Command>
+      <Command>
+      </Command>
     </PostBuildEvent>
     <Link>
       <AdditionalDependencies>..\..\libobs\RelWithDebInfo\obs.lib;..\..\deps\media-playback\RelWithDebInfo\media-playback.lib;..\..\deps\w32-pthreads\RelWithDebInfo\w32-pthreads.lib;D:\Qt\dependencies2015\win64\include\..\bin\avcodec.lib;D:\Qt\dependencies2015\win64\include\..\bin\avfilter.lib;D:\Qt\dependencies2015\win64\include\..\bin\avdevice.lib;D:\Qt\dependencies2015\win64\include\..\bin\avutil.lib;D:\Qt\dependencies2015\win64\include\..\bin\swscale.lib;D:\Qt\dependencies2015\win64\include\..\bin\avformat.lib;D:\Qt\dependencies2015\win64\include\..\bin\swresample.lib;kernel32.lib;user32.lib;gdi32.lib;winspool.lib;shell32.lib;ole32.lib;oleaut32.lib;uuid.lib;comdlg32.lib;advapi32.lib</AdditionalDependencies>
@@ -422,24 +290,6 @@ if %errorlevel% neq 0 goto :VCEnd</Command>
     <ClInclude Include="closest-pixel-format.h" />
     <ClInclude Include="obs-ffmpeg-compat.h" />
     <ClInclude Include="obs-ffmpeg-formats.h" />
-  </ItemGroup>
-  <ItemGroup>
-    <ProjectReference Include="F:\G\workplace\obs-studio\build\ZERO_CHECK.vcxproj">
-      <Project>{31E55BC9-E0DA-357D-BE36-742F4964C680}</Project>
-      <Name>ZERO_CHECK</Name>
-    </ProjectReference>
-    <ProjectReference Include="F:\G\workplace\obs-studio\build\libobs\libobs.vcxproj">
-      <Project>{0AE9526A-10B0-3980-A7DB-6EE8599DC4E3}</Project>
-      <Name>libobs</Name>
-    </ProjectReference>
-    <ProjectReference Include="F:\G\workplace\obs-studio\build\deps\media-playback\media-playback.vcxproj">
-      <Project>{36A88080-8674-32A4-AB31-6B2375B9D6E9}</Project>
-      <Name>media-playback</Name>
-    </ProjectReference>
-    <ProjectReference Include="F:\G\workplace\obs-studio\build\deps\w32-pthreads\w32-pthreads.vcxproj">
-      <Project>{88F21624-48A7-3014-934F-495DF4DAD2A2}</Project>
-      <Name>w32-pthreads</Name>
-    </ProjectReference>
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">

@@ -5,16 +5,31 @@ MinimumVisualStudioVersion = 10.0.40219.1
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "(libobs)", "(libobs)", "{B3893F30-D58C-4FAD-9C2B-88272CAE715E}"
 EndProject
 Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "libobs", "libobs\libobs.vcxproj", "{0AE9526A-10B0-3980-A7DB-6EE8599DC4E3}"
+	ProjectSection(ProjectDependencies) = postProject
+		{89477A01-A152-3252-80D5-D7A64FFB4495} = {89477A01-A152-3252-80D5-D7A64FFB4495}
+		{88F21624-48A7-3014-934F-495DF4DAD2A2} = {88F21624-48A7-3014-934F-495DF4DAD2A2}
+	EndProjectSection
 EndProject
 Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "libobs-d3d11", "libobs-d3d11\libobs-d3d11.vcxproj", "{0A1FAF35-7A33-3685-BD19-C77DA09AABF4}"
+	ProjectSection(ProjectDependencies) = postProject
+		{0AE9526A-10B0-3980-A7DB-6EE8599DC4E3} = {0AE9526A-10B0-3980-A7DB-6EE8599DC4E3}
+	EndProjectSection
 EndProject
 Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "libobs-opengl", "libobs-opengl\libobs-opengl.vcxproj", "{AA40730F-1179-38F6-9BBF-B3C9701DAD0D}"
+	ProjectSection(ProjectDependencies) = postProject
+		{0AE9526A-10B0-3980-A7DB-6EE8599DC4E3} = {0AE9526A-10B0-3980-A7DB-6EE8599DC4E3}
+		{3AFE22CD-34B1-3814-8E3D-CD8893FB2AED} = {3AFE22CD-34B1-3814-8E3D-CD8893FB2AED}
+	EndProjectSection
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "(third_party)", "(third_party)", "{89478747-6686-42FE-BA18-207D80A4D2AA}"
 EndProject
 Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "blake2", "deps\blake2\blake2.vcxproj", "{0391086E-686C-3D9E-B1FE-93CD6E4B1929}"
 EndProject
 Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "file-updater", "deps\file-updater\file-updater.vcxproj", "{3F2867F7-4263-39F7-97E6-99108A8566A2}"
+	ProjectSection(ProjectDependencies) = postProject
+		{88F21624-48A7-3014-934F-495DF4DAD2A2} = {88F21624-48A7-3014-934F-495DF4DAD2A2}
+		{0AE9526A-10B0-3980-A7DB-6EE8599DC4E3} = {0AE9526A-10B0-3980-A7DB-6EE8599DC4E3}
+	EndProjectSection
 EndProject
 Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "glad", "deps\glad\glad.vcxproj", "{3AFE22CD-34B1-3814-8E3D-CD8893FB2AED}"
 EndProject
@@ -33,12 +48,27 @@ EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "wincaptrue", "wincaptrue", "{E48E1692-4402-4352-9061-E644D71F033A}"
 EndProject
 Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "coreaudio-encoder", "plugins\coreaudio-encoder\coreaudio-encoder.vcxproj", "{DD3251C0-319F-3F73-94BE-86B56E8DC84A}"
+	ProjectSection(ProjectDependencies) = postProject
+		{0AE9526A-10B0-3980-A7DB-6EE8599DC4E3} = {0AE9526A-10B0-3980-A7DB-6EE8599DC4E3}
+	EndProjectSection
 EndProject
 Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "win-decklink", "plugins\decklink\win-decklink.vcxproj", "{F16CE1DE-8928-3053-868B-BBBBEFAC08FD}"
+	ProjectSection(ProjectDependencies) = postProject
+		{0AE9526A-10B0-3980-A7DB-6EE8599DC4E3} = {0AE9526A-10B0-3980-A7DB-6EE8599DC4E3}
+	EndProjectSection
 EndProject
 Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "image-source", "plugins\image-source\image-source.vcxproj", "{05CEADF8-FA7F-3FA8-AAC6-ADF8AFEC9A88}"
+	ProjectSection(ProjectDependencies) = postProject
+		{88F21624-48A7-3014-934F-495DF4DAD2A2} = {88F21624-48A7-3014-934F-495DF4DAD2A2}
+		{0AE9526A-10B0-3980-A7DB-6EE8599DC4E3} = {0AE9526A-10B0-3980-A7DB-6EE8599DC4E3}
+	EndProjectSection
 EndProject
 Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "obs-ffmpeg", "plugins\obs-ffmpeg\obs-ffmpeg.vcxproj", "{1A7021A2-79A7-3EB0-A239-25C760C687F3}"
+	ProjectSection(ProjectDependencies) = postProject
+		{88F21624-48A7-3014-934F-495DF4DAD2A2} = {88F21624-48A7-3014-934F-495DF4DAD2A2}
+		{0AE9526A-10B0-3980-A7DB-6EE8599DC4E3} = {0AE9526A-10B0-3980-A7DB-6EE8599DC4E3}
+		{36A88080-8674-32A4-AB31-6B2375B9D6E9} = {36A88080-8674-32A4-AB31-6B2375B9D6E9}
+	EndProjectSection
 EndProject
 Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "media-playback", "deps\media-playback\media-playback.vcxproj", "{36A88080-8674-32A4-AB31-6B2375B9D6E9}"
 EndProject
