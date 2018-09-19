@@ -1,81 +1,30 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <Project ToolsVersion="14.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
   <ItemGroup>
-    <ClCompile Include="F:\G\workplace\obs-studio\plugins\win-capture\dc-capture.c">
-      <Filter>Source Files</Filter>
-    </ClCompile>
-    <ClCompile Include="F:\G\workplace\obs-studio\plugins\win-capture\obfuscate.c">
-      <Filter>Source Files</Filter>
-    </ClCompile>
-    <ClCompile Include="F:\G\workplace\obs-studio\plugins\win-capture\app-helpers.c">
-      <Filter>Source Files</Filter>
-    </ClCompile>
-    <ClCompile Include="F:\G\workplace\obs-studio\plugins\win-capture\inject-library.c">
-      <Filter>Source Files</Filter>
-    </ClCompile>
-    <ClCompile Include="F:\G\workplace\obs-studio\plugins\win-capture\cursor-capture.c">
-      <Filter>Source Files</Filter>
-    </ClCompile>
-    <ClCompile Include="F:\G\workplace\obs-studio\plugins\win-capture\game-capture.c">
-      <Filter>Source Files</Filter>
-    </ClCompile>
-    <ClCompile Include="F:\G\workplace\obs-studio\plugins\win-capture\window-helpers.c">
-      <Filter>Source Files</Filter>
-    </ClCompile>
-    <ClCompile Include="F:\G\workplace\obs-studio\plugins\win-capture\monitor-capture.c">
-      <Filter>Source Files</Filter>
-    </ClCompile>
-    <ClCompile Include="F:\G\workplace\obs-studio\plugins\win-capture\window-capture.c">
-      <Filter>Source Files</Filter>
-    </ClCompile>
-    <ClCompile Include="F:\G\workplace\obs-studio\plugins\win-capture\load-graphics-offsets.c">
-      <Filter>Source Files</Filter>
-    </ClCompile>
-    <ClCompile Include="F:\G\workplace\obs-studio\plugins\win-capture\duplicator-monitor-capture.c">
-      <Filter>Source Files</Filter>
-    </ClCompile>
-    <ClCompile Include="F:\G\workplace\obs-studio\plugins\win-capture\plugin-main.c">
-      <Filter>Source Files</Filter>
-    </ClCompile>
+    <ClCompile Include="app-helpers.c" />
+    <ClCompile Include="cursor-capture.c" />
+    <ClCompile Include="dc-capture.c" />
+    <ClCompile Include="duplicator-monitor-capture.c" />
+    <ClCompile Include="funchook.c" />
+    <ClCompile Include="game-capture.c" />
+    <ClCompile Include="inject-library.c" />
+    <ClCompile Include="load-graphics-offsets.c" />
+    <ClCompile Include="monitor-capture.c" />
+    <ClCompile Include="obfuscate.c" />
+    <ClCompile Include="plugin-main.c" />
+    <ClCompile Include="window-capture.c" />
+    <ClCompile Include="window-helpers.c" />
   </ItemGroup>
   <ItemGroup>
-    <ClInclude Include="F:\G\workplace\obs-studio\plugins\win-capture\nt-stuff.h">
-      <Filter>Header Files</Filter>
-    </ClInclude>
-    <ClInclude Include="F:\G\workplace\obs-studio\plugins\win-capture\obfuscate.h">
-      <Filter>Header Files</Filter>
-    </ClInclude>
-    <ClInclude Include="F:\G\workplace\obs-studio\plugins\win-capture\app-helpers.h">
-      <Filter>Header Files</Filter>
-    </ClInclude>
-    <ClInclude Include="F:\G\workplace\obs-studio\plugins\win-capture\hook-helpers.h">
-      <Filter>Header Files</Filter>
-    </ClInclude>
-    <ClInclude Include="F:\G\workplace\obs-studio\plugins\win-capture\inject-library.h">
-      <Filter>Header Files</Filter>
-    </ClInclude>
-    <ClInclude Include="F:\G\workplace\obs-studio\plugins\win-capture\cursor-capture.h">
-      <Filter>Header Files</Filter>
-    </ClInclude>
-    <ClInclude Include="F:\G\workplace\obs-studio\plugins\win-capture\graphics-hook-info.h">
-      <Filter>Header Files</Filter>
-    </ClInclude>
-    <ClInclude Include="F:\G\workplace\obs-studio\plugins\win-capture\window-helpers.h">
-      <Filter>Header Files</Filter>
-    </ClInclude>
-    <ClInclude Include="F:\G\workplace\obs-studio\plugins\win-capture\dc-capture.h">
-      <Filter>Header Files</Filter>
-    </ClInclude>
-  </ItemGroup>
-  <ItemGroup>
-    <CustomBuild Include="F:\G\workplace\obs-studio\plugins\win-capture\CMakeLists.txt" />
-  </ItemGroup>
-  <ItemGroup>
-    <Filter Include="Header Files">
-      <UniqueIdentifier>{9116CAD4-A76C-3B23-BC10-34AD2B961A49}</UniqueIdentifier>
-    </Filter>
-    <Filter Include="Source Files">
-      <UniqueIdentifier>{EC127E52-875E-38AC-8EF9-737C807156F0}</UniqueIdentifier>
-    </Filter>
+    <ClInclude Include="app-helpers.h" />
+    <ClInclude Include="cursor-capture.h" />
+    <ClInclude Include="dc-capture.h" />
+    <ClInclude Include="funchook.h" />
+    <ClInclude Include="graphics-hook-info.h" />
+    <ClInclude Include="hook-helpers.h" />
+    <ClInclude Include="inject-library.h" />
+    <ClInclude Include="nt-stuff.h" />
+    <ClInclude Include="obfuscate.h" />
+    <ClInclude Include="window-helpers.h" />
   </ItemGroup>
 </Project>
