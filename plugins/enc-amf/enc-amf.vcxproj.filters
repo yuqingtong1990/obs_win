@@ -1,0 +1,113 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="14.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <ClCompile Include="F:\G\workplace\obs-studio\plugins\enc-amf\source\amf.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="F:\G\workplace\obs-studio\plugins\enc-amf\source\amf-capabilities.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="F:\G\workplace\obs-studio\plugins\enc-amf\source\amf-encoder.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="F:\G\workplace\obs-studio\plugins\enc-amf\source\amf-encoder-h264.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="F:\G\workplace\obs-studio\plugins\enc-amf\source\enc-h264.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="F:\G\workplace\obs-studio\plugins\enc-amf\source\amf-encoder-h265.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="F:\G\workplace\obs-studio\plugins\enc-amf\source\enc-h265.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="F:\G\workplace\obs-studio\plugins\enc-amf\source\api-base.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="F:\G\workplace\obs-studio\plugins\enc-amf\source\api-host.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="F:\G\workplace\obs-studio\plugins\enc-amf\source\api-opengl.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="F:\G\workplace\obs-studio\plugins\enc-amf\source\utility.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="F:\G\workplace\obs-studio\plugins\enc-amf\source\plugin.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="F:\G\workplace\obs-studio\plugins\enc-amf\source\api-d3d9.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="F:\G\workplace\obs-studio\plugins\enc-amf\source\api-d3d11.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="F:\G\workplace\obs-studio\plugins\enc-amf\include\amf.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="F:\G\workplace\obs-studio\plugins\enc-amf\include\amf-capabilities.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="F:\G\workplace\obs-studio\plugins\enc-amf\include\amf-encoder.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="F:\G\workplace\obs-studio\plugins\enc-amf\include\amf-encoder-h264.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="F:\G\workplace\obs-studio\plugins\enc-amf\include\enc-h264.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="F:\G\workplace\obs-studio\plugins\enc-amf\include\amf-encoder-h265.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="F:\G\workplace\obs-studio\plugins\enc-amf\include\enc-h265.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="F:\G\workplace\obs-studio\plugins\enc-amf\include\api-base.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="F:\G\workplace\obs-studio\plugins\enc-amf\include\api-host.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="F:\G\workplace\obs-studio\plugins\enc-amf\include\api-opengl.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="F:\G\workplace\obs-studio\plugins\enc-amf\include\utility.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="F:\G\workplace\obs-studio\plugins\enc-amf\include\plugin.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="F:\G\workplace\obs-studio\plugins\enc-amf\include\strings.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="F:\G\workplace\obs-studio\build\plugins\enc-amf\Include\Version.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="F:\G\workplace\obs-studio\plugins\enc-amf\include\api-d3d9.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="F:\G\workplace\obs-studio\plugins\enc-amf\include\api-d3d11.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+  </ItemGroup>
+  <ItemGroup>
+    <CustomBuild Include="F:\G\workplace\obs-studio\plugins\enc-amf\CMakeLists.txt" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="F:\G\workplace\obs-studio\plugins\enc-amf\resources\locale\en-US.ini" />
+    <None Include="F:\G\workplace\obs-studio\plugins\enc-amf\LICENSE" />
+    <None Include="F:\G\workplace\obs-studio\plugins\enc-amf\AUTHORS" />
+  </ItemGroup>
+  <ItemGroup>
+    <Filter Include="Header Files">
+      <UniqueIdentifier>{9116CAD4-A76C-3B23-BC10-34AD2B961A49}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files">
+      <UniqueIdentifier>{EC127E52-875E-38AC-8EF9-737C807156F0}</UniqueIdentifier>
+    </Filter>
+  </ItemGroup>
+</Project>

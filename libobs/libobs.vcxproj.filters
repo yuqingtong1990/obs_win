@@ -1,0 +1,509 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="14.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <ClCompile Include="audio-monitoring\wasapi-enum-devices.c">
+      <Filter>audio-monitoring</Filter>
+    </ClCompile>
+    <ClCompile Include="audio-monitoring\wasapi-output.c">
+      <Filter>audio-monitoring</Filter>
+    </ClCompile>
+    <ClCompile Include="callback\calldata.c">
+      <Filter>callback</Filter>
+    </ClCompile>
+    <ClCompile Include="callback\decl.c">
+      <Filter>callback</Filter>
+    </ClCompile>
+    <ClCompile Include="callback\proc.c">
+      <Filter>callback</Filter>
+    </ClCompile>
+    <ClCompile Include="callback\signal.c">
+      <Filter>callback</Filter>
+    </ClCompile>
+    <ClCompile Include="graphics\axisang.c">
+      <Filter>graphics</Filter>
+    </ClCompile>
+    <ClCompile Include="graphics\bounds.c">
+      <Filter>graphics</Filter>
+    </ClCompile>
+    <ClCompile Include="graphics\effect.c">
+      <Filter>graphics</Filter>
+    </ClCompile>
+    <ClCompile Include="graphics\effect-parser.c">
+      <Filter>graphics</Filter>
+    </ClCompile>
+    <ClCompile Include="graphics\graphics.c">
+      <Filter>graphics</Filter>
+    </ClCompile>
+    <ClCompile Include="graphics\graphics-ffmpeg.c">
+      <Filter>graphics</Filter>
+    </ClCompile>
+    <ClCompile Include="graphics\graphics-imports.c">
+      <Filter>graphics</Filter>
+    </ClCompile>
+    <ClCompile Include="graphics\image-file.c">
+      <Filter>graphics</Filter>
+    </ClCompile>
+    <ClCompile Include="graphics\math-extra.c">
+      <Filter>graphics</Filter>
+    </ClCompile>
+    <ClCompile Include="graphics\matrix3.c">
+      <Filter>graphics</Filter>
+    </ClCompile>
+    <ClCompile Include="graphics\matrix4.c">
+      <Filter>graphics</Filter>
+    </ClCompile>
+    <ClCompile Include="graphics\plane.c">
+      <Filter>graphics</Filter>
+    </ClCompile>
+    <ClCompile Include="graphics\quat.c">
+      <Filter>graphics</Filter>
+    </ClCompile>
+    <ClCompile Include="graphics\shader-parser.c">
+      <Filter>graphics</Filter>
+    </ClCompile>
+    <ClCompile Include="graphics\texture-render.c">
+      <Filter>graphics</Filter>
+    </ClCompile>
+    <ClCompile Include="graphics\vec2.c">
+      <Filter>graphics</Filter>
+    </ClCompile>
+    <ClCompile Include="graphics\vec3.c">
+      <Filter>graphics</Filter>
+    </ClCompile>
+    <ClCompile Include="graphics\vec4.c">
+      <Filter>graphics</Filter>
+    </ClCompile>
+    <ClCompile Include="graphics\libnsgif\libnsgif.c">
+      <Filter>graphics\libnsgif</Filter>
+    </ClCompile>
+    <ClCompile Include="media-io\audio-io.c">
+      <Filter>media-io</Filter>
+    </ClCompile>
+    <ClCompile Include="media-io\audio-resampler-ffmpeg.c">
+      <Filter>media-io</Filter>
+    </ClCompile>
+    <ClCompile Include="media-io\format-conversion.c">
+      <Filter>media-io</Filter>
+    </ClCompile>
+    <ClCompile Include="media-io\media-remux.c">
+      <Filter>media-io</Filter>
+    </ClCompile>
+    <ClCompile Include="media-io\video-fourcc.c">
+      <Filter>media-io</Filter>
+    </ClCompile>
+    <ClCompile Include="media-io\video-frame.c">
+      <Filter>media-io</Filter>
+    </ClCompile>
+    <ClCompile Include="media-io\video-io.c">
+      <Filter>media-io</Filter>
+    </ClCompile>
+    <ClCompile Include="media-io\video-matrices.c">
+      <Filter>media-io</Filter>
+    </ClCompile>
+    <ClCompile Include="media-io\video-scaler-ffmpeg.c">
+      <Filter>media-io</Filter>
+    </ClCompile>
+    <ClCompile Include="util\array-serializer.c">
+      <Filter>util</Filter>
+    </ClCompile>
+    <ClCompile Include="util\base.c">
+      <Filter>util</Filter>
+    </ClCompile>
+    <ClCompile Include="util\bmem.c">
+      <Filter>util</Filter>
+    </ClCompile>
+    <ClCompile Include="util\cf-lexer.c">
+      <Filter>util</Filter>
+    </ClCompile>
+    <ClCompile Include="util\cf-parser.c">
+      <Filter>util</Filter>
+    </ClCompile>
+    <ClCompile Include="util\config-file.c">
+      <Filter>util</Filter>
+    </ClCompile>
+    <ClCompile Include="util\crc32.c">
+      <Filter>util</Filter>
+    </ClCompile>
+    <ClCompile Include="util\dstr.c">
+      <Filter>util</Filter>
+    </ClCompile>
+    <ClCompile Include="util\file-serializer.c">
+      <Filter>util</Filter>
+    </ClCompile>
+    <ClCompile Include="util\lexer.c">
+      <Filter>util</Filter>
+    </ClCompile>
+    <ClCompile Include="util\pipe-windows.c">
+      <Filter>util</Filter>
+    </ClCompile>
+    <ClCompile Include="util\platform.c">
+      <Filter>util</Filter>
+    </ClCompile>
+    <ClCompile Include="util\profiler.c">
+      <Filter>util</Filter>
+    </ClCompile>
+    <ClCompile Include="util\text-lookup.c">
+      <Filter>util</Filter>
+    </ClCompile>
+    <ClCompile Include="util\utf8.c">
+      <Filter>util</Filter>
+    </ClCompile>
+    <ClCompile Include="obs.c">
+      <Filter>libobs</Filter>
+    </ClCompile>
+    <ClCompile Include="obs-audio.c">
+      <Filter>libobs</Filter>
+    </ClCompile>
+    <ClCompile Include="obs-audio-controls.c">
+      <Filter>libobs</Filter>
+    </ClCompile>
+    <ClCompile Include="obs-avc.c">
+      <Filter>libobs</Filter>
+    </ClCompile>
+    <ClCompile Include="obs-data.c">
+      <Filter>libobs</Filter>
+    </ClCompile>
+    <ClCompile Include="obs-display.c">
+      <Filter>libobs</Filter>
+    </ClCompile>
+    <ClCompile Include="obs-encoder.c">
+      <Filter>libobs</Filter>
+    </ClCompile>
+    <ClCompile Include="obs-hotkey.c">
+      <Filter>libobs</Filter>
+    </ClCompile>
+    <ClCompile Include="obs-hotkey-name-map.c">
+      <Filter>libobs</Filter>
+    </ClCompile>
+    <ClCompile Include="obs-module.c">
+      <Filter>libobs</Filter>
+    </ClCompile>
+    <ClCompile Include="obs-output.c">
+      <Filter>libobs</Filter>
+    </ClCompile>
+    <ClCompile Include="obs-output-delay.c">
+      <Filter>libobs</Filter>
+    </ClCompile>
+    <ClCompile Include="obs-properties.c">
+      <Filter>libobs</Filter>
+    </ClCompile>
+    <ClCompile Include="obs-scene.c">
+      <Filter>libobs</Filter>
+    </ClCompile>
+    <ClCompile Include="obs-service.c">
+      <Filter>libobs</Filter>
+    </ClCompile>
+    <ClCompile Include="obs-source.c">
+      <Filter>libobs</Filter>
+    </ClCompile>
+    <ClCompile Include="obs-source-deinterlace.c">
+      <Filter>libobs</Filter>
+    </ClCompile>
+    <ClCompile Include="obs-source-transition.c">
+      <Filter>libobs</Filter>
+    </ClCompile>
+    <ClCompile Include="obs-video.c">
+      <Filter>libobs</Filter>
+    </ClCompile>
+    <ClCompile Include="obs-view.c">
+      <Filter>libobs</Filter>
+    </ClCompile>
+    <ClCompile Include="obs-win-crash-handler.c">
+      <Filter>libobs</Filter>
+    </ClCompile>
+    <ClCompile Include="obs-windows.c">
+      <Filter>libobs</Filter>
+    </ClCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="audio-monitoring\wasapi-output.h">
+      <Filter>audio-monitoring</Filter>
+    </ClInclude>
+    <ClInclude Include="callback\calldata.h">
+      <Filter>callback</Filter>
+    </ClInclude>
+    <ClInclude Include="callback\decl.h">
+      <Filter>callback</Filter>
+    </ClInclude>
+    <ClInclude Include="callback\proc.h">
+      <Filter>callback</Filter>
+    </ClInclude>
+    <ClInclude Include="callback\signal.h">
+      <Filter>callback</Filter>
+    </ClInclude>
+    <ClInclude Include="graphics\axisang.h">
+      <Filter>graphics</Filter>
+    </ClInclude>
+    <ClInclude Include="graphics\basemath.hpp">
+      <Filter>graphics</Filter>
+    </ClInclude>
+    <ClInclude Include="graphics\bounds.h">
+      <Filter>graphics</Filter>
+    </ClInclude>
+    <ClInclude Include="graphics\device-exports.h">
+      <Filter>graphics</Filter>
+    </ClInclude>
+    <ClInclude Include="graphics\effect.h">
+      <Filter>graphics</Filter>
+    </ClInclude>
+    <ClInclude Include="graphics\effect-parser.h">
+      <Filter>graphics</Filter>
+    </ClInclude>
+    <ClInclude Include="graphics\graphics.h">
+      <Filter>graphics</Filter>
+    </ClInclude>
+    <ClInclude Include="graphics\graphics-internal.h">
+      <Filter>graphics</Filter>
+    </ClInclude>
+    <ClInclude Include="graphics\image-file.h">
+      <Filter>graphics</Filter>
+    </ClInclude>
+    <ClInclude Include="graphics\input.h">
+      <Filter>graphics</Filter>
+    </ClInclude>
+    <ClInclude Include="graphics\math-defs.h">
+      <Filter>graphics</Filter>
+    </ClInclude>
+    <ClInclude Include="graphics\math-extra.h">
+      <Filter>graphics</Filter>
+    </ClInclude>
+    <ClInclude Include="graphics\matrix3.h">
+      <Filter>graphics</Filter>
+    </ClInclude>
+    <ClInclude Include="graphics\matrix4.h">
+      <Filter>graphics</Filter>
+    </ClInclude>
+    <ClInclude Include="graphics\plane.h">
+      <Filter>graphics</Filter>
+    </ClInclude>
+    <ClInclude Include="graphics\quat.h">
+      <Filter>graphics</Filter>
+    </ClInclude>
+    <ClInclude Include="graphics\shader-parser.h">
+      <Filter>graphics</Filter>
+    </ClInclude>
+    <ClInclude Include="graphics\vec2.h">
+      <Filter>graphics</Filter>
+    </ClInclude>
+    <ClInclude Include="graphics\vec3.h">
+      <Filter>graphics</Filter>
+    </ClInclude>
+    <ClInclude Include="graphics\vec4.h">
+      <Filter>graphics</Filter>
+    </ClInclude>
+    <ClInclude Include="graphics\libnsgif\libnsgif.h">
+      <Filter>graphics\libnsgif</Filter>
+    </ClInclude>
+    <ClInclude Include="media-io\audio-io.h">
+      <Filter>media-io</Filter>
+    </ClInclude>
+    <ClInclude Include="media-io\audio-math.h">
+      <Filter>media-io</Filter>
+    </ClInclude>
+    <ClInclude Include="media-io\audio-resampler.h">
+      <Filter>media-io</Filter>
+    </ClInclude>
+    <ClInclude Include="media-io\format-conversion.h">
+      <Filter>media-io</Filter>
+    </ClInclude>
+    <ClInclude Include="media-io\frame-rate.h">
+      <Filter>media-io</Filter>
+    </ClInclude>
+    <ClInclude Include="media-io\media-io-defs.h">
+      <Filter>media-io</Filter>
+    </ClInclude>
+    <ClInclude Include="media-io\media-remux.h">
+      <Filter>media-io</Filter>
+    </ClInclude>
+    <ClInclude Include="media-io\video-frame.h">
+      <Filter>media-io</Filter>
+    </ClInclude>
+    <ClInclude Include="media-io\video-io.h">
+      <Filter>media-io</Filter>
+    </ClInclude>
+    <ClInclude Include="media-io\video-scaler.h">
+      <Filter>media-io</Filter>
+    </ClInclude>
+    <ClInclude Include="util\AlignedNew.hpp">
+      <Filter>util</Filter>
+    </ClInclude>
+    <ClInclude Include="util\array-serializer.h">
+      <Filter>util</Filter>
+    </ClInclude>
+    <ClInclude Include="util\base.h">
+      <Filter>util</Filter>
+    </ClInclude>
+    <ClInclude Include="util\bmem.h">
+      <Filter>util</Filter>
+    </ClInclude>
+    <ClInclude Include="util\c99defs.h">
+      <Filter>util</Filter>
+    </ClInclude>
+    <ClInclude Include="util\cf-lexer.h">
+      <Filter>util</Filter>
+    </ClInclude>
+    <ClInclude Include="util\cf-parser.h">
+      <Filter>util</Filter>
+    </ClInclude>
+    <ClInclude Include="util\circlebuf.h">
+      <Filter>util</Filter>
+    </ClInclude>
+    <ClInclude Include="util\config-file.h">
+      <Filter>util</Filter>
+    </ClInclude>
+    <ClInclude Include="util\crc32.h">
+      <Filter>util</Filter>
+    </ClInclude>
+    <ClInclude Include="util\darray.h">
+      <Filter>util</Filter>
+    </ClInclude>
+    <ClInclude Include="util\dstr.h">
+      <Filter>util</Filter>
+    </ClInclude>
+    <ClInclude Include="util\dstr.hpp">
+      <Filter>util</Filter>
+    </ClInclude>
+    <ClInclude Include="util\file-serializer.h">
+      <Filter>util</Filter>
+    </ClInclude>
+    <ClInclude Include="util\lexer.h">
+      <Filter>util</Filter>
+    </ClInclude>
+    <ClInclude Include="util\pipe.h">
+      <Filter>util</Filter>
+    </ClInclude>
+    <ClInclude Include="util\platform.h">
+      <Filter>util</Filter>
+    </ClInclude>
+    <ClInclude Include="util\profiler.h">
+      <Filter>util</Filter>
+    </ClInclude>
+    <ClInclude Include="util\profiler.hpp">
+      <Filter>util</Filter>
+    </ClInclude>
+    <ClInclude Include="util\serializer.h">
+      <Filter>util</Filter>
+    </ClInclude>
+    <ClInclude Include="util\text-lookup.h">
+      <Filter>util</Filter>
+    </ClInclude>
+    <ClInclude Include="util\threading.h">
+      <Filter>util</Filter>
+    </ClInclude>
+    <ClInclude Include="util\utf8.h">
+      <Filter>util</Filter>
+    </ClInclude>
+    <ClInclude Include="util\util.hpp">
+      <Filter>util</Filter>
+    </ClInclude>
+    <ClInclude Include="util\util_uint128.h">
+      <Filter>util</Filter>
+    </ClInclude>
+    <ClInclude Include="util\vc\vc_inttypes.h">
+      <Filter>util\windows</Filter>
+    </ClInclude>
+    <ClInclude Include="util\vc\vc_stdbool.h">
+      <Filter>util\windows</Filter>
+    </ClInclude>
+    <ClInclude Include="util\vc\vc_stdint.h">
+      <Filter>util\windows</Filter>
+    </ClInclude>
+    <ClInclude Include="obs.h">
+      <Filter>libobs</Filter>
+    </ClInclude>
+    <ClInclude Include="obs.hpp">
+      <Filter>libobs</Filter>
+    </ClInclude>
+    <ClInclude Include="obs-audio-controls.h">
+      <Filter>libobs</Filter>
+    </ClInclude>
+    <ClInclude Include="obs-avc.h">
+      <Filter>libobs</Filter>
+    </ClInclude>
+    <ClInclude Include="obs-data.h">
+      <Filter>libobs</Filter>
+    </ClInclude>
+    <ClInclude Include="obs-defs.h">
+      <Filter>libobs</Filter>
+    </ClInclude>
+    <ClInclude Include="obs-encoder.h">
+      <Filter>libobs</Filter>
+    </ClInclude>
+    <ClInclude Include="obs-ffmpeg-compat.h">
+      <Filter>libobs</Filter>
+    </ClInclude>
+    <ClInclude Include="obs-hotkey.h">
+      <Filter>libobs</Filter>
+    </ClInclude>
+    <ClInclude Include="obs-hotkeys.h">
+      <Filter>libobs</Filter>
+    </ClInclude>
+    <ClInclude Include="obs-interaction.h">
+      <Filter>libobs</Filter>
+    </ClInclude>
+    <ClInclude Include="obs-internal.h">
+      <Filter>libobs</Filter>
+    </ClInclude>
+    <ClInclude Include="obs-module.h">
+      <Filter>libobs</Filter>
+    </ClInclude>
+    <ClInclude Include="obs-output.h">
+      <Filter>libobs</Filter>
+    </ClInclude>
+    <ClInclude Include="obs-properties.h">
+      <Filter>libobs</Filter>
+    </ClInclude>
+    <ClInclude Include="obs-scene.h">
+      <Filter>libobs</Filter>
+    </ClInclude>
+    <ClInclude Include="obs-service.h">
+      <Filter>libobs</Filter>
+    </ClInclude>
+    <ClInclude Include="obs-source.h">
+      <Filter>libobs</Filter>
+    </ClInclude>
+    <ClInclude Include="obs-ui.h">
+      <Filter>libobs</Filter>
+    </ClInclude>
+    <ClInclude Include="obs-config.h">
+      <Filter>config</Filter>
+    </ClInclude>
+  </ItemGroup>
+  <ItemGroup>
+    <CustomBuild Include="F:\G\workplace\obs-studio\libobs\CMakeLists.txt" />
+  </ItemGroup>
+  <ItemGroup>
+    <Filter Include="audio-monitoring">
+      <UniqueIdentifier>{B030AD91-415B-335C-A01D-2E7BCA90777A}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="callback">
+      <UniqueIdentifier>{3E98036A-15CC-3928-BE7A-377353FAAFC8}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="graphics">
+      <UniqueIdentifier>{6C6B9085-6719-33FB-AE1A-8E3933013A7A}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="libobs">
+      <UniqueIdentifier>{5932969F-B4E4-33BB-ADCA-6557768C1B43}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="media-io">
+      <UniqueIdentifier>{1202FDFF-EE48-33FA-A87E-3DF426772868}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="util">
+      <UniqueIdentifier>{638D051C-B44C-327C-9C4F-6BD141DDC3E7}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="graphics\libnsgif">
+      <UniqueIdentifier>{28d1b196-b146-48c3-9580-a3694cb1b693}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="util\windows">
+      <UniqueIdentifier>{6a067ea1-e4ac-4744-873d-3d174818b6a4}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="config">
+      <UniqueIdentifier>{9116CAD4-A76C-3B23-BC10-34AD2B961A49}</UniqueIdentifier>
+    </Filter>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="obsconfig.h.in">
+      <Filter>config</Filter>
+    </None>
+  </ItemGroup>
+</Project>

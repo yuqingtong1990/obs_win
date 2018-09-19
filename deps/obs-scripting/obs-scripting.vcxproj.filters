@@ -1,0 +1,60 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="14.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <ClCompile Include="F:\G\workplace\obs-studio\deps\obs-scripting\obs-scripting.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="F:\G\workplace\obs-studio\deps\obs-scripting\obs-scripting-logging.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="F:\G\workplace\obs-studio\deps\obs-scripting\cstrcache.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="F:\G\workplace\obs-studio\deps\obs-scripting\obs-scripting-lua.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="F:\G\workplace\obs-studio\deps\obs-scripting\obs-scripting-lua-source.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="F:\G\workplace\obs-studio\deps\obs-scripting\obs-scripting-lua-frontend.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="F:\G\workplace\obs-studio\build\deps\obs-scripting\obs-scripting-config.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="F:\G\workplace\obs-studio\deps\obs-scripting\obs-scripting.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="F:\G\workplace\obs-studio\deps\obs-scripting\obs-scripting-callback.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="F:\G\workplace\obs-studio\deps\obs-scripting\cstrcache.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="F:\G\workplace\obs-studio\deps\obs-scripting\obs-scripting-lua.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="F:\G\workplace\obs-studio\build\deps\obs-scripting\swig\swigluarun.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+  </ItemGroup>
+  <ItemGroup>
+    <CustomBuild Include="F:\G\workplace\obs-studio\build\CMakeFiles\b2b28439842c44b819d326b3c411a04c\swigluarun.h.rule">
+      <Filter>CMake Rules</Filter>
+    </CustomBuild>
+    <CustomBuild Include="F:\G\workplace\obs-studio\deps\obs-scripting\CMakeLists.txt" />
+  </ItemGroup>
+  <ItemGroup>
+    <Filter Include="CMake Rules">
+      <UniqueIdentifier>{E95ECC9C-5F07-301B-9F86-3D2249ED7A1B}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Header Files">
+      <UniqueIdentifier>{9116CAD4-A76C-3B23-BC10-34AD2B961A49}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files">
+      <UniqueIdentifier>{EC127E52-875E-38AC-8EF9-737C807156F0}</UniqueIdentifier>
+    </Filter>
+  </ItemGroup>
+</Project>
