@@ -471,6 +471,7 @@ Global
 		{144AB6E2-065C-38EE-87B4-112AC38A5CFE}.Debug|x86.ActiveCfg = Debug|Win32
 		{144AB6E2-065C-38EE-87B4-112AC38A5CFE}.Debug|x86.Build.0 = Debug|Win32
 		{144AB6E2-065C-38EE-87B4-112AC38A5CFE}.Release|x64.ActiveCfg = Release|Win32
+		{144AB6E2-065C-38EE-87B4-112AC38A5CFE}.Release|x64.Build.0 = Release|Win32
 		{144AB6E2-065C-38EE-87B4-112AC38A5CFE}.Release|x86.ActiveCfg = Release|Win32
 		{144AB6E2-065C-38EE-87B4-112AC38A5CFE}.Release|x86.Build.0 = Release|Win32
 		{794AAC66-CDE3-4533-A136-4156E4A792DE}.Debug|x64.ActiveCfg = Debug|x64
@@ -480,6 +481,7 @@ Global
 		{794AAC66-CDE3-4533-A136-4156E4A792DE}.Release|x64.ActiveCfg = Release|x64
 		{794AAC66-CDE3-4533-A136-4156E4A792DE}.Release|x64.Build.0 = Release|x64
 		{794AAC66-CDE3-4533-A136-4156E4A792DE}.Release|x86.ActiveCfg = Release|x64
+		{794AAC66-CDE3-4533-A136-4156E4A792DE}.Release|x86.Build.0 = Release|x64
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
