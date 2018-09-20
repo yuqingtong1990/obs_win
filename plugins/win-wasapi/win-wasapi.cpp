@@ -16,7 +16,7 @@ using namespace std;
 static void GetWASAPIDefaults(obs_data_t *settings);
 
 // Fix inconsistent defs of speaker_surround between avutil & wasapi
-#define KSAUDIO_SPEAKER_2POINT1 (KSAUDIO_SPEAKER_STEREO|SPEAKER_LOW_FREQUENCY)
+//#define KSAUDIO_SPEAKER_2POINT1 (KSAUDIO_SPEAKER_STEREO|SPEAKER_LOW_FREQUENCY)
 #define KSAUDIO_SPEAKER_4POINT1 (KSAUDIO_SPEAKER_QUAD|SPEAKER_LOW_FREQUENCY)
 
 class WASAPISource {

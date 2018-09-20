@@ -1,69 +1,21 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <Project ToolsVersion="14.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
   <ItemGroup>
-    <ClCompile Include="F:\G\workplace\obs-studio\plugins\obs-filters\obs-filters.c">
-      <Filter>Source Files</Filter>
-    </ClCompile>
-    <ClCompile Include="F:\G\workplace\obs-studio\plugins\obs-filters\color-correction-filter.c">
-      <Filter>Source Files</Filter>
-    </ClCompile>
-    <ClCompile Include="F:\G\workplace\obs-studio\plugins\obs-filters\async-delay-filter.c">
-      <Filter>Source Files</Filter>
-    </ClCompile>
-    <ClCompile Include="F:\G\workplace\obs-studio\plugins\obs-filters\gpu-delay.c">
-      <Filter>Source Files</Filter>
-    </ClCompile>
-    <ClCompile Include="F:\G\workplace\obs-studio\plugins\obs-filters\crop-filter.c">
-      <Filter>Source Files</Filter>
-    </ClCompile>
-    <ClCompile Include="F:\G\workplace\obs-studio\plugins\obs-filters\scale-filter.c">
-      <Filter>Source Files</Filter>
-    </ClCompile>
-    <ClCompile Include="F:\G\workplace\obs-studio\plugins\obs-filters\scroll-filter.c">
-      <Filter>Source Files</Filter>
-    </ClCompile>
-    <ClCompile Include="F:\G\workplace\obs-studio\plugins\obs-filters\chroma-key-filter.c">
-      <Filter>Source Files</Filter>
-    </ClCompile>
-    <ClCompile Include="F:\G\workplace\obs-studio\plugins\obs-filters\color-key-filter.c">
-      <Filter>Source Files</Filter>
-    </ClCompile>
-    <ClCompile Include="F:\G\workplace\obs-studio\plugins\obs-filters\color-grade-filter.c">
-      <Filter>Source Files</Filter>
-    </ClCompile>
-    <ClCompile Include="F:\G\workplace\obs-studio\plugins\obs-filters\sharpness-filter.c">
-      <Filter>Source Files</Filter>
-    </ClCompile>
-    <ClCompile Include="F:\G\workplace\obs-studio\plugins\obs-filters\gain-filter.c">
-      <Filter>Source Files</Filter>
-    </ClCompile>
-    <ClCompile Include="F:\G\workplace\obs-studio\plugins\obs-filters\noise-gate-filter.c">
-      <Filter>Source Files</Filter>
-    </ClCompile>
-    <ClCompile Include="F:\G\workplace\obs-studio\plugins\obs-filters\mask-filter.c">
-      <Filter>Source Files</Filter>
-    </ClCompile>
-    <ClCompile Include="F:\G\workplace\obs-studio\plugins\obs-filters\compressor-filter.c">
-      <Filter>Source Files</Filter>
-    </ClCompile>
-    <ClCompile Include="F:\G\workplace\obs-studio\plugins\obs-filters\noise-suppress-filter.c">
-      <Filter>Source Files</Filter>
-    </ClCompile>
-  </ItemGroup>
-  <ItemGroup>
-    <ClInclude Include="F:\G\workplace\obs-studio\build\plugins\obs-filters\config\obs-filters-config.h">
-      <Filter>Header Files</Filter>
-    </ClInclude>
-  </ItemGroup>
-  <ItemGroup>
-    <CustomBuild Include="F:\G\workplace\obs-studio\plugins\obs-filters\CMakeLists.txt" />
-  </ItemGroup>
-  <ItemGroup>
-    <Filter Include="Header Files">
-      <UniqueIdentifier>{9116CAD4-A76C-3B23-BC10-34AD2B961A49}</UniqueIdentifier>
-    </Filter>
-    <Filter Include="Source Files">
-      <UniqueIdentifier>{EC127E52-875E-38AC-8EF9-737C807156F0}</UniqueIdentifier>
-    </Filter>
+    <ClCompile Include="async-delay-filter.c" />
+    <ClCompile Include="chroma-key-filter.c" />
+    <ClCompile Include="color-correction-filter.c" />
+    <ClCompile Include="color-grade-filter.c" />
+    <ClCompile Include="color-key-filter.c" />
+    <ClCompile Include="compressor-filter.c" />
+    <ClCompile Include="crop-filter.c" />
+    <ClCompile Include="gain-filter.c" />
+    <ClCompile Include="gpu-delay.c" />
+    <ClCompile Include="mask-filter.c" />
+    <ClCompile Include="noise-gate-filter.c" />
+    <ClCompile Include="noise-suppress-filter.c" />
+    <ClCompile Include="obs-filters.c" />
+    <ClCompile Include="scale-filter.c" />
+    <ClCompile Include="scroll-filter.c" />
+    <ClCompile Include="sharpness-filter.c" />
   </ItemGroup>
 </Project>

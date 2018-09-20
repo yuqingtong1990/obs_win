@@ -1,165 +1,137 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <Project ToolsVersion="14.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
   <ItemGroup>
-    <ClCompile Include="F:\G\workplace\obs-studio\plugins\obs-outputs\ftl-stream.c">
-      <Filter>Source Files</Filter>
+    <ClCompile Include="net-if.c" />
+    <ClCompile Include="null-output.c" />
+    <ClCompile Include="obs-outputs.c" />
+    <ClCompile Include="rtmp-stream.c" />
+    <ClCompile Include="rtmp-windows.c" />
+    <ClCompile Include="librtmp\amf.c">
+      <Filter>librtmp</Filter>
     </ClCompile>
-    <ClCompile Include="F:\G\workplace\obs-studio\plugins\obs-outputs\ftl-sdk\libftl\hmac\hmac.c">
-      <Filter>Source Files</Filter>
+    <ClCompile Include="librtmp\cencode.c">
+      <Filter>librtmp</Filter>
     </ClCompile>
-    <ClCompile Include="F:\G\workplace\obs-studio\plugins\obs-outputs\ftl-sdk\libftl\hmac\sha2.c">
-      <Filter>Source Files</Filter>
+    <ClCompile Include="librtmp\hashswf.c">
+      <Filter>librtmp</Filter>
     </ClCompile>
-    <ClCompile Include="F:\G\workplace\obs-studio\plugins\obs-outputs\ftl-sdk\libftl\ftl-sdk.c">
-      <Filter>Source Files</Filter>
+    <ClCompile Include="librtmp\log.c">
+      <Filter>librtmp</Filter>
     </ClCompile>
-    <ClCompile Include="F:\G\workplace\obs-studio\plugins\obs-outputs\ftl-sdk\libftl\handshake.c">
-      <Filter>Source Files</Filter>
+    <ClCompile Include="librtmp\md5.c">
+      <Filter>librtmp</Filter>
     </ClCompile>
-    <ClCompile Include="F:\G\workplace\obs-studio\plugins\obs-outputs\ftl-sdk\libftl\ingest.c">
-      <Filter>Source Files</Filter>
+    <ClCompile Include="librtmp\parseurl.c">
+      <Filter>librtmp</Filter>
     </ClCompile>
-    <ClCompile Include="F:\G\workplace\obs-studio\plugins\obs-outputs\ftl-sdk\libftl\ftl_helpers.c">
-      <Filter>Source Files</Filter>
+    <ClCompile Include="librtmp\rtmp.c">
+      <Filter>librtmp</Filter>
     </ClCompile>
-    <ClCompile Include="F:\G\workplace\obs-studio\plugins\obs-outputs\ftl-sdk\libftl\media.c">
-      <Filter>Source Files</Filter>
+    <ClCompile Include="flv-mux.c" />
+    <ClCompile Include="flv-output.c" />
+    <ClCompile Include="ftl-stream.c" />
+    <ClCompile Include="ftl-sdk\libftl\ftl_helpers.c">
+      <Filter>flt</Filter>
     </ClCompile>
-    <ClCompile Include="F:\G\workplace\obs-studio\plugins\obs-outputs\ftl-sdk\libftl\gettimeofday\gettimeofday.c">
-      <Filter>Source Files</Filter>
+    <ClCompile Include="ftl-sdk\libftl\ftl-sdk.c">
+      <Filter>flt</Filter>
     </ClCompile>
-    <ClCompile Include="F:\G\workplace\obs-studio\plugins\obs-outputs\ftl-sdk\libftl\logging.c">
-      <Filter>Source Files</Filter>
+    <ClCompile Include="ftl-sdk\libftl\handshake.c">
+      <Filter>flt</Filter>
     </ClCompile>
-    <ClCompile Include="F:\G\workplace\obs-studio\plugins\obs-outputs\ftl-sdk\libftl\win32\socket.c">
-      <Filter>Source Files</Filter>
+    <ClCompile Include="ftl-sdk\libftl\ingest.c">
+      <Filter>flt</Filter>
     </ClCompile>
-    <ClCompile Include="F:\G\workplace\obs-studio\plugins\obs-outputs\ftl-sdk\libftl\win32\threads.c">
-      <Filter>Source Files</Filter>
+    <ClCompile Include="ftl-sdk\libftl\logging.c">
+      <Filter>flt</Filter>
     </ClCompile>
-    <ClCompile Include="F:\G\workplace\obs-studio\plugins\obs-outputs\obs-outputs.c">
-      <Filter>Source Files</Filter>
+    <ClCompile Include="ftl-sdk\libftl\media.c">
+      <Filter>flt</Filter>
     </ClCompile>
-    <ClCompile Include="F:\G\workplace\obs-studio\plugins\obs-outputs\null-output.c">
-      <Filter>Source Files</Filter>
+    <ClCompile Include="ftl-sdk\libftl\win32\socket.c">
+      <Filter>flt</Filter>
     </ClCompile>
-    <ClCompile Include="F:\G\workplace\obs-studio\plugins\obs-outputs\rtmp-stream.c">
-      <Filter>Source Files</Filter>
+    <ClCompile Include="ftl-sdk\libftl\win32\threads.c">
+      <Filter>flt</Filter>
     </ClCompile>
-    <ClCompile Include="F:\G\workplace\obs-studio\plugins\obs-outputs\rtmp-windows.c">
-      <Filter>Source Files</Filter>
+    <ClCompile Include="ftl-sdk\libftl\gettimeofday\gettimeofday.c">
+      <Filter>flt</Filter>
     </ClCompile>
-    <ClCompile Include="F:\G\workplace\obs-studio\plugins\obs-outputs\flv-output.c">
-      <Filter>Source Files</Filter>
+    <ClCompile Include="ftl-sdk\libftl\hmac\hmac.c">
+      <Filter>flt</Filter>
     </ClCompile>
-    <ClCompile Include="F:\G\workplace\obs-studio\plugins\obs-outputs\flv-mux.c">
-      <Filter>Source Files</Filter>
-    </ClCompile>
-    <ClCompile Include="F:\G\workplace\obs-studio\plugins\obs-outputs\net-if.c">
-      <Filter>Source Files</Filter>
-    </ClCompile>
-    <ClCompile Include="F:\G\workplace\obs-studio\plugins\obs-outputs\librtmp\amf.c">
-      <Filter>Source Files</Filter>
-    </ClCompile>
-    <ClCompile Include="F:\G\workplace\obs-studio\plugins\obs-outputs\librtmp\cencode.c">
-      <Filter>Source Files</Filter>
-    </ClCompile>
-    <ClCompile Include="F:\G\workplace\obs-studio\plugins\obs-outputs\librtmp\hashswf.c">
-      <Filter>Source Files</Filter>
-    </ClCompile>
-    <ClCompile Include="F:\G\workplace\obs-studio\plugins\obs-outputs\librtmp\log.c">
-      <Filter>Source Files</Filter>
-    </ClCompile>
-    <ClCompile Include="F:\G\workplace\obs-studio\plugins\obs-outputs\librtmp\md5.c">
-      <Filter>Source Files</Filter>
-    </ClCompile>
-    <ClCompile Include="F:\G\workplace\obs-studio\plugins\obs-outputs\librtmp\parseurl.c">
-      <Filter>Source Files</Filter>
-    </ClCompile>
-    <ClCompile Include="F:\G\workplace\obs-studio\plugins\obs-outputs\librtmp\rtmp.c">
-      <Filter>Source Files</Filter>
+    <ClCompile Include="ftl-sdk\libftl\hmac\sha2.c">
+      <Filter>flt</Filter>
     </ClCompile>
   </ItemGroup>
   <ItemGroup>
-    <ClInclude Include="F:\G\workplace\obs-studio\plugins\obs-outputs\ftl-sdk\libftl\hmac\hmac.h">
-      <Filter>Header Files</Filter>
+    <ClInclude Include="rtmp-stream.h" />
+    <ClInclude Include="net-if.h" />
+    <ClInclude Include="obs-output-ver.h" />
+    <ClInclude Include="rtmp-helpers.h" />
+    <ClInclude Include="librtmp\amf.h">
+      <Filter>librtmp</Filter>
     </ClInclude>
-    <ClInclude Include="F:\G\workplace\obs-studio\plugins\obs-outputs\ftl-sdk\libftl\hmac\sha2.h">
-      <Filter>Header Files</Filter>
+    <ClInclude Include="librtmp\bytes.h">
+      <Filter>librtmp</Filter>
     </ClInclude>
-    <ClInclude Include="F:\G\workplace\obs-studio\plugins\obs-outputs\ftl-sdk\libftl\ftl.h">
-      <Filter>Header Files</Filter>
+    <ClInclude Include="librtmp\cencode.h">
+      <Filter>librtmp</Filter>
     </ClInclude>
-    <ClInclude Include="F:\G\workplace\obs-studio\plugins\obs-outputs\ftl-sdk\libftl\ftl_private.h">
-      <Filter>Header Files</Filter>
+    <ClInclude Include="librtmp\dh.h">
+      <Filter>librtmp</Filter>
     </ClInclude>
-    <ClInclude Include="F:\G\workplace\obs-studio\plugins\obs-outputs\ftl-sdk\libftl\gettimeofday\gettimeofday.h">
-      <Filter>Header Files</Filter>
+    <ClInclude Include="librtmp\dhgroups.h">
+      <Filter>librtmp</Filter>
     </ClInclude>
-    <ClInclude Include="F:\G\workplace\obs-studio\plugins\obs-outputs\ftl-sdk\libftl\win32\threads.h">
-      <Filter>Header Files</Filter>
+    <ClInclude Include="librtmp\handshake.h">
+      <Filter>librtmp</Filter>
     </ClInclude>
-    <ClInclude Include="F:\G\workplace\obs-studio\build\plugins\obs-outputs\config\obs-outputs-config.h">
-      <Filter>Header Files</Filter>
+    <ClInclude Include="librtmp\http.h">
+      <Filter>librtmp</Filter>
     </ClInclude>
-    <ClInclude Include="F:\G\workplace\obs-studio\plugins\obs-outputs\obs-output-ver.h">
-      <Filter>Header Files</Filter>
+    <ClInclude Include="librtmp\log.h">
+      <Filter>librtmp</Filter>
     </ClInclude>
-    <ClInclude Include="F:\G\workplace\obs-studio\plugins\obs-outputs\rtmp-helpers.h">
-      <Filter>Header Files</Filter>
+    <ClInclude Include="librtmp\md5.h">
+      <Filter>librtmp</Filter>
     </ClInclude>
-    <ClInclude Include="F:\G\workplace\obs-studio\plugins\obs-outputs\rtmp-stream.h">
-      <Filter>Header Files</Filter>
+    <ClInclude Include="librtmp\rtmp.h">
+      <Filter>librtmp</Filter>
     </ClInclude>
-    <ClInclude Include="F:\G\workplace\obs-studio\plugins\obs-outputs\net-if.h">
-      <Filter>Header Files</Filter>
+    <ClInclude Include="librtmp\rtmp_sys.h">
+      <Filter>librtmp</Filter>
     </ClInclude>
-    <ClInclude Include="F:\G\workplace\obs-studio\plugins\obs-outputs\flv-mux.h">
-      <Filter>Header Files</Filter>
+    <ClInclude Include="obs-outputs-config.h" />
+    <ClInclude Include="flv-mux.h" />
+    <ClInclude Include="ftl-sdk\libftl\ftl.h">
+      <Filter>flt</Filter>
     </ClInclude>
-    <ClInclude Include="F:\G\workplace\obs-studio\plugins\obs-outputs\librtmp\amf.h">
-      <Filter>Header Files</Filter>
+    <ClInclude Include="ftl-sdk\libftl\ftl_private.h">
+      <Filter>flt</Filter>
     </ClInclude>
-    <ClInclude Include="F:\G\workplace\obs-studio\plugins\obs-outputs\librtmp\bytes.h">
-      <Filter>Header Files</Filter>
+    <ClInclude Include="ftl-sdk\libftl\win32\socket.h">
+      <Filter>flt</Filter>
     </ClInclude>
-    <ClInclude Include="F:\G\workplace\obs-studio\plugins\obs-outputs\librtmp\cencode.h">
-      <Filter>Header Files</Filter>
+    <ClInclude Include="ftl-sdk\libftl\win32\threads.h">
+      <Filter>flt</Filter>
     </ClInclude>
-    <ClInclude Include="F:\G\workplace\obs-studio\plugins\obs-outputs\librtmp\dh.h">
-      <Filter>Header Files</Filter>
+    <ClInclude Include="ftl-sdk\libftl\gettimeofday\gettimeofday.h">
+      <Filter>flt</Filter>
     </ClInclude>
-    <ClInclude Include="F:\G\workplace\obs-studio\plugins\obs-outputs\librtmp\dhgroups.h">
-      <Filter>Header Files</Filter>
+    <ClInclude Include="ftl-sdk\libftl\hmac\hmac.h">
+      <Filter>flt</Filter>
     </ClInclude>
-    <ClInclude Include="F:\G\workplace\obs-studio\plugins\obs-outputs\librtmp\handshake.h">
-      <Filter>Header Files</Filter>
-    </ClInclude>
-    <ClInclude Include="F:\G\workplace\obs-studio\plugins\obs-outputs\librtmp\http.h">
-      <Filter>Header Files</Filter>
-    </ClInclude>
-    <ClInclude Include="F:\G\workplace\obs-studio\plugins\obs-outputs\librtmp\log.h">
-      <Filter>Header Files</Filter>
-    </ClInclude>
-    <ClInclude Include="F:\G\workplace\obs-studio\plugins\obs-outputs\librtmp\md5.h">
-      <Filter>Header Files</Filter>
-    </ClInclude>
-    <ClInclude Include="F:\G\workplace\obs-studio\plugins\obs-outputs\librtmp\rtmp.h">
-      <Filter>Header Files</Filter>
-    </ClInclude>
-    <ClInclude Include="F:\G\workplace\obs-studio\plugins\obs-outputs\librtmp\rtmp_sys.h">
-      <Filter>Header Files</Filter>
+    <ClInclude Include="ftl-sdk\libftl\hmac\sha2.h">
+      <Filter>flt</Filter>
     </ClInclude>
   </ItemGroup>
   <ItemGroup>
-    <CustomBuild Include="F:\G\workplace\obs-studio\plugins\obs-outputs\CMakeLists.txt" />
-  </ItemGroup>
-  <ItemGroup>
-    <Filter Include="Header Files">
-      <UniqueIdentifier>{9116CAD4-A76C-3B23-BC10-34AD2B961A49}</UniqueIdentifier>
+    <Filter Include="librtmp">
+      <UniqueIdentifier>{b13dce38-7c21-4fbd-8e36-831c9d7d9264}</UniqueIdentifier>
     </Filter>
-    <Filter Include="Source Files">
-      <UniqueIdentifier>{EC127E52-875E-38AC-8EF9-737C807156F0}</UniqueIdentifier>
+    <Filter Include="flt">
+      <UniqueIdentifier>{212e7d90-74c2-41dc-bded-9ea6b97d1620}</UniqueIdentifier>
     </Filter>
   </ItemGroup>
 </Project>

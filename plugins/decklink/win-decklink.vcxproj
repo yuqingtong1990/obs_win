@@ -85,7 +85,7 @@
       <GenerateDebugInformation>true</GenerateDebugInformation>
       <IgnoreSpecificDefaultLibraries>%(IgnoreSpecificDefaultLibraries)</IgnoreSpecificDefaultLibraries>
       <ImportLibrary>$(OutputPath)$(ProjectName).lib</ImportLibrary>
-      <ProgramDataBaseFile>$(OutDir)/win-decklink.pdb</ProgramDataBaseFile>
+      <ProgramDataBaseFile>$(OutDir)win-decklink.pdb</ProgramDataBaseFile>
       <SubSystem>Console</SubSystem>
     </Link>
     <ProjectReference>
@@ -126,7 +126,7 @@
       <GenerateDebugInformation>false</GenerateDebugInformation>
       <IgnoreSpecificDefaultLibraries>%(IgnoreSpecificDefaultLibraries)</IgnoreSpecificDefaultLibraries>
       <ImportLibrary>$(OutputPath)$(ProjectName).lib</ImportLibrary>
-      <ProgramDataBaseFile>$(OutDir)/win-decklink.pdb</ProgramDataBaseFile>
+      <ProgramDataBaseFile>$(OutDir)win-decklink.pdb</ProgramDataBaseFile>
       <SubSystem>Console</SubSystem>
     </Link>
     <ProjectReference>

@@ -56,26 +56,26 @@
   <PropertyGroup Label="UserMacros" />
   <PropertyGroup>
     <_ProjectFileVersion>10.0.20506.1</_ProjectFileVersion>
-    <OutDir Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">F:\G\workplace\obs-studio\build\plugins\obs-transitions\Debug\</OutDir>
-    <IntDir Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">obs-transitions.dir\Debug\</IntDir>
+    <OutDir Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">$(Configuration)\$(Platform)\</OutDir>
+    <IntDir Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">$(Configuration)\$(Platform)\tmp\</IntDir>
     <TargetName Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">obs-transitions</TargetName>
     <TargetExt Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">.dll</TargetExt>
     <LinkIncremental Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">true</LinkIncremental>
     <GenerateManifest Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">true</GenerateManifest>
-    <OutDir Condition="'$(Configuration)|$(Platform)'=='Release|x64'">F:\G\workplace\obs-studio\build\plugins\obs-transitions\Release\</OutDir>
-    <IntDir Condition="'$(Configuration)|$(Platform)'=='Release|x64'">obs-transitions.dir\Release\</IntDir>
+    <OutDir Condition="'$(Configuration)|$(Platform)'=='Release|x64'">$(Configuration)\$(Platform)\</OutDir>
+    <IntDir Condition="'$(Configuration)|$(Platform)'=='Release|x64'">$(Configuration)\$(Platform)\tmp\</IntDir>
     <TargetName Condition="'$(Configuration)|$(Platform)'=='Release|x64'">obs-transitions</TargetName>
     <TargetExt Condition="'$(Configuration)|$(Platform)'=='Release|x64'">.dll</TargetExt>
     <LinkIncremental Condition="'$(Configuration)|$(Platform)'=='Release|x64'">false</LinkIncremental>
     <GenerateManifest Condition="'$(Configuration)|$(Platform)'=='Release|x64'">true</GenerateManifest>
-    <OutDir Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">F:\G\workplace\obs-studio\build\plugins\obs-transitions\MinSizeRel\</OutDir>
-    <IntDir Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">obs-transitions.dir\MinSizeRel\</IntDir>
+    <OutDir Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">$(Configuration)\$(Platform)\</OutDir>
+    <IntDir Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">$(Configuration)\$(Platform)\tmp\</IntDir>
     <TargetName Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">obs-transitions</TargetName>
     <TargetExt Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">.dll</TargetExt>
     <LinkIncremental Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">false</LinkIncremental>
     <GenerateManifest Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">true</GenerateManifest>
-    <OutDir Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">F:\G\workplace\obs-studio\build\plugins\obs-transitions\RelWithDebInfo\</OutDir>
-    <IntDir Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">obs-transitions.dir\RelWithDebInfo\</IntDir>
+    <OutDir Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">$(Configuration)\$(Platform)\</OutDir>
+    <IntDir Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">$(Configuration)\$(Platform)\tmp\</IntDir>
     <TargetName Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">obs-transitions</TargetName>
     <TargetExt Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">.dll</TargetExt>
     <LinkIncremental Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">true</LinkIncremental>
@@ -83,7 +83,7 @@
   </PropertyGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
     <ClCompile>
-      <AdditionalIncludeDirectories>F:\G\workplace\obs-studio\libobs;F:\G\workplace\obs-studio\build\config;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AdditionalIncludeDirectories>..\..\libobs;..\..\config;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
       <AssemblerListingLocation>Debug/</AssemblerListingLocation>
       <BasicRuntimeChecks>EnableFastChecks</BasicRuntimeChecks>
       <CompileAs>CompileAsC</CompileAs>
@@ -100,63 +100,21 @@
     </ClCompile>
     <ResourceCompile>
       <PreprocessorDefinitions>WIN32;_DEBUG;_WINDOWS;DEBUG=1;_DEBUG=1;UNICODE;_UNICODE;_CRT_SECURE_NO_WARNINGS;_CRT_NONSTDC_NO_WARNINGS;HAVE_OBSCONFIG_H;CMAKE_INTDIR=\"Debug\";obs_transitions_EXPORTS;%(PreprocessorDefinitions)</PreprocessorDefinitions>
-      <AdditionalIncludeDirectories>F:\G\workplace\obs-studio\libobs;F:\G\workplace\obs-studio\build\config;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
     </ResourceCompile>
-    <Midl>
-      <AdditionalIncludeDirectories>F:\G\workplace\obs-studio\libobs;F:\G\workplace\obs-studio\build\config;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
-      <OutputDirectory>$(ProjectDir)/$(IntDir)</OutputDirectory>
-      <HeaderFileName>%(Filename).h</HeaderFileName>
-      <TypeLibraryName>%(Filename).tlb</TypeLibraryName>
-      <InterfaceIdentifierFileName>%(Filename)_i.c</InterfaceIdentifierFileName>
-      <ProxyFileName>%(Filename)_p.c</ProxyFileName>
-    </Midl>
     <PostBuildEvent>
-      <Message>			</Message>
-      <Command>setlocal
-"C:\Program Files\CMake\bin\cmake.exe" -E copy F:/G/workplace/obs-studio/build/plugins/obs-transitions/Debug/obs-transitions.dll F:/G/workplace/obs-studio/build/rundir/Debug/obs-plugins/64bit/obs-transitions.dll
-if %errorlevel% neq 0 goto :cmEnd
-:cmEnd
-endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
-:cmErrorLevel
-exit /b %1
-:cmDone
-if %errorlevel% neq 0 goto :VCEnd
-setlocal
-"C:\Program Files\CMake\bin\cmake.exe" -DCONFIG=Debug -DFNAME=obs-transitions.dll -DINPUT=F:/G/workplace/obs-studio/build/plugins/obs-transitions/Debug -DOUTPUT=F:/G/workplace/obs-studio/build/plugins/obs-transitions/pdbs -P F:/G/workplace/obs-studio/cmake/copy_on_debug_helper.cmake
-if %errorlevel% neq 0 goto :cmEnd
-:cmEnd
-endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
-:cmErrorLevel
-exit /b %1
-:cmDone
-if %errorlevel% neq 0 goto :VCEnd
-setlocal
-"C:\Program Files\CMake\bin\cmake.exe" -DCONFIG=Debug -DFNAME=obs-transitions.dll -DINPUT=F:/G/workplace/obs-studio/build/plugins/obs-transitions/Debug -DOUTPUT=F:/G/workplace/obs-studio/build/rundir/Debug/obs-plugins/64bit -P F:/G/workplace/obs-studio/cmake/copy_on_debug_helper.cmake
-if %errorlevel% neq 0 goto :cmEnd
-:cmEnd
-endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
-:cmErrorLevel
-exit /b %1
-:cmDone
-if %errorlevel% neq 0 goto :VCEnd
-setlocal
-"C:\Program Files\CMake\bin\cmake.exe" -E copy_directory F:/G/workplace/obs-studio/plugins/obs-transitions/data F:/G/workplace/obs-studio/build/rundir/Debug/data/obs-plugins/obs-transitions
-if %errorlevel% neq 0 goto :cmEnd
-:cmEnd
-endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
-:cmErrorLevel
-exit /b %1
-:cmDone
-if %errorlevel% neq 0 goto :VCEnd</Command>
+      <Message>
+      </Message>
+      <Command>
+      </Command>
     </PostBuildEvent>
     <Link>
-      <AdditionalDependencies>..\..\libobs\Debug\obs.lib;kernel32.lib;user32.lib;gdi32.lib;winspool.lib;shell32.lib;ole32.lib;oleaut32.lib;uuid.lib;comdlg32.lib;advapi32.lib</AdditionalDependencies>
+      <AdditionalDependencies>..\..\libobs\$(Configuration)\$(Platform)\obs.lib;kernel32.lib;user32.lib;gdi32.lib;winspool.lib;shell32.lib;ole32.lib;oleaut32.lib;uuid.lib;comdlg32.lib;advapi32.lib</AdditionalDependencies>
       <AdditionalLibraryDirectories>%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
       <AdditionalOptions>%(AdditionalOptions) /machine:x64</AdditionalOptions>
       <GenerateDebugInformation>true</GenerateDebugInformation>
       <IgnoreSpecificDefaultLibraries>%(IgnoreSpecificDefaultLibraries)</IgnoreSpecificDefaultLibraries>
-      <ImportLibrary>F:/G/workplace/obs-studio/build/plugins/obs-transitions/Debug/obs-transitions.lib</ImportLibrary>
-      <ProgramDataBaseFile>F:/G/workplace/obs-studio/build/plugins/obs-transitions/Debug/obs-transitions.pdb</ProgramDataBaseFile>
+      <ImportLibrary>$(OutputPath)obs-transitions.lib</ImportLibrary>
+      <ProgramDataBaseFile>$(OutputPath)obs-transitions.pdb</ProgramDataBaseFile>
       <SubSystem>Console</SubSystem>
     </Link>
     <ProjectReference>
@@ -165,7 +123,7 @@ if %errorlevel% neq 0 goto :VCEnd</Command>
   </ItemDefinitionGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
     <ClCompile>
-      <AdditionalIncludeDirectories>F:\G\workplace\obs-studio\libobs;F:\G\workplace\obs-studio\build\config;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AdditionalIncludeDirectories>..\..\libobs;..\..\config;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
       <AssemblerListingLocation>Release/</AssemblerListingLocation>
       <CompileAs>CompileAsC</CompileAs>
       <ExceptionHandling>
@@ -182,63 +140,21 @@ if %errorlevel% neq 0 goto :VCEnd</Command>
     </ClCompile>
     <ResourceCompile>
       <PreprocessorDefinitions>WIN32;_WINDOWS;NDEBUG;UNICODE;_UNICODE;_CRT_SECURE_NO_WARNINGS;_CRT_NONSTDC_NO_WARNINGS;HAVE_OBSCONFIG_H;CMAKE_INTDIR=\"Release\";obs_transitions_EXPORTS;%(PreprocessorDefinitions)</PreprocessorDefinitions>
-      <AdditionalIncludeDirectories>F:\G\workplace\obs-studio\libobs;F:\G\workplace\obs-studio\build\config;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
     </ResourceCompile>
-    <Midl>
-      <AdditionalIncludeDirectories>F:\G\workplace\obs-studio\libobs;F:\G\workplace\obs-studio\build\config;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
-      <OutputDirectory>$(ProjectDir)/$(IntDir)</OutputDirectory>
-      <HeaderFileName>%(Filename).h</HeaderFileName>
-      <TypeLibraryName>%(Filename).tlb</TypeLibraryName>
-      <InterfaceIdentifierFileName>%(Filename)_i.c</InterfaceIdentifierFileName>
-      <ProxyFileName>%(Filename)_p.c</ProxyFileName>
-    </Midl>
     <PostBuildEvent>
-      <Message>			</Message>
-      <Command>setlocal
-"C:\Program Files\CMake\bin\cmake.exe" -E copy F:/G/workplace/obs-studio/build/plugins/obs-transitions/Release/obs-transitions.dll F:/G/workplace/obs-studio/build/rundir/Release/obs-plugins/64bit/obs-transitions.dll
-if %errorlevel% neq 0 goto :cmEnd
-:cmEnd
-endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
-:cmErrorLevel
-exit /b %1
-:cmDone
-if %errorlevel% neq 0 goto :VCEnd
-setlocal
-"C:\Program Files\CMake\bin\cmake.exe" -DCONFIG=Release -DFNAME=obs-transitions.dll -DINPUT=F:/G/workplace/obs-studio/build/plugins/obs-transitions/Release -DOUTPUT=F:/G/workplace/obs-studio/build/plugins/obs-transitions/pdbs -P F:/G/workplace/obs-studio/cmake/copy_on_debug_helper.cmake
-if %errorlevel% neq 0 goto :cmEnd
-:cmEnd
-endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
-:cmErrorLevel
-exit /b %1
-:cmDone
-if %errorlevel% neq 0 goto :VCEnd
-setlocal
-"C:\Program Files\CMake\bin\cmake.exe" -DCONFIG=Release -DFNAME=obs-transitions.dll -DINPUT=F:/G/workplace/obs-studio/build/plugins/obs-transitions/Release -DOUTPUT=F:/G/workplace/obs-studio/build/rundir/Release/obs-plugins/64bit -P F:/G/workplace/obs-studio/cmake/copy_on_debug_helper.cmake
-if %errorlevel% neq 0 goto :cmEnd
-:cmEnd
-endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
-:cmErrorLevel
-exit /b %1
-:cmDone
-if %errorlevel% neq 0 goto :VCEnd
-setlocal
-"C:\Program Files\CMake\bin\cmake.exe" -E copy_directory F:/G/workplace/obs-studio/plugins/obs-transitions/data F:/G/workplace/obs-studio/build/rundir/Release/data/obs-plugins/obs-transitions
-if %errorlevel% neq 0 goto :cmEnd
-:cmEnd
-endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
-:cmErrorLevel
-exit /b %1
-:cmDone
-if %errorlevel% neq 0 goto :VCEnd</Command>
+      <Message>
+      </Message>
+      <Command>
+      </Command>
     </PostBuildEvent>
     <Link>
-      <AdditionalDependencies>..\..\libobs\Release\obs.lib;kernel32.lib;user32.lib;gdi32.lib;winspool.lib;shell32.lib;ole32.lib;oleaut32.lib;uuid.lib;comdlg32.lib;advapi32.lib</AdditionalDependencies>
+      <AdditionalDependencies>..\..\libobs\$(Configuration)\$(Platform)\obs.lib;kernel32.lib;user32.lib;gdi32.lib;winspool.lib;shell32.lib;ole32.lib;oleaut32.lib;uuid.lib;comdlg32.lib;advapi32.lib</AdditionalDependencies>
       <AdditionalLibraryDirectories>%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
       <AdditionalOptions>%(AdditionalOptions) /machine:x64</AdditionalOptions>
       <GenerateDebugInformation>false</GenerateDebugInformation>
       <IgnoreSpecificDefaultLibraries>%(IgnoreSpecificDefaultLibraries)</IgnoreSpecificDefaultLibraries>
-      <ImportLibrary>F:/G/workplace/obs-studio/build/plugins/obs-transitions/Release/obs-transitions.lib</ImportLibrary>
-      <ProgramDataBaseFile>F:/G/workplace/obs-studio/build/plugins/obs-transitions/Release/obs-transitions.pdb</ProgramDataBaseFile>
+      <ImportLibrary>$(OutputPath)obs-transitions.lib</ImportLibrary>
+      <ProgramDataBaseFile>$(OutputPath)obs-transitions.pdb</ProgramDataBaseFile>
       <SubSystem>Console</SubSystem>
     </Link>
     <ProjectReference>
@@ -247,7 +163,7 @@ if %errorlevel% neq 0 goto :VCEnd</Command>
   </ItemDefinitionGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">
     <ClCompile>
-      <AdditionalIncludeDirectories>F:\G\workplace\obs-studio\libobs;F:\G\workplace\obs-studio\build\config;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AdditionalIncludeDirectories>..\..\libobs;..\..\config;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
       <AssemblerListingLocation>MinSizeRel/</AssemblerListingLocation>
       <CompileAs>CompileAsC</CompileAs>
       <ExceptionHandling>
@@ -264,63 +180,21 @@ if %errorlevel% neq 0 goto :VCEnd</Command>
     </ClCompile>
     <ResourceCompile>
       <PreprocessorDefinitions>WIN32;_WINDOWS;NDEBUG;UNICODE;_UNICODE;_CRT_SECURE_NO_WARNINGS;_CRT_NONSTDC_NO_WARNINGS;HAVE_OBSCONFIG_H;CMAKE_INTDIR=\"MinSizeRel\";obs_transitions_EXPORTS;%(PreprocessorDefinitions)</PreprocessorDefinitions>
-      <AdditionalIncludeDirectories>F:\G\workplace\obs-studio\libobs;F:\G\workplace\obs-studio\build\config;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
     </ResourceCompile>
-    <Midl>
-      <AdditionalIncludeDirectories>F:\G\workplace\obs-studio\libobs;F:\G\workplace\obs-studio\build\config;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
-      <OutputDirectory>$(ProjectDir)/$(IntDir)</OutputDirectory>
-      <HeaderFileName>%(Filename).h</HeaderFileName>
-      <TypeLibraryName>%(Filename).tlb</TypeLibraryName>
-      <InterfaceIdentifierFileName>%(Filename)_i.c</InterfaceIdentifierFileName>
-      <ProxyFileName>%(Filename)_p.c</ProxyFileName>
-    </Midl>
     <PostBuildEvent>
-      <Message>			</Message>
-      <Command>setlocal
-"C:\Program Files\CMake\bin\cmake.exe" -E copy F:/G/workplace/obs-studio/build/plugins/obs-transitions/MinSizeRel/obs-transitions.dll F:/G/workplace/obs-studio/build/rundir/MinSizeRel/obs-plugins/64bit/obs-transitions.dll
-if %errorlevel% neq 0 goto :cmEnd
-:cmEnd
-endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
-:cmErrorLevel
-exit /b %1
-:cmDone
-if %errorlevel% neq 0 goto :VCEnd
-setlocal
-"C:\Program Files\CMake\bin\cmake.exe" -DCONFIG=MinSizeRel -DFNAME=obs-transitions.dll -DINPUT=F:/G/workplace/obs-studio/build/plugins/obs-transitions/MinSizeRel -DOUTPUT=F:/G/workplace/obs-studio/build/plugins/obs-transitions/pdbs -P F:/G/workplace/obs-studio/cmake/copy_on_debug_helper.cmake
-if %errorlevel% neq 0 goto :cmEnd
-:cmEnd
-endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
-:cmErrorLevel
-exit /b %1
-:cmDone
-if %errorlevel% neq 0 goto :VCEnd
-setlocal
-"C:\Program Files\CMake\bin\cmake.exe" -DCONFIG=MinSizeRel -DFNAME=obs-transitions.dll -DINPUT=F:/G/workplace/obs-studio/build/plugins/obs-transitions/MinSizeRel -DOUTPUT=F:/G/workplace/obs-studio/build/rundir/MinSizeRel/obs-plugins/64bit -P F:/G/workplace/obs-studio/cmake/copy_on_debug_helper.cmake
-if %errorlevel% neq 0 goto :cmEnd
-:cmEnd
-endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
-:cmErrorLevel
-exit /b %1
-:cmDone
-if %errorlevel% neq 0 goto :VCEnd
-setlocal
-"C:\Program Files\CMake\bin\cmake.exe" -E copy_directory F:/G/workplace/obs-studio/plugins/obs-transitions/data F:/G/workplace/obs-studio/build/rundir/MinSizeRel/data/obs-plugins/obs-transitions
-if %errorlevel% neq 0 goto :cmEnd
-:cmEnd
-endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
-:cmErrorLevel
-exit /b %1
-:cmDone
-if %errorlevel% neq 0 goto :VCEnd</Command>
+      <Message>
+      </Message>
+      <Command>
+      </Command>
     </PostBuildEvent>
     <Link>
-      <AdditionalDependencies>..\..\libobs\MinSizeRel\obs.lib;kernel32.lib;user32.lib;gdi32.lib;winspool.lib;shell32.lib;ole32.lib;oleaut32.lib;uuid.lib;comdlg32.lib;advapi32.lib</AdditionalDependencies>
+      <AdditionalDependencies>..\..\libobs\$(Configuration)\$(Platform)\obs.lib;kernel32.lib;user32.lib;gdi32.lib;winspool.lib;shell32.lib;ole32.lib;oleaut32.lib;uuid.lib;comdlg32.lib;advapi32.lib</AdditionalDependencies>
       <AdditionalLibraryDirectories>%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
       <AdditionalOptions>%(AdditionalOptions) /machine:x64</AdditionalOptions>
       <GenerateDebugInformation>false</GenerateDebugInformation>
       <IgnoreSpecificDefaultLibraries>%(IgnoreSpecificDefaultLibraries)</IgnoreSpecificDefaultLibraries>
-      <ImportLibrary>F:/G/workplace/obs-studio/build/plugins/obs-transitions/MinSizeRel/obs-transitions.lib</ImportLibrary>
-      <ProgramDataBaseFile>F:/G/workplace/obs-studio/build/plugins/obs-transitions/MinSizeRel/obs-transitions.pdb</ProgramDataBaseFile>
+      <ImportLibrary>$(OutputPath)obs-transitions.lib</ImportLibrary>
+      <ProgramDataBaseFile>$(OutputPath)obs-transitions.pdb</ProgramDataBaseFile>
       <SubSystem>Console</SubSystem>
     </Link>
     <ProjectReference>
@@ -329,7 +203,7 @@ if %errorlevel% neq 0 goto :VCEnd</Command>
   </ItemDefinitionGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">
     <ClCompile>
-      <AdditionalIncludeDirectories>F:\G\workplace\obs-studio\libobs;F:\G\workplace\obs-studio\build\config;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AdditionalIncludeDirectories>..\..\libobs;..\..\config;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
       <AssemblerListingLocation>RelWithDebInfo/</AssemblerListingLocation>
       <CompileAs>CompileAsC</CompileAs>
       <DebugInformationFormat>ProgramDatabase</DebugInformationFormat>
@@ -347,61 +221,20 @@ if %errorlevel% neq 0 goto :VCEnd</Command>
       <PreprocessorDefinitions>WIN32;_WINDOWS;NDEBUG;UNICODE;_UNICODE;_CRT_SECURE_NO_WARNINGS;_CRT_NONSTDC_NO_WARNINGS;HAVE_OBSCONFIG_H;CMAKE_INTDIR=\"RelWithDebInfo\";obs_transitions_EXPORTS;%(PreprocessorDefinitions)</PreprocessorDefinitions>
       <AdditionalIncludeDirectories>F:\G\workplace\obs-studio\libobs;F:\G\workplace\obs-studio\build\config;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
     </ResourceCompile>
-    <Midl>
-      <AdditionalIncludeDirectories>F:\G\workplace\obs-studio\libobs;F:\G\workplace\obs-studio\build\config;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
-      <OutputDirectory>$(ProjectDir)/$(IntDir)</OutputDirectory>
-      <HeaderFileName>%(Filename).h</HeaderFileName>
-      <TypeLibraryName>%(Filename).tlb</TypeLibraryName>
-      <InterfaceIdentifierFileName>%(Filename)_i.c</InterfaceIdentifierFileName>
-      <ProxyFileName>%(Filename)_p.c</ProxyFileName>
-    </Midl>
     <PostBuildEvent>
-      <Message>			</Message>
-      <Command>setlocal
-"C:\Program Files\CMake\bin\cmake.exe" -E copy F:/G/workplace/obs-studio/build/plugins/obs-transitions/RelWithDebInfo/obs-transitions.dll F:/G/workplace/obs-studio/build/rundir/RelWithDebInfo/obs-plugins/64bit/obs-transitions.dll
-if %errorlevel% neq 0 goto :cmEnd
-:cmEnd
-endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
-:cmErrorLevel
-exit /b %1
-:cmDone
-if %errorlevel% neq 0 goto :VCEnd
-setlocal
-"C:\Program Files\CMake\bin\cmake.exe" -DCONFIG=RelWithDebInfo -DFNAME=obs-transitions.dll -DINPUT=F:/G/workplace/obs-studio/build/plugins/obs-transitions/RelWithDebInfo -DOUTPUT=F:/G/workplace/obs-studio/build/plugins/obs-transitions/pdbs -P F:/G/workplace/obs-studio/cmake/copy_on_debug_helper.cmake
-if %errorlevel% neq 0 goto :cmEnd
-:cmEnd
-endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
-:cmErrorLevel
-exit /b %1
-:cmDone
-if %errorlevel% neq 0 goto :VCEnd
-setlocal
-"C:\Program Files\CMake\bin\cmake.exe" -DCONFIG=RelWithDebInfo -DFNAME=obs-transitions.dll -DINPUT=F:/G/workplace/obs-studio/build/plugins/obs-transitions/RelWithDebInfo -DOUTPUT=F:/G/workplace/obs-studio/build/rundir/RelWithDebInfo/obs-plugins/64bit -P F:/G/workplace/obs-studio/cmake/copy_on_debug_helper.cmake
-if %errorlevel% neq 0 goto :cmEnd
-:cmEnd
-endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
-:cmErrorLevel
-exit /b %1
-:cmDone
-if %errorlevel% neq 0 goto :VCEnd
-setlocal
-"C:\Program Files\CMake\bin\cmake.exe" -E copy_directory F:/G/workplace/obs-studio/plugins/obs-transitions/data F:/G/workplace/obs-studio/build/rundir/RelWithDebInfo/data/obs-plugins/obs-transitions
-if %errorlevel% neq 0 goto :cmEnd
-:cmEnd
-endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
-:cmErrorLevel
-exit /b %1
-:cmDone
-if %errorlevel% neq 0 goto :VCEnd</Command>
+      <Message>
+      </Message>
+      <Command>
+      </Command>
     </PostBuildEvent>
     <Link>
-      <AdditionalDependencies>..\..\libobs\RelWithDebInfo\obs.lib;kernel32.lib;user32.lib;gdi32.lib;winspool.lib;shell32.lib;ole32.lib;oleaut32.lib;uuid.lib;comdlg32.lib;advapi32.lib</AdditionalDependencies>
+      <AdditionalDependencies>..\..\libobs\$(Configuration)\$(Platform)\obs.lib;kernel32.lib;user32.lib;gdi32.lib;winspool.lib;shell32.lib;ole32.lib;oleaut32.lib;uuid.lib;comdlg32.lib;advapi32.lib</AdditionalDependencies>
       <AdditionalLibraryDirectories>%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
       <AdditionalOptions>%(AdditionalOptions) /machine:x64</AdditionalOptions>
       <GenerateDebugInformation>true</GenerateDebugInformation>
       <IgnoreSpecificDefaultLibraries>%(IgnoreSpecificDefaultLibraries)</IgnoreSpecificDefaultLibraries>
-      <ImportLibrary>F:/G/workplace/obs-studio/build/plugins/obs-transitions/RelWithDebInfo/obs-transitions.lib</ImportLibrary>
-      <ProgramDataBaseFile>F:/G/workplace/obs-studio/build/plugins/obs-transitions/RelWithDebInfo/obs-transitions.pdb</ProgramDataBaseFile>
+      <ImportLibrary>$(OutputPath)obs-transitions.lib</ImportLibrary>
+      <ProgramDataBaseFile>$(OutputPath)obs-transitions.pdb</ProgramDataBaseFile>
       <SubSystem>Console</SubSystem>
     </Link>
     <ProjectReference>
@@ -409,80 +242,14 @@ if %errorlevel% neq 0 goto :VCEnd</Command>
     </ProjectReference>
   </ItemDefinitionGroup>
   <ItemGroup>
-    <CustomBuild Include="F:\G\workplace\obs-studio\plugins\obs-transitions\CMakeLists.txt">
-      <Message Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">Building Custom Rule F:/G/workplace/obs-studio/plugins/obs-transitions/CMakeLists.txt</Message>
-      <Command Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">setlocal
-"C:\Program Files\CMake\bin\cmake.exe" -HF:/G/workplace/obs-studio -BF:/G/workplace/obs-studio/build --check-stamp-file F:/G/workplace/obs-studio/build/plugins/obs-transitions/CMakeFiles/generate.stamp
-if %errorlevel% neq 0 goto :cmEnd
-:cmEnd
-endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
-:cmErrorLevel
-exit /b %1
-:cmDone
-if %errorlevel% neq 0 goto :VCEnd</Command>
-      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">F:/G/workplace/obs-studio/plugins/obs-transitions/CMakeLists.txt;F:\G\workplace\obs-studio\plugins\obs-transitions\CMakeLists.txt;F:\G\workplace\obs-studio\plugins\obs-transitions\CMakeLists.txt;%(AdditionalInputs)</AdditionalInputs>
-      <Outputs Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">F:\G\workplace\obs-studio\build\plugins\obs-transitions\CMakeFiles\generate.stamp</Outputs>
-      <LinkObjects Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">false</LinkObjects>
-      <Message Condition="'$(Configuration)|$(Platform)'=='Release|x64'">Building Custom Rule F:/G/workplace/obs-studio/plugins/obs-transitions/CMakeLists.txt</Message>
-      <Command Condition="'$(Configuration)|$(Platform)'=='Release|x64'">setlocal
-"C:\Program Files\CMake\bin\cmake.exe" -HF:/G/workplace/obs-studio -BF:/G/workplace/obs-studio/build --check-stamp-file F:/G/workplace/obs-studio/build/plugins/obs-transitions/CMakeFiles/generate.stamp
-if %errorlevel% neq 0 goto :cmEnd
-:cmEnd
-endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
-:cmErrorLevel
-exit /b %1
-:cmDone
-if %errorlevel% neq 0 goto :VCEnd</Command>
-      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Release|x64'">F:/G/workplace/obs-studio/plugins/obs-transitions/CMakeLists.txt;F:\G\workplace\obs-studio\plugins\obs-transitions\CMakeLists.txt;F:\G\workplace\obs-studio\plugins\obs-transitions\CMakeLists.txt;%(AdditionalInputs)</AdditionalInputs>
-      <Outputs Condition="'$(Configuration)|$(Platform)'=='Release|x64'">F:\G\workplace\obs-studio\build\plugins\obs-transitions\CMakeFiles\generate.stamp</Outputs>
-      <LinkObjects Condition="'$(Configuration)|$(Platform)'=='Release|x64'">false</LinkObjects>
-      <Message Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">Building Custom Rule F:/G/workplace/obs-studio/plugins/obs-transitions/CMakeLists.txt</Message>
-      <Command Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">setlocal
-"C:\Program Files\CMake\bin\cmake.exe" -HF:/G/workplace/obs-studio -BF:/G/workplace/obs-studio/build --check-stamp-file F:/G/workplace/obs-studio/build/plugins/obs-transitions/CMakeFiles/generate.stamp
-if %errorlevel% neq 0 goto :cmEnd
-:cmEnd
-endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
-:cmErrorLevel
-exit /b %1
-:cmDone
-if %errorlevel% neq 0 goto :VCEnd</Command>
-      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">F:/G/workplace/obs-studio/plugins/obs-transitions/CMakeLists.txt;F:\G\workplace\obs-studio\plugins\obs-transitions\CMakeLists.txt;F:\G\workplace\obs-studio\plugins\obs-transitions\CMakeLists.txt;%(AdditionalInputs)</AdditionalInputs>
-      <Outputs Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">F:\G\workplace\obs-studio\build\plugins\obs-transitions\CMakeFiles\generate.stamp</Outputs>
-      <LinkObjects Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">false</LinkObjects>
-      <Message Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">Building Custom Rule F:/G/workplace/obs-studio/plugins/obs-transitions/CMakeLists.txt</Message>
-      <Command Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">setlocal
-"C:\Program Files\CMake\bin\cmake.exe" -HF:/G/workplace/obs-studio -BF:/G/workplace/obs-studio/build --check-stamp-file F:/G/workplace/obs-studio/build/plugins/obs-transitions/CMakeFiles/generate.stamp
-if %errorlevel% neq 0 goto :cmEnd
-:cmEnd
-endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
-:cmErrorLevel
-exit /b %1
-:cmDone
-if %errorlevel% neq 0 goto :VCEnd</Command>
-      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">F:/G/workplace/obs-studio/plugins/obs-transitions/CMakeLists.txt;F:\G\workplace\obs-studio\plugins\obs-transitions\CMakeLists.txt;F:\G\workplace\obs-studio\plugins\obs-transitions\CMakeLists.txt;%(AdditionalInputs)</AdditionalInputs>
-      <Outputs Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">F:\G\workplace\obs-studio\build\plugins\obs-transitions\CMakeFiles\generate.stamp</Outputs>
-      <LinkObjects Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">false</LinkObjects>
-    </CustomBuild>
-  </ItemGroup>
-  <ItemGroup>
-    <ClCompile Include="F:\G\workplace\obs-studio\plugins\obs-transitions\obs-transitions.c" />
-    <ClCompile Include="F:\G\workplace\obs-studio\plugins\obs-transitions\transition-slide.c" />
-    <ClCompile Include="F:\G\workplace\obs-studio\plugins\obs-transitions\transition-swipe.c" />
-    <ClCompile Include="F:\G\workplace\obs-studio\plugins\obs-transitions\transition-fade.c" />
-    <ClCompile Include="F:\G\workplace\obs-studio\plugins\obs-transitions\transition-cut.c" />
-    <ClCompile Include="F:\G\workplace\obs-studio\plugins\obs-transitions\transition-fade-to-color.c" />
-    <ClCompile Include="F:\G\workplace\obs-studio\plugins\obs-transitions\transition-luma-wipe.c" />
-    <ClCompile Include="F:\G\workplace\obs-studio\plugins\obs-transitions\transition-stinger.c" />
-  </ItemGroup>
-  <ItemGroup>
-    <ProjectReference Include="F:\G\workplace\obs-studio\build\ZERO_CHECK.vcxproj">
-      <Project>{31E55BC9-E0DA-357D-BE36-742F4964C680}</Project>
-      <Name>ZERO_CHECK</Name>
-    </ProjectReference>
-    <ProjectReference Include="F:\G\workplace\obs-studio\build\libobs\libobs.vcxproj">
-      <Project>{0AE9526A-10B0-3980-A7DB-6EE8599DC4E3}</Project>
-      <Name>libobs</Name>
-    </ProjectReference>
+    <ClCompile Include="obs-transitions.c" />
+    <ClCompile Include="transition-cut.c" />
+    <ClCompile Include="transition-fade-to-color.c" />
+    <ClCompile Include="transition-fade.c" />
+    <ClCompile Include="transition-luma-wipe.c" />
+    <ClCompile Include="transition-slide.c" />
+    <ClCompile Include="transition-stinger.c" />
+    <ClCompile Include="transition-swipe.c" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">
