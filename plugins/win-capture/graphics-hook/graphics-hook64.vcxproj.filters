@@ -1,0 +1,24 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="14.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <ClInclude Include="d3d1x_shaders.hpp" />
+    <ClInclude Include="d3d9-patches.hpp" />
+    <ClInclude Include="dxgi-helpers.hpp" />
+    <ClInclude Include="gl-decs.h" />
+    <ClInclude Include="graphics-hook.h" />
+    <ClInclude Include="..\funchook.h" />
+    <ClInclude Include="..\obfuscate.h" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="d3d8-capture.cpp" />
+    <ClCompile Include="d3d9-capture.cpp" />
+    <ClCompile Include="d3d10-capture.cpp" />
+    <ClCompile Include="d3d11-capture.cpp" />
+    <ClCompile Include="d3d12-capture.cpp" />
+    <ClCompile Include="dxgi-capture.cpp" />
+    <ClCompile Include="gl-capture.c" />
+    <ClCompile Include="graphics-hook.c" />
+    <ClCompile Include="..\funchook.c" />
+    <ClCompile Include="..\obfuscate.c" />
+  </ItemGroup>
+</Project>
