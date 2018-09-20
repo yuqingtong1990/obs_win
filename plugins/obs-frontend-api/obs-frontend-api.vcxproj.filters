@@ -1,0 +1,10 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="14.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <ClCompile Include="obs-frontend-api.cpp" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="obs-frontend-api.h" />
+    <ClInclude Include="obs-frontend-internal.hpp" />
+  </ItemGroup>
+</Project>
