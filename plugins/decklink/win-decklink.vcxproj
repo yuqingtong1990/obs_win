@@ -56,8 +56,8 @@
   <PropertyGroup Label="UserMacros" />
   <PropertyGroup>
     <_ProjectFileVersion>10.0.20506.1</_ProjectFileVersion>
-    <OutDir Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">$(Configuration)\$(Platform)\</OutDir>
-    <OutDir Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">$(Configuration)\$(Platform)\</OutDir>
+    <OutDir Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">$(SolutionDir)build\$(Configuration)_$(Platform)\</OutDir>
+    <OutDir Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">$(SolutionDir)build\$(Configuration)_$(Platform)\</OutDir>
     <IntDir Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">$(Configuration)\$(Platform)\tmp\</IntDir>
     <IntDir Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">$(Configuration)\$(Platform)\tmp\</IntDir>
     <TargetName Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">win-decklink</TargetName>
@@ -68,8 +68,8 @@
     <LinkIncremental Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">true</LinkIncremental>
     <GenerateManifest Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">true</GenerateManifest>
     <GenerateManifest Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">true</GenerateManifest>
-    <OutDir Condition="'$(Configuration)|$(Platform)'=='Release|x64'">$(Configuration)\$(Platform)\</OutDir>
-    <OutDir Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">$(Configuration)\$(Platform)\</OutDir>
+    <OutDir Condition="'$(Configuration)|$(Platform)'=='Release|x64'">$(SolutionDir)build\$(Configuration)_$(Platform)\</OutDir>
+    <OutDir Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">$(SolutionDir)build\$(Configuration)_$(Platform)\</OutDir>
     <IntDir Condition="'$(Configuration)|$(Platform)'=='Release|x64'">$(Configuration)\$(Platform)\tmp\</IntDir>
     <IntDir Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">$(Configuration)\$(Platform)\tmp\</IntDir>
     <TargetName Condition="'$(Configuration)|$(Platform)'=='Release|x64'">win-decklink</TargetName>
@@ -105,8 +105,8 @@
     <PostBuildEvent>
       <Message>
       </Message>
-      <Command>xcopy $(ProjectDir)$(Configuration)\$(Platform)\$(ProjectName).dll  $(SolutionDir)build\$(Configuration)_$(Platform)\ /S /Y
-xcopy $(ProjectDir)$(Configuration)\$(Platform)\$(ProjectName).pdb  $(SolutionDir)build\$(Configuration)_$(Platform)\pdb\ /S /Y</Command>
+      <Command>
+      </Command>
     </PostBuildEvent>
     <Link>
       <AdditionalDependencies>..\..\libobs\$(Configuration)\$(Platform)\obs.lib;kernel32.lib;user32.lib;gdi32.lib;winspool.lib;shell32.lib;ole32.lib;oleaut32.lib;uuid.lib;comdlg32.lib;advapi32.lib</AdditionalDependencies>
@@ -114,7 +114,7 @@ xcopy $(ProjectDir)$(Configuration)\$(Platform)\$(ProjectName).pdb  $(SolutionDi
       <AdditionalOptions>%(AdditionalOptions) /machine:x64</AdditionalOptions>
       <GenerateDebugInformation>true</GenerateDebugInformation>
       <IgnoreSpecificDefaultLibraries>%(IgnoreSpecificDefaultLibraries)</IgnoreSpecificDefaultLibraries>
-      <ImportLibrary>$(OutputPath)$(ProjectName).lib</ImportLibrary>
+      <ImportLibrary>$(Configuration)\$(Platform)\$(ProjectName).lib</ImportLibrary>
       <ProgramDataBaseFile>$(OutDir)win-decklink.pdb</ProgramDataBaseFile>
       <SubSystem>Console</SubSystem>
     </Link>
@@ -146,8 +146,8 @@ xcopy $(ProjectDir)$(Configuration)\$(Platform)\$(ProjectName).pdb  $(SolutionDi
     <PostBuildEvent>
       <Message>
       </Message>
-      <Command>xcopy $(ProjectDir)$(Configuration)\$(Platform)\$(ProjectName).dll  $(SolutionDir)build\$(Configuration)_$(Platform)\ /S /Y
-xcopy $(ProjectDir)$(Configuration)\$(Platform)\$(ProjectName).pdb  $(SolutionDir)build\$(Configuration)_$(Platform)\pdb\ /S /Y</Command>
+      <Command>
+      </Command>
     </PostBuildEvent>
     <Link>
       <AdditionalDependencies>..\..\libobs\$(Configuration)\$(Platform)\obs.lib;kernel32.lib;user32.lib;gdi32.lib;winspool.lib;shell32.lib;ole32.lib;oleaut32.lib;uuid.lib;comdlg32.lib;advapi32.lib</AdditionalDependencies>
@@ -155,7 +155,7 @@ xcopy $(ProjectDir)$(Configuration)\$(Platform)\$(ProjectName).pdb  $(SolutionDi
       <AdditionalOptions>%(AdditionalOptions) /machine:x86</AdditionalOptions>
       <GenerateDebugInformation>true</GenerateDebugInformation>
       <IgnoreSpecificDefaultLibraries>%(IgnoreSpecificDefaultLibraries)</IgnoreSpecificDefaultLibraries>
-      <ImportLibrary>$(OutputPath)$(ProjectName).lib</ImportLibrary>
+      <ImportLibrary>$(Configuration)\$(Platform)\$(ProjectName).lib</ImportLibrary>
       <ProgramDataBaseFile>$(OutDir)win-decklink.pdb</ProgramDataBaseFile>
       <SubSystem>Console</SubSystem>
     </Link>
@@ -187,8 +187,8 @@ xcopy $(ProjectDir)$(Configuration)\$(Platform)\$(ProjectName).pdb  $(SolutionDi
     <PostBuildEvent>
       <Message>
       </Message>
-      <Command>xcopy $(ProjectDir)$(Configuration)\$(Platform)\$(ProjectName).dll  $(SolutionDir)build\$(Configuration)_$(Platform)\ /S /Y
-xcopy $(ProjectDir)$(Configuration)\$(Platform)\$(ProjectName).pdb  $(SolutionDir)build\$(Configuration)_$(Platform)\pdb\ /S /Y</Command>
+      <Command>
+      </Command>
     </PostBuildEvent>
     <Link>
       <AdditionalDependencies>..\..\libobs\$(Configuration)\$(Platform)\obs.lib;kernel32.lib;user32.lib;gdi32.lib;winspool.lib;shell32.lib;ole32.lib;oleaut32.lib;uuid.lib;comdlg32.lib;advapi32.lib</AdditionalDependencies>
@@ -196,7 +196,7 @@ xcopy $(ProjectDir)$(Configuration)\$(Platform)\$(ProjectName).pdb  $(SolutionDi
       <AdditionalOptions>%(AdditionalOptions) /machine:x64</AdditionalOptions>
       <GenerateDebugInformation>true</GenerateDebugInformation>
       <IgnoreSpecificDefaultLibraries>%(IgnoreSpecificDefaultLibraries)</IgnoreSpecificDefaultLibraries>
-      <ImportLibrary>$(OutputPath)$(ProjectName).lib</ImportLibrary>
+      <ImportLibrary>$(Configuration)\$(Platform)\$(ProjectName).lib</ImportLibrary>
       <ProgramDataBaseFile>$(OutDir)win-decklink.pdb</ProgramDataBaseFile>
       <SubSystem>Console</SubSystem>
     </Link>
@@ -228,8 +228,8 @@ xcopy $(ProjectDir)$(Configuration)\$(Platform)\$(ProjectName).pdb  $(SolutionDi
     <PostBuildEvent>
       <Message>
       </Message>
-      <Command>xcopy $(ProjectDir)$(Configuration)\$(Platform)\$(ProjectName).dll  $(SolutionDir)build\$(Configuration)_$(Platform)\ /S /Y
-xcopy $(ProjectDir)$(Configuration)\$(Platform)\$(ProjectName).pdb  $(SolutionDir)build\$(Configuration)_$(Platform)\pdb\ /S /Y</Command>
+      <Command>
+      </Command>
     </PostBuildEvent>
     <Link>
       <AdditionalDependencies>..\..\libobs\$(Configuration)\$(Platform)\obs.lib;kernel32.lib;user32.lib;gdi32.lib;winspool.lib;shell32.lib;ole32.lib;oleaut32.lib;uuid.lib;comdlg32.lib;advapi32.lib</AdditionalDependencies>
@@ -237,7 +237,7 @@ xcopy $(ProjectDir)$(Configuration)\$(Platform)\$(ProjectName).pdb  $(SolutionDi
       <AdditionalOptions>%(AdditionalOptions) /machine:x86</AdditionalOptions>
       <GenerateDebugInformation>true</GenerateDebugInformation>
       <IgnoreSpecificDefaultLibraries>%(IgnoreSpecificDefaultLibraries)</IgnoreSpecificDefaultLibraries>
-      <ImportLibrary>$(OutputPath)$(ProjectName).lib</ImportLibrary>
+      <ImportLibrary>$(Configuration)\$(Platform)\$(ProjectName).lib</ImportLibrary>
       <ProgramDataBaseFile>$(OutDir)win-decklink.pdb</ProgramDataBaseFile>
       <SubSystem>Console</SubSystem>
     </Link>

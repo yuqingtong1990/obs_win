@@ -92,8 +92,8 @@
   <PropertyGroup Label="UserMacros" />
   <PropertyGroup>
     <_ProjectFileVersion>10.0.20506.1</_ProjectFileVersion>
-    <OutDir Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">$(Configuration)\$(Platform)\</OutDir>
-    <OutDir Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">$(Configuration)\$(Platform)\</OutDir>
+    <OutDir Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">$(SolutionDir)build\$(Configuration)_$(Platform)\</OutDir>
+    <OutDir Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">$(SolutionDir)build\$(Configuration)_$(Platform)\</OutDir>
     <IntDir Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">$(Configuration)\$(Platform)\tmp\</IntDir>
     <IntDir Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">$(Configuration)\$(Platform)\tmp\</IntDir>
     <TargetName Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">libobs-d3d11</TargetName>
@@ -104,8 +104,8 @@
     <LinkIncremental Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">true</LinkIncremental>
     <GenerateManifest Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">true</GenerateManifest>
     <GenerateManifest Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">true</GenerateManifest>
-    <OutDir Condition="'$(Configuration)|$(Platform)'=='Release|x64'">$(Configuration)\$(Platform)\</OutDir>
-    <OutDir Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">$(Configuration)\$(Platform)\</OutDir>
+    <OutDir Condition="'$(Configuration)|$(Platform)'=='Release|x64'">$(SolutionDir)build\$(Configuration)_$(Platform)\</OutDir>
+    <OutDir Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">$(SolutionDir)build\$(Configuration)_$(Platform)\</OutDir>
     <IntDir Condition="'$(Configuration)|$(Platform)'=='Release|x64'">$(Configuration)\$(Platform)\tmp\</IntDir>
     <IntDir Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">$(Configuration)\$(Platform)\tmp\</IntDir>
     <TargetName Condition="'$(Configuration)|$(Platform)'=='Release|x64'">libobs-d3d11</TargetName>
@@ -116,8 +116,8 @@
     <LinkIncremental Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">false</LinkIncremental>
     <GenerateManifest Condition="'$(Configuration)|$(Platform)'=='Release|x64'">true</GenerateManifest>
     <GenerateManifest Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">true</GenerateManifest>
-    <OutDir Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">$(Configuration)\$(Platform)\</OutDir>
-    <OutDir Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|Win32'">$(Configuration)\$(Platform)\</OutDir>
+    <OutDir Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">$(SolutionDir)build\$(Configuration)_$(Platform)\</OutDir>
+    <OutDir Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|Win32'">$(SolutionDir)build\$(Configuration)_$(Platform)\</OutDir>
     <IntDir Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">$(Configuration)\$(Platform)\tmp\</IntDir>
     <IntDir Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|Win32'">$(Configuration)\$(Platform)\tmp\</IntDir>
     <TargetName Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">libobs-d3d11</TargetName>
@@ -128,8 +128,8 @@
     <LinkIncremental Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|Win32'">false</LinkIncremental>
     <GenerateManifest Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">true</GenerateManifest>
     <GenerateManifest Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|Win32'">true</GenerateManifest>
-    <OutDir Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">$(Configuration)\$(Platform)\</OutDir>
-    <OutDir Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|Win32'">$(Configuration)\$(Platform)\</OutDir>
+    <OutDir Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">$(SolutionDir)build\$(Configuration)_$(Platform)\</OutDir>
+    <OutDir Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|Win32'">$(SolutionDir)build\$(Configuration)_$(Platform)\</OutDir>
     <IntDir Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">$(Configuration)\$(Platform)\tmp\</IntDir>
     <IntDir Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|Win32'">$(Configuration)\$(Platform)\tmp\</IntDir>
     <TargetName Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">libobs-d3d11</TargetName>
@@ -165,8 +165,8 @@
     <PostBuildEvent>
       <Message>
       </Message>
-      <Command>xcopy $(ProjectDir)$(Configuration)\$(Platform)\$(ProjectName).exe  $(SolutionDir)build\$(Configuration)_$(Platform)\ /S /Y
-xcopy $(ProjectDir)$(Configuration)\$(Platform)\$(ProjectName).pdb  $(SolutionDir)build\$(Configuration)_$(Platform)\pdb\ /S /Y</Command>
+      <Command>
+      </Command>
     </PostBuildEvent>
     <Link>
       <AdditionalDependencies>..\libobs\$(Configuration)\$(Platform)\obs.lib;d3d11.lib;dxgi.lib;kernel32.lib;user32.lib;%(AdditionalDependencies)</AdditionalDependencies>
@@ -174,7 +174,7 @@ xcopy $(ProjectDir)$(Configuration)\$(Platform)\$(ProjectName).pdb  $(SolutionDi
       <AdditionalOptions>%(AdditionalOptions) /machine:x64</AdditionalOptions>
       <GenerateDebugInformation>true</GenerateDebugInformation>
       <IgnoreSpecificDefaultLibraries>%(IgnoreSpecificDefaultLibraries)</IgnoreSpecificDefaultLibraries>
-      <ImportLibrary>$(OutDir)libobs-d3d11.lib</ImportLibrary>
+      <ImportLibrary>$(Configuration)\$(Platform)\$(ProjectName).lib</ImportLibrary>
       <ProgramDataBaseFile>$(OutDir)libobs-d3d11.pdb</ProgramDataBaseFile>
       <SubSystem>Console</SubSystem>
     </Link>
@@ -206,8 +206,8 @@ xcopy $(ProjectDir)$(Configuration)\$(Platform)\$(ProjectName).pdb  $(SolutionDi
     <PostBuildEvent>
       <Message>
       </Message>
-      <Command>xcopy $(ProjectDir)$(Configuration)\$(Platform)\$(ProjectName).exe  $(SolutionDir)build\$(Configuration)_$(Platform)\ /S /Y
-xcopy $(ProjectDir)$(Configuration)\$(Platform)\$(ProjectName).pdb  $(SolutionDir)build\$(Configuration)_$(Platform)\pdb\ /S /Y</Command>
+      <Command>
+      </Command>
     </PostBuildEvent>
     <Link>
       <AdditionalDependencies>..\libobs\$(Configuration)\$(Platform)\obs.lib;d3d11.lib;dxgi.lib;kernel32.lib;user32.lib;%(AdditionalDependencies)</AdditionalDependencies>
@@ -215,7 +215,7 @@ xcopy $(ProjectDir)$(Configuration)\$(Platform)\$(ProjectName).pdb  $(SolutionDi
       <AdditionalOptions>%(AdditionalOptions) /machine:x86</AdditionalOptions>
       <GenerateDebugInformation>true</GenerateDebugInformation>
       <IgnoreSpecificDefaultLibraries>%(IgnoreSpecificDefaultLibraries)</IgnoreSpecificDefaultLibraries>
-      <ImportLibrary>$(OutDir)libobs-d3d11.lib</ImportLibrary>
+      <ImportLibrary>$(Configuration)\$(Platform)\$(ProjectName).lib</ImportLibrary>
       <ProgramDataBaseFile>$(OutDir)libobs-d3d11.pdb</ProgramDataBaseFile>
       <SubSystem>Console</SubSystem>
     </Link>
@@ -247,8 +247,8 @@ xcopy $(ProjectDir)$(Configuration)\$(Platform)\$(ProjectName).pdb  $(SolutionDi
     <PostBuildEvent>
       <Message>
       </Message>
-      <Command>xcopy $(ProjectDir)$(Configuration)\$(Platform)\$(ProjectName).exe  $(SolutionDir)build\$(Configuration)_$(Platform)\ /S /Y
-xcopy $(ProjectDir)$(Configuration)\$(Platform)\$(ProjectName).pdb  $(SolutionDir)build\$(Configuration)_$(Platform)\pdb\ /S /Y</Command>
+      <Command>
+      </Command>
     </PostBuildEvent>
     <Link>
       <AdditionalDependencies>..\libobs\$(Configuration)\$(Platform)\obs.lib;d3d11.lib;dxgi.lib;kernel32.lib;user32.lib;%(AdditionalDependencies)</AdditionalDependencies>
@@ -256,7 +256,7 @@ xcopy $(ProjectDir)$(Configuration)\$(Platform)\$(ProjectName).pdb  $(SolutionDi
       <AdditionalOptions>%(AdditionalOptions) /machine:x64</AdditionalOptions>
       <GenerateDebugInformation>true</GenerateDebugInformation>
       <IgnoreSpecificDefaultLibraries>%(IgnoreSpecificDefaultLibraries)</IgnoreSpecificDefaultLibraries>
-      <ImportLibrary>$(OutDir)libobs-d3d11.lib</ImportLibrary>
+      <ImportLibrary>$(Configuration)\$(Platform)\$(ProjectName).lib</ImportLibrary>
       <ProgramDataBaseFile>$(OutDir)libobs-d3d11.pdb</ProgramDataBaseFile>
       <SubSystem>Console</SubSystem>
     </Link>
@@ -288,8 +288,8 @@ xcopy $(ProjectDir)$(Configuration)\$(Platform)\$(ProjectName).pdb  $(SolutionDi
     <PostBuildEvent>
       <Message>
       </Message>
-      <Command>xcopy $(ProjectDir)$(Configuration)\$(Platform)\$(ProjectName).exe  $(SolutionDir)build\$(Configuration)_$(Platform)\ /S /Y
-xcopy $(ProjectDir)$(Configuration)\$(Platform)\$(ProjectName).pdb  $(SolutionDir)build\$(Configuration)_$(Platform)\pdb\ /S /Y</Command>
+      <Command>
+      </Command>
     </PostBuildEvent>
     <Link>
       <AdditionalDependencies>..\libobs\$(Configuration)\$(Platform)\obs.lib;d3d11.lib;dxgi.lib;kernel32.lib;user32.lib;%(AdditionalDependencies)</AdditionalDependencies>
@@ -297,7 +297,7 @@ xcopy $(ProjectDir)$(Configuration)\$(Platform)\$(ProjectName).pdb  $(SolutionDi
       <AdditionalOptions>%(AdditionalOptions) /machine:x86</AdditionalOptions>
       <GenerateDebugInformation>true</GenerateDebugInformation>
       <IgnoreSpecificDefaultLibraries>%(IgnoreSpecificDefaultLibraries)</IgnoreSpecificDefaultLibraries>
-      <ImportLibrary>$(OutDir)libobs-d3d11.lib</ImportLibrary>
+      <ImportLibrary>$(Configuration)\$(Platform)\$(ProjectName).lib</ImportLibrary>
       <ProgramDataBaseFile>$(OutDir)libobs-d3d11.pdb</ProgramDataBaseFile>
       <SubSystem>Console</SubSystem>
     </Link>
@@ -329,8 +329,8 @@ xcopy $(ProjectDir)$(Configuration)\$(Platform)\$(ProjectName).pdb  $(SolutionDi
     <PostBuildEvent>
       <Message>
       </Message>
-      <Command>xcopy $(ProjectDir)$(Configuration)\$(Platform)\$(ProjectName).exe  $(SolutionDir)build\$(Configuration)_$(Platform)\ /S /Y
-xcopy $(ProjectDir)$(Configuration)\$(Platform)\$(ProjectName).pdb  $(SolutionDir)build\$(Configuration)_$(Platform)\pdb\ /S /Y</Command>
+      <Command>
+      </Command>
     </PostBuildEvent>
     <Link>
       <AdditionalDependencies>..\libobs\$(Configuration)\$(Platform)\obs.lib;d3d11.lib;dxgi.lib;kernel32.lib;user32.lib;%(AdditionalDependencies)</AdditionalDependencies>
@@ -338,7 +338,7 @@ xcopy $(ProjectDir)$(Configuration)\$(Platform)\$(ProjectName).pdb  $(SolutionDi
       <AdditionalOptions>%(AdditionalOptions) /machine:x64</AdditionalOptions>
       <GenerateDebugInformation>false</GenerateDebugInformation>
       <IgnoreSpecificDefaultLibraries>%(IgnoreSpecificDefaultLibraries)</IgnoreSpecificDefaultLibraries>
-      <ImportLibrary>$(OutDir)libobs-d3d11.lib</ImportLibrary>
+      <ImportLibrary>$(Configuration)\$(Platform)\$(ProjectName).lib</ImportLibrary>
       <ProgramDataBaseFile>$(OutDir)libobs-d3d11.pdb</ProgramDataBaseFile>
       <SubSystem>Console</SubSystem>
     </Link>
@@ -370,8 +370,8 @@ xcopy $(ProjectDir)$(Configuration)\$(Platform)\$(ProjectName).pdb  $(SolutionDi
     <PostBuildEvent>
       <Message>
       </Message>
-      <Command>xcopy $(ProjectDir)$(Configuration)\$(Platform)\$(ProjectName).exe  $(SolutionDir)build\$(Configuration)_$(Platform)\ /S /Y
-xcopy $(ProjectDir)$(Configuration)\$(Platform)\$(ProjectName).pdb  $(SolutionDir)build\$(Configuration)_$(Platform)\pdb\ /S /Y</Command>
+      <Command>
+      </Command>
     </PostBuildEvent>
     <Link>
       <AdditionalDependencies>..\libobs\$(Configuration)\$(Platform)\obs.lib;d3d11.lib;dxgi.lib;kernel32.lib;user32.lib;%(AdditionalDependencies)</AdditionalDependencies>
@@ -379,7 +379,7 @@ xcopy $(ProjectDir)$(Configuration)\$(Platform)\$(ProjectName).pdb  $(SolutionDi
       <AdditionalOptions>%(AdditionalOptions) /machine:x86</AdditionalOptions>
       <GenerateDebugInformation>false</GenerateDebugInformation>
       <IgnoreSpecificDefaultLibraries>%(IgnoreSpecificDefaultLibraries)</IgnoreSpecificDefaultLibraries>
-      <ImportLibrary>$(OutDir)libobs-d3d11.lib</ImportLibrary>
+      <ImportLibrary>$(Configuration)\$(Platform)\$(ProjectName).lib</ImportLibrary>
       <ProgramDataBaseFile>$(OutDir)libobs-d3d11.pdb</ProgramDataBaseFile>
       <SubSystem>Console</SubSystem>
     </Link>
@@ -410,8 +410,8 @@ xcopy $(ProjectDir)$(Configuration)\$(Platform)\$(ProjectName).pdb  $(SolutionDi
     <PostBuildEvent>
       <Message>
       </Message>
-      <Command>xcopy $(ProjectDir)$(Configuration)\$(Platform)\$(ProjectName).exe  $(SolutionDir)build\$(Configuration)_$(Platform)\ /S /Y
-xcopy $(ProjectDir)$(Configuration)\$(Platform)\$(ProjectName).pdb  $(SolutionDir)build\$(Configuration)_$(Platform)\pdb\ /S /Y</Command>
+      <Command>
+      </Command>
     </PostBuildEvent>
     <Link>
       <AdditionalDependencies>..\libobs\$(Configuration)\$(Platform)\obs.lib;d3d11.lib;dxgi.lib;kernel32.lib;user32.lib;%(AdditionalDependencies)</AdditionalDependencies>
@@ -419,7 +419,7 @@ xcopy $(ProjectDir)$(Configuration)\$(Platform)\$(ProjectName).pdb  $(SolutionDi
       <AdditionalOptions>%(AdditionalOptions) /machine:x64</AdditionalOptions>
       <GenerateDebugInformation>true</GenerateDebugInformation>
       <IgnoreSpecificDefaultLibraries>%(IgnoreSpecificDefaultLibraries)</IgnoreSpecificDefaultLibraries>
-      <ImportLibrary>$(OutDir)libobs-d3d11.lib</ImportLibrary>
+      <ImportLibrary>$(Configuration)\$(Platform)\$(ProjectName).lib</ImportLibrary>
       <ProgramDataBaseFile>$(OutDir)libobs-d3d11.pdb</ProgramDataBaseFile>
       <SubSystem>Console</SubSystem>
     </Link>
@@ -450,8 +450,8 @@ xcopy $(ProjectDir)$(Configuration)\$(Platform)\$(ProjectName).pdb  $(SolutionDi
     <PostBuildEvent>
       <Message>
       </Message>
-      <Command>xcopy $(ProjectDir)$(Configuration)\$(Platform)\$(ProjectName).exe  $(SolutionDir)build\$(Configuration)_$(Platform)\ /S /Y
-xcopy $(ProjectDir)$(Configuration)\$(Platform)\$(ProjectName).pdb  $(SolutionDir)build\$(Configuration)_$(Platform)\pdb\ /S /Y</Command>
+      <Command>
+      </Command>
     </PostBuildEvent>
     <Link>
       <AdditionalDependencies>..\libobs\$(Configuration)\$(Platform)\obs.lib;d3d11.lib;dxgi.lib;kernel32.lib;user32.lib;%(AdditionalDependencies)</AdditionalDependencies>
@@ -459,7 +459,7 @@ xcopy $(ProjectDir)$(Configuration)\$(Platform)\$(ProjectName).pdb  $(SolutionDi
       <AdditionalOptions>%(AdditionalOptions) /machine:x86</AdditionalOptions>
       <GenerateDebugInformation>true</GenerateDebugInformation>
       <IgnoreSpecificDefaultLibraries>%(IgnoreSpecificDefaultLibraries)</IgnoreSpecificDefaultLibraries>
-      <ImportLibrary>$(OutDir)libobs-d3d11.lib</ImportLibrary>
+      <ImportLibrary>$(Configuration)\$(Platform)\$(ProjectName).lib</ImportLibrary>
       <ProgramDataBaseFile>$(OutDir)libobs-d3d11.pdb</ProgramDataBaseFile>
       <SubSystem>Console</SubSystem>
     </Link>

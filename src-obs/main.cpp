@@ -23,6 +23,7 @@ int APIENTRY _tWinMain(_In_ HINSTANCE hInstance,
                      _In_ LPTSTR    lpCmdLine,
                      _In_ int       nCmdShow)
 {
+	obs_load_all_modules();
 	return 0;
 }
 

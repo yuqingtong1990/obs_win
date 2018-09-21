@@ -56,8 +56,8 @@
   <PropertyGroup Label="UserMacros" />
   <PropertyGroup>
     <_ProjectFileVersion>10.0.20506.1</_ProjectFileVersion>
-    <OutDir Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">$(Configuration)\$(Platform)\</OutDir>
-    <OutDir Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">$(Configuration)\$(Platform)\</OutDir>
+    <OutDir Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">$(SolutionDir)build\$(Configuration)_$(Platform)\</OutDir>
+    <OutDir Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">$(SolutionDir)build\$(Configuration)_$(Platform)\</OutDir>
     <IntDir Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">$(Configuration)\$(Platform)\tmp\</IntDir>
     <IntDir Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">$(Configuration)\$(Platform)\tmp\</IntDir>
     <TargetName Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">libobs</TargetName>
@@ -68,8 +68,8 @@
     <LinkIncremental Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">true</LinkIncremental>
     <GenerateManifest Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">true</GenerateManifest>
     <GenerateManifest Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">true</GenerateManifest>
-    <OutDir Condition="'$(Configuration)|$(Platform)'=='Release|x64'">$(Configuration)\$(Platform)\</OutDir>
-    <OutDir Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">$(Configuration)\$(Platform)\</OutDir>
+    <OutDir Condition="'$(Configuration)|$(Platform)'=='Release|x64'">$(SolutionDir)build\$(Configuration)_$(Platform)\</OutDir>
+    <OutDir Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">$(SolutionDir)build\$(Configuration)_$(Platform)\</OutDir>
     <IntDir Condition="'$(Configuration)|$(Platform)'=='Release|x64'">$(Configuration)\$(Platform)\tmp\</IntDir>
     <IntDir Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">$(Configuration)\$(Platform)\tmp\</IntDir>
     <TargetName Condition="'$(Configuration)|$(Platform)'=='Release|x64'">libobs</TargetName>
@@ -106,8 +106,8 @@
     <PostBuildEvent>
       <Message>
       </Message>
-      <Command>xcopy $(ProjectDir)$(Configuration)\$(Platform)\$(ProjectName).dll  $(SolutionDir)build\$(Configuration)_$(Platform)\ /S /Y
-xcopy $(ProjectDir)$(Configuration)\$(Platform)\$(ProjectName).pdb  $(SolutionDir)build\$(Configuration)_$(Platform)\pdb\ /S /Y</Command>
+      <Command>
+      </Command>
     </PostBuildEvent>
     <Link>
       <AdditionalDependencies>..\deps\jansson\$(Configuration)\$(Platform)\jansson.lib;..\deps\w32-pthreads\$(Configuration)\$(Platform)\w32-pthreads.lib;..\deps\dependencies2015\win64\bin\avcodec.lib;..\deps\dependencies2015\win64\bin\avformat.lib;..\deps\dependencies2015\win64\bin\avutil.lib;..\deps\dependencies2015\win64\bin\swscale.lib;..\deps\dependencies2015\win64\bin\swresample.lib;..\deps\dependencies2015\win64\bin\zlib.lib;winmm.lib;psapi.lib;kernel32.lib;user32.lib;gdi32.lib;winspool.lib;shell32.lib;ole32.lib;oleaut32.lib;uuid.lib;comdlg32.lib;advapi32.lib</AdditionalDependencies>
@@ -116,7 +116,7 @@ xcopy $(ProjectDir)$(Configuration)\$(Platform)\$(ProjectName).pdb  $(SolutionDi
       <GenerateDebugInformation>true</GenerateDebugInformation>
       <IgnoreSpecificDefaultLibraries>%(IgnoreSpecificDefaultLibraries)</IgnoreSpecificDefaultLibraries>
       <ImageHasSafeExceptionHandlers>false</ImageHasSafeExceptionHandlers>
-      <ImportLibrary>$(OutDir)obs.lib</ImportLibrary>
+      <ImportLibrary>$(Configuration)\$(Platform)\obs.lib</ImportLibrary>
       <ProgramDataBaseFile>$(OutDir)libobs.pdb</ProgramDataBaseFile>
       <SubSystem>Console</SubSystem>
     </Link>
@@ -149,8 +149,8 @@ xcopy $(ProjectDir)$(Configuration)\$(Platform)\$(ProjectName).pdb  $(SolutionDi
     <PostBuildEvent>
       <Message>
       </Message>
-      <Command>xcopy $(ProjectDir)$(Configuration)\$(Platform)\$(ProjectName).dll  $(SolutionDir)build\$(Configuration)_$(Platform)\ /S /Y
-xcopy $(ProjectDir)$(Configuration)\$(Platform)\$(ProjectName).pdb  $(SolutionDir)build\$(Configuration)_$(Platform)\pdb\ /S /Y</Command>
+      <Command>
+      </Command>
     </PostBuildEvent>
     <Link>
       <AdditionalDependencies>..\deps\jansson\$(Configuration)\$(Platform)\jansson.lib;..\deps\w32-pthreads\$(Configuration)\$(Platform)\w32-pthreads.lib;..\deps\dependencies2015\win32\bin\avcodec.lib;..\deps\dependencies2015\win32\bin\avformat.lib;..\deps\dependencies2015\win32\bin\avutil.lib;..\deps\dependencies2015\win32\bin\swscale.lib;..\deps\dependencies2015\win32\bin\swresample.lib;..\deps\dependencies2015\win32\bin\zlib.lib;winmm.lib;psapi.lib;kernel32.lib;user32.lib;gdi32.lib;winspool.lib;shell32.lib;ole32.lib;oleaut32.lib;uuid.lib;comdlg32.lib;advapi32.lib</AdditionalDependencies>
@@ -159,7 +159,7 @@ xcopy $(ProjectDir)$(Configuration)\$(Platform)\$(ProjectName).pdb  $(SolutionDi
       <GenerateDebugInformation>true</GenerateDebugInformation>
       <IgnoreSpecificDefaultLibraries>%(IgnoreSpecificDefaultLibraries)</IgnoreSpecificDefaultLibraries>
       <ImageHasSafeExceptionHandlers>false</ImageHasSafeExceptionHandlers>
-      <ImportLibrary>$(OutDir)obs.lib</ImportLibrary>
+      <ImportLibrary>$(Configuration)\$(Platform)\obs.lib</ImportLibrary>
       <ProgramDataBaseFile>$(OutDir)libobs.pdb</ProgramDataBaseFile>
       <SubSystem>Console</SubSystem>
     </Link>
@@ -192,8 +192,8 @@ xcopy $(ProjectDir)$(Configuration)\$(Platform)\$(ProjectName).pdb  $(SolutionDi
     <PostBuildEvent>
       <Message>
       </Message>
-      <Command>xcopy $(ProjectDir)$(Configuration)\$(Platform)\$(ProjectName).dll  $(SolutionDir)build\$(Configuration)_$(Platform)\ /S /Y
-xcopy $(ProjectDir)$(Configuration)\$(Platform)\$(ProjectName).pdb  $(SolutionDir)build\$(Configuration)_$(Platform)\pdb\ /S /Y</Command>
+      <Command>
+      </Command>
     </PostBuildEvent>
     <Link>
       <AdditionalDependencies>..\deps\jansson\$(Configuration)\$(Platform)\jansson.lib;..\deps\w32-pthreads\$(Configuration)\$(Platform)\w32-pthreads.lib;..\deps\dependencies2015\win64\bin\avcodec.lib;..\deps\dependencies2015\win64\bin\avformat.lib;..\deps\dependencies2015\win64\bin\avutil.lib;..\deps\dependencies2015\win64\bin\swscale.lib;..\deps\dependencies2015\win64\bin\swresample.lib;..\deps\dependencies2015\win64\bin\zlib.lib;winmm.lib;psapi.lib;kernel32.lib;user32.lib;gdi32.lib;winspool.lib;shell32.lib;ole32.lib;oleaut32.lib;uuid.lib;comdlg32.lib;advapi32.lib</AdditionalDependencies>
@@ -202,7 +202,7 @@ xcopy $(ProjectDir)$(Configuration)\$(Platform)\$(ProjectName).pdb  $(SolutionDi
       <GenerateDebugInformation>true</GenerateDebugInformation>
       <IgnoreSpecificDefaultLibraries>%(IgnoreSpecificDefaultLibraries)</IgnoreSpecificDefaultLibraries>
       <ImageHasSafeExceptionHandlers>false</ImageHasSafeExceptionHandlers>
-      <ImportLibrary>$(OutDir)obs.lib</ImportLibrary>
+      <ImportLibrary>$(Configuration)\$(Platform)\obs.lib</ImportLibrary>
       <ProgramDataBaseFile>$(OutDir)libobs.pdb</ProgramDataBaseFile>
       <SubSystem>Console</SubSystem>
     </Link>
@@ -235,8 +235,8 @@ xcopy $(ProjectDir)$(Configuration)\$(Platform)\$(ProjectName).pdb  $(SolutionDi
     <PostBuildEvent>
       <Message>
       </Message>
-      <Command>xcopy $(ProjectDir)$(Configuration)\$(Platform)\$(ProjectName).dll  $(SolutionDir)build\$(Configuration)_$(Platform)\ /S /Y
-xcopy $(ProjectDir)$(Configuration)\$(Platform)\$(ProjectName).pdb  $(SolutionDir)build\$(Configuration)_$(Platform)\pdb\ /S /Y</Command>
+      <Command>
+      </Command>
     </PostBuildEvent>
     <Link>
       <AdditionalDependencies>..\deps\jansson\$(Configuration)\$(Platform)\jansson.lib;..\deps\w32-pthreads\$(Configuration)\$(Platform)\w32-pthreads.lib;..\deps\dependencies2015\win32\bin\avcodec.lib;..\deps\dependencies2015\win32\bin\avformat.lib;..\deps\dependencies2015\win32\bin\avutil.lib;..\deps\dependencies2015\win32\bin\swscale.lib;..\deps\dependencies2015\win32\bin\swresample.lib;..\deps\dependencies2015\win32\bin\zlib.lib;winmm.lib;psapi.lib;kernel32.lib;user32.lib;gdi32.lib;winspool.lib;shell32.lib;ole32.lib;oleaut32.lib;uuid.lib;comdlg32.lib;advapi32.lib</AdditionalDependencies>
@@ -245,7 +245,7 @@ xcopy $(ProjectDir)$(Configuration)\$(Platform)\$(ProjectName).pdb  $(SolutionDi
       <GenerateDebugInformation>true</GenerateDebugInformation>
       <IgnoreSpecificDefaultLibraries>%(IgnoreSpecificDefaultLibraries)</IgnoreSpecificDefaultLibraries>
       <ImageHasSafeExceptionHandlers>false</ImageHasSafeExceptionHandlers>
-      <ImportLibrary>$(OutDir)obs.lib</ImportLibrary>
+      <ImportLibrary>$(Configuration)\$(Platform)\obs.lib</ImportLibrary>
       <ProgramDataBaseFile>$(OutDir)libobs.pdb</ProgramDataBaseFile>
       <SubSystem>Console</SubSystem>
     </Link>
