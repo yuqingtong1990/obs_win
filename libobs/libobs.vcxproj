@@ -117,7 +117,7 @@
       <IgnoreSpecificDefaultLibraries>%(IgnoreSpecificDefaultLibraries)</IgnoreSpecificDefaultLibraries>
       <ImageHasSafeExceptionHandlers>false</ImageHasSafeExceptionHandlers>
       <ImportLibrary>$(Configuration)\$(Platform)\obs.lib</ImportLibrary>
-      <ProgramDataBaseFile>$(OutDir)libobs.pdb</ProgramDataBaseFile>
+      <ProgramDataBaseFile>$(SolutionDir)build\$(Configuration)_$(Platform)\pdb\$(ProjectName).pdb</ProgramDataBaseFile>
       <SubSystem>Console</SubSystem>
     </Link>
     <ProjectReference>
@@ -160,7 +160,7 @@
       <IgnoreSpecificDefaultLibraries>%(IgnoreSpecificDefaultLibraries)</IgnoreSpecificDefaultLibraries>
       <ImageHasSafeExceptionHandlers>false</ImageHasSafeExceptionHandlers>
       <ImportLibrary>$(Configuration)\$(Platform)\obs.lib</ImportLibrary>
-      <ProgramDataBaseFile>$(OutDir)libobs.pdb</ProgramDataBaseFile>
+      <ProgramDataBaseFile>$(SolutionDir)build\$(Configuration)_$(Platform)\pdb\$(ProjectName).pdb</ProgramDataBaseFile>
       <SubSystem>Console</SubSystem>
     </Link>
     <ProjectReference>
@@ -203,7 +203,7 @@
       <IgnoreSpecificDefaultLibraries>%(IgnoreSpecificDefaultLibraries)</IgnoreSpecificDefaultLibraries>
       <ImageHasSafeExceptionHandlers>false</ImageHasSafeExceptionHandlers>
       <ImportLibrary>$(Configuration)\$(Platform)\obs.lib</ImportLibrary>
-      <ProgramDataBaseFile>$(OutDir)libobs.pdb</ProgramDataBaseFile>
+      <ProgramDataBaseFile>$(SolutionDir)build\$(Configuration)_$(Platform)\pdb\$(ProjectName).pdb</ProgramDataBaseFile>
       <SubSystem>Console</SubSystem>
     </Link>
     <ProjectReference>
@@ -246,7 +246,7 @@
       <IgnoreSpecificDefaultLibraries>%(IgnoreSpecificDefaultLibraries)</IgnoreSpecificDefaultLibraries>
       <ImageHasSafeExceptionHandlers>false</ImageHasSafeExceptionHandlers>
       <ImportLibrary>$(Configuration)\$(Platform)\obs.lib</ImportLibrary>
-      <ProgramDataBaseFile>$(OutDir)libobs.pdb</ProgramDataBaseFile>
+      <ProgramDataBaseFile>$(SolutionDir)build\$(Configuration)_$(Platform)\pdb\$(ProjectName).pdb</ProgramDataBaseFile>
       <SubSystem>Console</SubSystem>
     </Link>
     <ProjectReference>
