@@ -30,6 +30,9 @@
 #include <functional>
 #include <unordered_map>
 
+#include "CqtUtil.h"
+#include "ObserContainer.hpp"
+#include "threadTaskPool.h"
 //°üº¬libobs
 #include "obs.h"
 #include "obs.hpp"

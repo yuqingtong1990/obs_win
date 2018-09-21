@@ -8,11 +8,11 @@
     <Filter Include="project">
       <UniqueIdentifier>{fe6f001a-fdcf-4316-835d-317bd7d15230}</UniqueIdentifier>
     </Filter>
-    <Filter Include="wrapper">
-      <UniqueIdentifier>{d98a7b97-6c68-429a-b243-77e016ff8ba8}</UniqueIdentifier>
-    </Filter>
     <Filter Include="common">
       <UniqueIdentifier>{bd76023f-f739-4b4b-928d-5469203e2618}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="function">
+      <UniqueIdentifier>{fcc597c4-b85d-4c5f-a734-821f796973f1}</UniqueIdentifier>
     </Filter>
   </ItemGroup>
   <ItemGroup>
@@ -33,6 +33,9 @@
     <ClCompile Include="stdafx.cpp">
       <Filter>project</Filter>
     </ClCompile>
+    <ClCompile Include="OBSInstance.cpp">
+      <Filter>function</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="Resource.h">
@@ -46,6 +49,9 @@
     </ClInclude>
     <ClInclude Include="obs_define.h">
       <Filter>common</Filter>
+    </ClInclude>
+    <ClInclude Include="OBSInstance.h">
+      <Filter>function</Filter>
     </ClInclude>
   </ItemGroup>
 </Project>
