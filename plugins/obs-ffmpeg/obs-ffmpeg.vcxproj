@@ -165,8 +165,7 @@
     <PostBuildEvent>
       <Message>
       </Message>
-      <Command>
-      </Command>
+      <Command>xcopy .\data\* $(OutputPath)..\data\obs-plugins\$(ProjectName)\ /S /Y</Command>
     </PostBuildEvent>
     <Link>
       <AdditionalDependencies>..\..\libobs\$(Configuration)\$(Platform)\obs.lib;..\..\deps\media-playback\\$(Configuration)\$(Platform)\media-playback.lib;..\..\deps\w32-pthreads\$(Configuration)\$(Platform)\w32-pthreads.lib;..\..\deps\dependencies2015\win64\include\..\bin\avcodec.lib;..\..\deps\dependencies2015\win64\include\..\bin\avfilter.lib;..\..\deps\dependencies2015\win64\include\..\bin\avdevice.lib;..\..\deps\dependencies2015\win64\include\..\bin\avutil.lib;..\..\deps\dependencies2015\win64\include\..\bin\swscale.lib;..\..\deps\dependencies2015\win64\include\..\bin\avformat.lib;..\..\deps\dependencies2015\win64\include\..\bin\swresample.lib;kernel32.lib</AdditionalDependencies>
@@ -206,8 +205,7 @@
     <PostBuildEvent>
       <Message>
       </Message>
-      <Command>
-      </Command>
+      <Command>xcopy .\data\* $(OutputPath)..\data\obs-plugins\$(ProjectName)\ /S /Y</Command>
     </PostBuildEvent>
     <Link>
       <AdditionalDependencies>..\..\libobs\$(Configuration)\$(Platform)\obs.lib;..\..\deps\media-playback\$(Configuration)\$(Platform)\media-playback.lib;..\..\deps\w32-pthreads\$(Configuration)\$(Platform)\w32-pthreads.lib;..\..\deps\dependencies2015\win32\bin\avcodec.lib;..\..\deps\dependencies2015\win32\bin\avfilter.lib;..\..\deps\dependencies2015\win32\bin\avdevice.lib;..\..\deps\dependencies2015\win32\bin\avutil.lib;..\..\deps\dependencies2015\win32\bin\swscale.lib;..\..\deps\dependencies2015\win32\bin\avformat.lib;..\..\deps\dependencies2015\win32\bin\swresample.lib;kernel32.lib</AdditionalDependencies>
@@ -247,8 +245,7 @@
     <PostBuildEvent>
       <Message>
       </Message>
-      <Command>
-      </Command>
+      <Command>xcopy .\data\* $(OutputPath)..\data\obs-plugins\$(ProjectName)\ /S /Y</Command>
     </PostBuildEvent>
     <Link>
       <AdditionalDependencies>..\..\libobs\$(Configuration)\$(Platform)\obs.lib;..\..\deps\media-playback\\$(Configuration)\$(Platform)\media-playback.lib;..\..\deps\w32-pthreads\$(Configuration)\$(Platform)\w32-pthreads.lib;..\..\deps\dependencies2015\win64\include\..\bin\avcodec.lib;..\..\deps\dependencies2015\win64\include\..\bin\avfilter.lib;..\..\deps\dependencies2015\win64\include\..\bin\avdevice.lib;..\..\deps\dependencies2015\win64\include\..\bin\avutil.lib;..\..\deps\dependencies2015\win64\include\..\bin\swscale.lib;..\..\deps\dependencies2015\win64\include\..\bin\avformat.lib;..\..\deps\dependencies2015\win64\include\..\bin\swresample.lib;kernel32.lib</AdditionalDependencies>
@@ -288,8 +285,7 @@
     <PostBuildEvent>
       <Message>
       </Message>
-      <Command>
-      </Command>
+      <Command>xcopy .\data\* $(OutputPath)..\data\obs-plugins\$(ProjectName)\ /S /Y</Command>
     </PostBuildEvent>
     <Link>
       <AdditionalDependencies>..\..\libobs\$(Configuration)\$(Platform)\obs.lib;..\..\deps\media-playback\$(Configuration)\$(Platform)\media-playback.lib;..\..\deps\w32-pthreads\$(Configuration)\$(Platform)\w32-pthreads.lib;..\..\deps\dependencies2015\win32\bin\avcodec.lib;..\..\deps\dependencies2015\win32\bin\avfilter.lib;..\..\deps\dependencies2015\win32\bin\avdevice.lib;..\..\deps\dependencies2015\win32\bin\avutil.lib;..\..\deps\dependencies2015\win32\bin\swscale.lib;..\..\deps\dependencies2015\win32\bin\avformat.lib;..\..\deps\dependencies2015\win32\bin\swresample.lib;kernel32.lib</AdditionalDependencies>
@@ -329,8 +325,7 @@
     <PostBuildEvent>
       <Message>
       </Message>
-      <Command>
-      </Command>
+      <Command>xcopy .\data\* $(OutputPath)..\data\obs-plugins\$(ProjectName)\ /S /Y</Command>
     </PostBuildEvent>
     <Link>
       <AdditionalDependencies>..\..\libobs\$(Configuration)\$(Platform)\obs.lib;..\..\deps\media-playback\\$(Configuration)\$(Platform)\media-playback.lib;..\..\deps\w32-pthreads\$(Configuration)\$(Platform)\w32-pthreads.lib;..\..\deps\dependencies2015\win64\include\..\bin\avcodec.lib;..\..\deps\dependencies2015\win64\include\..\bin\avfilter.lib;..\..\deps\dependencies2015\win64\include\..\bin\avdevice.lib;..\..\deps\dependencies2015\win64\include\..\bin\avutil.lib;..\..\deps\dependencies2015\win64\include\..\bin\swscale.lib;..\..\deps\dependencies2015\win64\include\..\bin\avformat.lib;..\..\deps\dependencies2015\win64\include\..\bin\swresample.lib;kernel32.lib</AdditionalDependencies>
@@ -370,8 +365,7 @@
     <PostBuildEvent>
       <Message>
       </Message>
-      <Command>
-      </Command>
+      <Command>xcopy .\data\* $(OutputPath)..\data\obs-plugins\$(ProjectName)\ /S /Y</Command>
     </PostBuildEvent>
     <Link>
       <AdditionalDependencies>..\..\libobs\$(Configuration)\$(Platform)\obs.lib;..\..\deps\media-playback\$(Configuration)\$(Platform)\media-playback.lib;..\..\deps\w32-pthreads\$(Configuration)\$(Platform)\w32-pthreads.lib;..\..\deps\dependencies2015\win32\bin\avcodec.lib;..\..\deps\dependencies2015\win32\bin\avfilter.lib;..\..\deps\dependencies2015\win32\bin\avdevice.lib;..\..\deps\dependencies2015\win32\bin\avutil.lib;..\..\deps\dependencies2015\win32\bin\swscale.lib;..\..\deps\dependencies2015\win32\bin\avformat.lib;..\..\deps\dependencies2015\win32\bin\swresample.lib;kernel32.lib</AdditionalDependencies>
@@ -410,8 +404,7 @@
     <PostBuildEvent>
       <Message>
       </Message>
-      <Command>
-      </Command>
+      <Command>xcopy .\data\* $(OutputPath)..\data\obs-plugins\$(ProjectName)\ /S /Y</Command>
     </PostBuildEvent>
     <Link>
       <AdditionalDependencies>..\..\libobs\$(Configuration)\$(Platform)\obs.lib;..\..\deps\media-playback\\$(Configuration)\$(Platform)\media-playback.lib;..\..\deps\w32-pthreads\$(Configuration)\$(Platform)\w32-pthreads.lib;..\..\deps\dependencies2015\win64\include\..\bin\avcodec.lib;..\..\deps\dependencies2015\win64\include\..\bin\avfilter.lib;..\..\deps\dependencies2015\win64\include\..\bin\avdevice.lib;..\..\deps\dependencies2015\win64\include\..\bin\avutil.lib;..\..\deps\dependencies2015\win64\include\..\bin\swscale.lib;..\..\deps\dependencies2015\win64\include\..\bin\avformat.lib;..\..\deps\dependencies2015\win64\include\..\bin\swresample.lib;kernel32.lib</AdditionalDependencies>
@@ -450,8 +443,7 @@
     <PostBuildEvent>
       <Message>
       </Message>
-      <Command>
-      </Command>
+      <Command>xcopy .\data\* $(OutputPath)..\data\obs-plugins\$(ProjectName)\ /S /Y</Command>
     </PostBuildEvent>
     <Link>
       <AdditionalDependencies>..\..\libobs\$(Configuration)\$(Platform)\obs.lib;..\..\deps\media-playback\$(Configuration)\$(Platform)\media-playback.lib;..\..\deps\w32-pthreads\$(Configuration)\$(Platform)\w32-pthreads.lib;..\..\deps\dependencies2015\win32\bin\avcodec.lib;..\..\deps\dependencies2015\win32\bin\avfilter.lib;..\..\deps\dependencies2015\win32\bin\avdevice.lib;..\..\deps\dependencies2015\win32\bin\avutil.lib;..\..\deps\dependencies2015\win32\bin\swscale.lib;..\..\deps\dependencies2015\win32\bin\avformat.lib;..\..\deps\dependencies2015\win32\bin\swresample.lib;kernel32.lib</AdditionalDependencies>

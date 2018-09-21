@@ -106,8 +106,7 @@
     <PostBuildEvent>
       <Message>
       </Message>
-      <Command>
-      </Command>
+      <Command>xcopy .\data\* $(OutputPath)data\$(ProjectName)\ /S /Y</Command>
     </PostBuildEvent>
     <Link>
       <AdditionalDependencies>..\deps\jansson\$(Configuration)\$(Platform)\jansson.lib;..\deps\w32-pthreads\$(Configuration)\$(Platform)\w32-pthreads.lib;..\deps\dependencies2015\win64\bin\avcodec.lib;..\deps\dependencies2015\win64\bin\avformat.lib;..\deps\dependencies2015\win64\bin\avutil.lib;..\deps\dependencies2015\win64\bin\swscale.lib;..\deps\dependencies2015\win64\bin\swresample.lib;..\deps\dependencies2015\win64\bin\zlib.lib;winmm.lib;psapi.lib;kernel32.lib;user32.lib;gdi32.lib;winspool.lib;shell32.lib;ole32.lib;oleaut32.lib;uuid.lib;comdlg32.lib;advapi32.lib</AdditionalDependencies>
@@ -149,8 +148,7 @@
     <PostBuildEvent>
       <Message>
       </Message>
-      <Command>
-      </Command>
+      <Command>xcopy .\data\* $(OutputPath)data\$(ProjectName)\ /S /Y</Command>
     </PostBuildEvent>
     <Link>
       <AdditionalDependencies>..\deps\jansson\$(Configuration)\$(Platform)\jansson.lib;..\deps\w32-pthreads\$(Configuration)\$(Platform)\w32-pthreads.lib;..\deps\dependencies2015\win32\bin\avcodec.lib;..\deps\dependencies2015\win32\bin\avformat.lib;..\deps\dependencies2015\win32\bin\avutil.lib;..\deps\dependencies2015\win32\bin\swscale.lib;..\deps\dependencies2015\win32\bin\swresample.lib;..\deps\dependencies2015\win32\bin\zlib.lib;winmm.lib;psapi.lib;kernel32.lib;user32.lib;gdi32.lib;winspool.lib;shell32.lib;ole32.lib;oleaut32.lib;uuid.lib;comdlg32.lib;advapi32.lib</AdditionalDependencies>
@@ -192,8 +190,7 @@
     <PostBuildEvent>
       <Message>
       </Message>
-      <Command>
-      </Command>
+      <Command>xcopy .\data\* $(OutputPath)data\$(ProjectName)\ /S /Y</Command>
     </PostBuildEvent>
     <Link>
       <AdditionalDependencies>..\deps\jansson\$(Configuration)\$(Platform)\jansson.lib;..\deps\w32-pthreads\$(Configuration)\$(Platform)\w32-pthreads.lib;..\deps\dependencies2015\win64\bin\avcodec.lib;..\deps\dependencies2015\win64\bin\avformat.lib;..\deps\dependencies2015\win64\bin\avutil.lib;..\deps\dependencies2015\win64\bin\swscale.lib;..\deps\dependencies2015\win64\bin\swresample.lib;..\deps\dependencies2015\win64\bin\zlib.lib;winmm.lib;psapi.lib;kernel32.lib;user32.lib;gdi32.lib;winspool.lib;shell32.lib;ole32.lib;oleaut32.lib;uuid.lib;comdlg32.lib;advapi32.lib</AdditionalDependencies>
@@ -235,8 +232,7 @@
     <PostBuildEvent>
       <Message>
       </Message>
-      <Command>
-      </Command>
+      <Command>xcopy .\data\* $(OutputPath)data\$(ProjectName)\ /S /Y</Command>
     </PostBuildEvent>
     <Link>
       <AdditionalDependencies>..\deps\jansson\$(Configuration)\$(Platform)\jansson.lib;..\deps\w32-pthreads\$(Configuration)\$(Platform)\w32-pthreads.lib;..\deps\dependencies2015\win32\bin\avcodec.lib;..\deps\dependencies2015\win32\bin\avformat.lib;..\deps\dependencies2015\win32\bin\avutil.lib;..\deps\dependencies2015\win32\bin\swscale.lib;..\deps\dependencies2015\win32\bin\swresample.lib;..\deps\dependencies2015\win32\bin\zlib.lib;winmm.lib;psapi.lib;kernel32.lib;user32.lib;gdi32.lib;winspool.lib;shell32.lib;ole32.lib;oleaut32.lib;uuid.lib;comdlg32.lib;advapi32.lib</AdditionalDependencies>
