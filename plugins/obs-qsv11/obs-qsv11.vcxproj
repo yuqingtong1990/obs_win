@@ -105,8 +105,8 @@
     <PostBuildEvent>
       <Message>
       </Message>
-      <Command>
-      </Command>
+      <Command>xcopy $(ProjectDir)$(Configuration)\$(Platform)\$(ProjectName).dll  $(SolutionDir)build\$(Configuration)_$(Platform)\ /S /Y
+xcopy $(ProjectDir)$(Configuration)\$(Platform)\$(ProjectName).pdb  $(SolutionDir)build\$(Configuration)_$(Platform)\pdb\ /S /Y</Command>
     </PostBuildEvent>
     <Link>
       <AdditionalDependencies>..\..\libobs\$(Configuration)\$(Platform)\obs.lib;d3d9.lib;d3d11.lib;dxva2.lib;dxgi.lib;kernel32.lib;user32.lib;gdi32.lib;winspool.lib;shell32.lib;ole32.lib;oleaut32.lib;uuid.lib;comdlg32.lib;advapi32.lib</AdditionalDependencies>
@@ -146,8 +146,8 @@
     <PostBuildEvent>
       <Message>
       </Message>
-      <Command>
-      </Command>
+      <Command>xcopy $(ProjectDir)$(Configuration)\$(Platform)\$(ProjectName).dll  $(SolutionDir)build\$(Configuration)_$(Platform)\ /S /Y
+xcopy $(ProjectDir)$(Configuration)\$(Platform)\$(ProjectName).pdb  $(SolutionDir)build\$(Configuration)_$(Platform)\pdb\ /S /Y</Command>
     </PostBuildEvent>
     <Link>
       <AdditionalDependencies>..\..\libobs\$(Configuration)\$(Platform)\obs.lib;d3d9.lib;d3d11.lib;dxva2.lib;dxgi.lib;kernel32.lib;user32.lib;gdi32.lib;winspool.lib;shell32.lib;ole32.lib;oleaut32.lib;uuid.lib;comdlg32.lib;advapi32.lib</AdditionalDependencies>
@@ -187,14 +187,14 @@
     <PostBuildEvent>
       <Message>
       </Message>
-      <Command>
-      </Command>
+      <Command>xcopy $(ProjectDir)$(Configuration)\$(Platform)\$(ProjectName).dll  $(SolutionDir)build\$(Configuration)_$(Platform)\ /S /Y
+xcopy $(ProjectDir)$(Configuration)\$(Platform)\$(ProjectName).pdb  $(SolutionDir)build\$(Configuration)_$(Platform)\pdb\ /S /Y</Command>
     </PostBuildEvent>
     <Link>
       <AdditionalDependencies>..\..\libobs\$(Configuration)\$(Platform)\obs.lib;d3d9.lib;d3d11.lib;dxva2.lib;dxgi.lib;kernel32.lib;user32.lib;gdi32.lib;winspool.lib;shell32.lib;ole32.lib;oleaut32.lib;uuid.lib;comdlg32.lib;advapi32.lib</AdditionalDependencies>
       <AdditionalLibraryDirectories>%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
       <AdditionalOptions>%(AdditionalOptions) /machine:x64</AdditionalOptions>
-      <GenerateDebugInformation>false</GenerateDebugInformation>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
       <IgnoreSpecificDefaultLibraries>%(IgnoreSpecificDefaultLibraries)</IgnoreSpecificDefaultLibraries>
       <ImportLibrary>$(OutDir)$(ProjectName).lib</ImportLibrary>
       <ProgramDataBaseFile>$(OutDir)$(ProjectName).pdb</ProgramDataBaseFile>
@@ -228,14 +228,14 @@
     <PostBuildEvent>
       <Message>
       </Message>
-      <Command>
-      </Command>
+      <Command>xcopy $(ProjectDir)$(Configuration)\$(Platform)\$(ProjectName).dll  $(SolutionDir)build\$(Configuration)_$(Platform)\ /S /Y
+xcopy $(ProjectDir)$(Configuration)\$(Platform)\$(ProjectName).pdb  $(SolutionDir)build\$(Configuration)_$(Platform)\pdb\ /S /Y</Command>
     </PostBuildEvent>
     <Link>
       <AdditionalDependencies>..\..\libobs\$(Configuration)\$(Platform)\obs.lib;d3d9.lib;d3d11.lib;dxva2.lib;dxgi.lib;kernel32.lib;user32.lib;gdi32.lib;winspool.lib;shell32.lib;ole32.lib;oleaut32.lib;uuid.lib;comdlg32.lib;advapi32.lib</AdditionalDependencies>
       <AdditionalLibraryDirectories>%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
       <AdditionalOptions>%(AdditionalOptions) /machine:x86</AdditionalOptions>
-      <GenerateDebugInformation>false</GenerateDebugInformation>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
       <IgnoreSpecificDefaultLibraries>%(IgnoreSpecificDefaultLibraries)</IgnoreSpecificDefaultLibraries>
       <ImportLibrary>$(OutDir)$(ProjectName).lib</ImportLibrary>
       <ProgramDataBaseFile>$(OutDir)$(ProjectName).pdb</ProgramDataBaseFile>

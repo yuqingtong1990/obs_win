@@ -22,6 +22,7 @@
     <ProjectGuid>{FA5AA431-FC0D-4951-ADAD-CBA988B964CD}</ProjectGuid>
     <Keyword>Win32Proj</Keyword>
     <RootNamespace>obs</RootNamespace>
+    <WindowsTargetPlatformVersion>8.1</WindowsTargetPlatformVersion>
   </PropertyGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'" Label="Configuration">
@@ -68,19 +69,23 @@
   <PropertyGroup Label="UserMacros" />
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
     <LinkIncremental>true</LinkIncremental>
-    <OutDir>..\build\$(Configuration)\</OutDir>
-    <IntDir>$(OutDir)obj\$(ProjectName)\</IntDir>
+    <OutDir>$(Configuration)\$(Platform)\</OutDir>
+    <IntDir>$(Configuration)\$(Platform)\tmp\</IntDir>
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
     <LinkIncremental>true</LinkIncremental>
+    <OutDir>$(Configuration)\$(Platform)\</OutDir>
+    <IntDir>$(Configuration)\$(Platform)\tmp\</IntDir>
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
     <LinkIncremental>false</LinkIncremental>
-    <OutDir>..\build\$(Configuration)\</OutDir>
-    <IntDir>$(OutDir)obj\$(ProjectName)\</IntDir>
+    <OutDir>$(Configuration)\$(Platform)\</OutDir>
+    <IntDir>$(Configuration)\$(Platform)\tmp\</IntDir>
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
     <LinkIncremental>false</LinkIncremental>
+    <OutDir>$(Configuration)\$(Platform)\</OutDir>
+    <IntDir>$(Configuration)\$(Platform)\tmp\</IntDir>
   </PropertyGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
     <ClCompile>
@@ -90,6 +95,7 @@
       <PreprocessorDefinitions>WIN32;_DEBUG;_WINDOWS;%(PreprocessorDefinitions)</PreprocessorDefinitions>
       <SDLCheck>true</SDLCheck>
       <AdditionalIncludeDirectories>../libobs/;../libobs/util;../third_party/w32-pthreads/;</AdditionalIncludeDirectories>
+      <DisableSpecificWarnings>4091</DisableSpecificWarnings>
     </ClCompile>
     <Link>
       <SubSystem>Windows</SubSystem>
@@ -98,6 +104,11 @@
       </AdditionalLibraryDirectories>
       <AdditionalDependencies>..\libobs\$(Configuration)\$(Platform)\obs.lib;kernel32.lib;user32.lib;gdi32.lib;winspool.lib;comdlg32.lib;advapi32.lib;shell32.lib;ole32.lib;oleaut32.lib;uuid.lib;odbc32.lib;odbccp32.lib;%(AdditionalDependencies)</AdditionalDependencies>
     </Link>
+    <PostBuildEvent>
+      <Command>xcopy $(ProjectDir)$(Configuration)\$(Platform)\$(ProjectName).exe  $(SolutionDir)build\$(Configuration)_$(Platform)\ /S /Y
+xcopy $(ProjectDir)$(Configuration)\$(Platform)\$(ProjectName).pdb  $(SolutionDir)build\$(Configuration)_$(Platform)\pdb\ /S /Y
+xcopy $(SolutionDir)\deps\dependencies2015\win32\bin\*.dll $(SolutionDir)build\$(Configuration)_$(Platform)\ /S /Y</Command>
+    </PostBuildEvent>
   </ItemDefinitionGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
     <ClCompile>
@@ -116,6 +127,11 @@
       </AdditionalLibraryDirectories>
       <AdditionalDependencies>..\libobs\$(Configuration)\$(Platform)\obs.lib;kernel32.lib;user32.lib;gdi32.lib;winspool.lib;comdlg32.lib;advapi32.lib;shell32.lib;ole32.lib;oleaut32.lib;uuid.lib;odbc32.lib;odbccp32.lib;%(AdditionalDependencies)</AdditionalDependencies>
     </Link>
+    <PostBuildEvent>
+      <Command>xcopy $(ProjectDir)$(Configuration)\$(Platform)\$(ProjectName).exe  $(SolutionDir)build\$(Configuration)_$(Platform)\ /S /Y
+xcopy $(ProjectDir)$(Configuration)\$(Platform)\$(ProjectName).pdb  $(SolutionDir)build\$(Configuration)_$(Platform)\pdb\ /S /Y
+xcopy $(SolutionDir)\deps\dependencies2015\win64\bin\*.dll $(SolutionDir)build\$(Configuration)_$(Platform)\ /S /Y</Command>
+    </PostBuildEvent>
   </ItemDefinitionGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
     <ClCompile>
@@ -127,6 +143,7 @@
       <PreprocessorDefinitions>WIN32;NDEBUG;_WINDOWS;%(PreprocessorDefinitions)</PreprocessorDefinitions>
       <SDLCheck>true</SDLCheck>
       <AdditionalIncludeDirectories>../libobs/;../libobs/util;../third_party/w32-pthreads/;</AdditionalIncludeDirectories>
+      <DisableSpecificWarnings>4091</DisableSpecificWarnings>
     </ClCompile>
     <Link>
       <SubSystem>Windows</SubSystem>
@@ -137,6 +154,11 @@
       </AdditionalLibraryDirectories>
       <AdditionalDependencies>..\libobs\$(Configuration)\$(Platform)\obs.lib;kernel32.lib;user32.lib;gdi32.lib;winspool.lib;comdlg32.lib;advapi32.lib;shell32.lib;ole32.lib;oleaut32.lib;uuid.lib;odbc32.lib;odbccp32.lib;%(AdditionalDependencies)</AdditionalDependencies>
     </Link>
+    <PostBuildEvent>
+      <Command>xcopy $(ProjectDir)$(Configuration)\$(Platform)\$(ProjectName).exe  $(SolutionDir)build\$(Configuration)_$(Platform)\ /S /Y
+xcopy $(ProjectDir)$(Configuration)\$(Platform)\$(ProjectName).pdb  $(SolutionDir)build\$(Configuration)_$(Platform)\pdb\ /S /Y
+xcopy $(SolutionDir)\deps\dependencies2015\win32\bin\*.dll $(SolutionDir)build\$(Configuration)_$(Platform)\ /S /Y</Command>
+    </PostBuildEvent>
   </ItemDefinitionGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
     <ClCompile>
@@ -159,6 +181,11 @@
       </AdditionalLibraryDirectories>
       <AdditionalDependencies>..\libobs\$(Configuration)\$(Platform)\obs.lib;kernel32.lib;user32.lib;gdi32.lib;winspool.lib;comdlg32.lib;advapi32.lib;shell32.lib;ole32.lib;oleaut32.lib;uuid.lib;odbc32.lib;odbccp32.lib;%(AdditionalDependencies)</AdditionalDependencies>
     </Link>
+    <PostBuildEvent>
+      <Command>xcopy $(ProjectDir)$(Configuration)\$(Platform)\$(ProjectName).exe  $(SolutionDir)build\$(Configuration)_$(Platform)\ /S /Y
+xcopy $(ProjectDir)$(Configuration)\$(Platform)\$(ProjectName).pdb  $(SolutionDir)build\$(Configuration)_$(Platform)\pdb\ /S /Y
+xcopy $(SolutionDir)\deps\dependencies2015\win64\bin\*.dll $(SolutionDir)build\$(Configuration)_$(Platform)\ /S /Y</Command>
+    </PostBuildEvent>
   </ItemDefinitionGroup>
   <ItemGroup>
     <ResourceCompile Include="obs.rc" />
