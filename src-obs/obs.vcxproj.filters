@@ -33,7 +33,16 @@
     <ClCompile Include="stdafx.cpp">
       <Filter>project</Filter>
     </ClCompile>
-    <ClCompile Include="OBSInstance.cpp">
+    <ClCompile Include="threadTaskPool.cpp">
+      <Filter>common</Filter>
+    </ClCompile>
+    <ClCompile Include="CqtUtil.cpp">
+      <Filter>common</Filter>
+    </ClCompile>
+    <ClCompile Include="obs-app.cpp">
+      <Filter>function</Filter>
+    </ClCompile>
+    <ClCompile Include="obs-path.cpp">
       <Filter>function</Filter>
     </ClCompile>
   </ItemGroup>
@@ -50,7 +59,19 @@
     <ClInclude Include="obs_define.h">
       <Filter>common</Filter>
     </ClInclude>
-    <ClInclude Include="OBSInstance.h">
+    <ClInclude Include="ObserContainer.hpp">
+      <Filter>common</Filter>
+    </ClInclude>
+    <ClInclude Include="threadTaskPool.h">
+      <Filter>common</Filter>
+    </ClInclude>
+    <ClInclude Include="CqtUtil.h">
+      <Filter>common</Filter>
+    </ClInclude>
+    <ClInclude Include="obs-app.h">
+      <Filter>function</Filter>
+    </ClInclude>
+    <ClInclude Include="obs-path.h">
       <Filter>function</Filter>
     </ClInclude>
   </ItemGroup>

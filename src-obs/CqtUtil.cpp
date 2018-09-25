@@ -673,6 +673,14 @@ std::wstring GeTaskbarPath()
 	return csPath;
 }
 
+std::wstring GetExeRunPath()
+{
+	wchar_t strCurPath[MAX_PATH] = { 0 };
+	GetModuleFileNameW(NULL, strCurPath, MAX_PATH);
+	wstring wsCurPath = ExtractFilePathW(strCurPath, true);
+	return wsCurPath;
+}
+
 std::wstring trimW( const std::wstring &str )
 {
 	if (str.empty())
@@ -2658,7 +2666,7 @@ unsigned int __stdcall TThread::Wrapper(void *Param)
 
 #define TIMETRAYICON 1990531
 CTrayIconEx *CTrayIconEx::pCTrayIconEx = NULL;
-void CALLBACK OnTimer(HWND hwnd, UINT uMsg, UINT idEvent, DWORD dwTime);
+void CALLBACK OnTrayTimer(HWND hwnd, UINT uMsg, UINT idEvent, DWORD dwTime);
 
 CTrayIconEx::CTrayIconEx(void)
 {
@@ -2730,7 +2738,7 @@ bool CTrayIconEx::CreateTrayIcon(HWND _RecvHwnd, UINT _IconIDResource, LPCTSTR _
 	{
 		wcsncpy_s(m_trayData.szTip,128,_ToolTipText,_TRUNCATE);
 	}
-	::SetTimer(_RecvHwnd, TIMETRAYICON, 500, &OnTimer);
+	::SetTimer(_RecvHwnd, TIMETRAYICON, 500, (TIMERPROC)&OnTrayTimer);
 	return Shell_NotifyIcon(NIM_ADD, &m_trayData) == TRUE;
 }
 
@@ -2860,12 +2868,11 @@ void CTrayIconEx::OnTimerTray()
 	}
 }
 
-void CALLBACK OnTimer(HWND hwnd, UINT uMsg, UINT idEvent, DWORD dwTime)
+void CALLBACK OnTrayTimer(HWND hwnd, UINT uMsg, UINT idEvent, DWORD dwTime)
 {
 	if (idEvent == TIMETRAYICON){
 		if (NULL != CTrayIconEx::pCTrayIconEx){
 			CTrayIconEx::pCTrayIconEx->OnTimerTray();
 		}
 	}
-
 }

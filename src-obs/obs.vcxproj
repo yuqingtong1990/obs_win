@@ -95,7 +95,7 @@
       <PreprocessorDefinitions>WIN32;_DEBUG;_WINDOWS;%(PreprocessorDefinitions)</PreprocessorDefinitions>
       <SDLCheck>true</SDLCheck>
       <AdditionalIncludeDirectories>../libobs/;../libobs/util;../third_party/w32-pthreads/;</AdditionalIncludeDirectories>
-      <DisableSpecificWarnings>4091</DisableSpecificWarnings>
+      <DisableSpecificWarnings>4091;4267;4312;4311;4302;</DisableSpecificWarnings>
     </ClCompile>
     <Link>
       <SubSystem>Windows</SubSystem>
@@ -121,7 +121,7 @@
       <PreprocessorDefinitions>WIN32;_DEBUG;_WINDOWS;%(PreprocessorDefinitions)</PreprocessorDefinitions>
       <SDLCheck>true</SDLCheck>
       <AdditionalIncludeDirectories>../libobs/;../libobs/util;../third_party/w32-pthreads/;</AdditionalIncludeDirectories>
-      <DisableSpecificWarnings>4091</DisableSpecificWarnings>
+      <DisableSpecificWarnings>4091;4267;4312;4311;4302;</DisableSpecificWarnings>
     </ClCompile>
     <Link>
       <SubSystem>Windows</SubSystem>
@@ -149,7 +149,7 @@
       <PreprocessorDefinitions>WIN32;NDEBUG;_WINDOWS;%(PreprocessorDefinitions)</PreprocessorDefinitions>
       <SDLCheck>true</SDLCheck>
       <AdditionalIncludeDirectories>../libobs/;../libobs/util;../third_party/w32-pthreads/;</AdditionalIncludeDirectories>
-      <DisableSpecificWarnings>4091</DisableSpecificWarnings>
+      <DisableSpecificWarnings>4091;4267;4312;4311;4302;</DisableSpecificWarnings>
     </ClCompile>
     <Link>
       <SubSystem>Windows</SubSystem>
@@ -179,7 +179,7 @@
       <PreprocessorDefinitions>WIN32;NDEBUG;_WINDOWS;%(PreprocessorDefinitions)</PreprocessorDefinitions>
       <SDLCheck>true</SDLCheck>
       <AdditionalIncludeDirectories>../libobs/;../libobs/util;../third_party/w32-pthreads/;</AdditionalIncludeDirectories>
-      <DisableSpecificWarnings>4091</DisableSpecificWarnings>
+      <DisableSpecificWarnings>4091;4267;4312;4311;4302;</DisableSpecificWarnings>
     </ClCompile>
     <Link>
       <SubSystem>Windows</SubSystem>
@@ -207,21 +207,33 @@
     <Image Include="small.ico" />
   </ItemGroup>
   <ItemGroup>
+    <ClCompile Include="CqtUtil.cpp" />
     <ClCompile Include="main.cpp" />
-    <ClCompile Include="OBSInstance.cpp" />
+    <ClCompile Include="obs-app.cpp" />
+    <ClCompile Include="obs-path.cpp" />
     <ClCompile Include="stdafx.cpp">
       <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">Create</PrecompiledHeader>
       <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">Create</PrecompiledHeader>
       <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">Create</PrecompiledHeader>
       <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Release|x64'">Create</PrecompiledHeader>
     </ClCompile>
+    <ClCompile Include="threadTaskPool.cpp">
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">NotUsing</PrecompiledHeader>
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">NotUsing</PrecompiledHeader>
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">NotUsing</PrecompiledHeader>
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Release|x64'">NotUsing</PrecompiledHeader>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
-    <ClInclude Include="OBSInstance.h" />
+    <ClInclude Include="CqtUtil.h" />
+    <ClInclude Include="obs-app.h" />
+    <ClInclude Include="obs-path.h" />
+    <ClInclude Include="ObserContainer.hpp" />
     <ClInclude Include="obs_define.h" />
     <ClInclude Include="Resource.h" />
     <ClInclude Include="stdafx.h" />
     <ClInclude Include="targetver.h" />
+    <ClInclude Include="threadTaskPool.h" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">

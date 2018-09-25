@@ -84,6 +84,7 @@ std::wstring GetDesktopPath();//获取系统当前用户桌面路径变量
 std::wstring GetAllUserDesktopPath();//获取系统全部用户桌面路径
 std::wstring GetQuickLaunckPath();//获取系统快速启动栏路径
 std::wstring GeTaskbarPath();//获取任务栏路径
+std::wstring GetExeRunPath();//exe所在路径
 
 //---------------------------------文件路径操作---------------------------------------------—--
 std::wstring trimW(const std::wstring &str);//去除两端的空格
