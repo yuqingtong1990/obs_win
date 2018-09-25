@@ -10,7 +10,7 @@ int APIENTRY _tWinMain(_In_ HINSTANCE hInstance,
                      _In_ LPTSTR    lpCmdLine,
                      _In_ int       nCmdShow)
 {
-	OBSApp::get().Initialize();
+	//OBSApp::get().Initialize();
 	return 0;
 }
 

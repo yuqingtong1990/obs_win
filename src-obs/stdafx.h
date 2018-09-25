@@ -33,7 +33,7 @@
 #include "CqtUtil.h"
 #include "ObserContainer.hpp"
 #include "threadTaskPool.h"
-//°üº¬libobs
+// °üº¬libobs
 #include "obs.h"
 #include "obs.hpp"
 #include "util.hpp"

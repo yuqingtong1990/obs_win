@@ -39,10 +39,10 @@
     <ClCompile Include="CqtUtil.cpp">
       <Filter>common</Filter>
     </ClCompile>
-    <ClCompile Include="obs-app.cpp">
+    <ClCompile Include="obs-path.cpp">
       <Filter>function</Filter>
     </ClCompile>
-    <ClCompile Include="obs-path.cpp">
+    <ClCompile Include="obs-app.cpp">
       <Filter>function</Filter>
     </ClCompile>
   </ItemGroup>
@@ -68,10 +68,10 @@
     <ClInclude Include="CqtUtil.h">
       <Filter>common</Filter>
     </ClInclude>
-    <ClInclude Include="obs-app.h">
+    <ClInclude Include="obs-path.h">
       <Filter>function</Filter>
     </ClInclude>
-    <ClInclude Include="obs-path.h">
+    <ClInclude Include="obs-app.h">
       <Filter>function</Filter>
     </ClInclude>
   </ItemGroup>

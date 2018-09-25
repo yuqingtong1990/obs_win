@@ -37,7 +37,7 @@ bool OBSApp::Initialize()
 
 	auto profilerNameStore = CreateNameStore();
 	obs_startup("zh-CN", _W2A_(getObsPluginCfgPath(), CP_UTF8).c_str(), profilerNameStore.get());
-	
+	return true;
 }
 
 void OBSApp::Destory()

@@ -22,7 +22,7 @@
     <ProjectGuid>{FA5AA431-FC0D-4951-ADAD-CBA988B964CD}</ProjectGuid>
     <Keyword>Win32Proj</Keyword>
     <RootNamespace>obs</RootNamespace>
-    <WindowsTargetPlatformVersion>8.1</WindowsTargetPlatformVersion>
+    <WindowsTargetPlatformVersion>10.0.17134.0</WindowsTargetPlatformVersion>
   </PropertyGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'" Label="Configuration">
@@ -41,14 +41,14 @@
     <ConfigurationType>Application</ConfigurationType>
     <UseDebugLibraries>false</UseDebugLibraries>
     <PlatformToolset>v140</PlatformToolset>
-    <WholeProgramOptimization>true</WholeProgramOptimization>
+    <WholeProgramOptimization>false</WholeProgramOptimization>
     <CharacterSet>Unicode</CharacterSet>
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'" Label="Configuration">
     <ConfigurationType>Application</ConfigurationType>
     <UseDebugLibraries>false</UseDebugLibraries>
     <PlatformToolset>v140</PlatformToolset>
-    <WholeProgramOptimization>true</WholeProgramOptimization>
+    <WholeProgramOptimization>false</WholeProgramOptimization>
     <CharacterSet>Unicode</CharacterSet>
   </PropertyGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.props" />
@@ -102,7 +102,7 @@
       <GenerateDebugInformation>true</GenerateDebugInformation>
       <AdditionalLibraryDirectories>
       </AdditionalLibraryDirectories>
-      <AdditionalDependencies>..\libobs\$(Configuration)\$(Platform)\obs.lib;kernel32.lib;user32.lib;gdi32.lib;winspool.lib;comdlg32.lib;advapi32.lib;shell32.lib;ole32.lib;oleaut32.lib;uuid.lib;odbc32.lib;odbccp32.lib;%(AdditionalDependencies)</AdditionalDependencies>
+      <AdditionalDependencies>..\libobs\$(Configuration)\$(Platform)\obs.lib;..\deps\jansson\$(Configuration)\$(Platform)\jansson.lib;..\deps\blake2\$(Configuration)\$(Platform)\blake2.lib;kernel32.lib;user32.lib;gdi32.lib;winspool.lib;shell32.lib;ole32.lib;oleaut32.lib;uuid.lib;comdlg32.lib;advapi32.lib;crypt32.lib</AdditionalDependencies>
       <ProgramDatabaseFile>$(SolutionDir)build\$(Configuration)_$(Platform)\pdb\$(ProjectName).pdb</ProgramDatabaseFile>
       <OutputFile>$(OutDir)$(TargetName)$(TargetExt)</OutputFile>
     </Link>
@@ -128,12 +128,12 @@
       <GenerateDebugInformation>true</GenerateDebugInformation>
       <AdditionalLibraryDirectories>
       </AdditionalLibraryDirectories>
-      <AdditionalDependencies>..\libobs\$(Configuration)\$(Platform)\obs.lib;kernel32.lib;user32.lib;gdi32.lib;winspool.lib;comdlg32.lib;advapi32.lib;shell32.lib;ole32.lib;oleaut32.lib;uuid.lib;odbc32.lib;odbccp32.lib;%(AdditionalDependencies)</AdditionalDependencies>
+      <AdditionalDependencies>..\libobs\$(Configuration)\$(Platform)\obs.lib;..\deps\jansson\$(Configuration)\$(Platform)\jansson.lib;..\deps\blake2\$(Configuration)\$(Platform)\blake2.lib;kernel32.lib;user32.lib;gdi32.lib;winspool.lib;shell32.lib;ole32.lib;oleaut32.lib;uuid.lib;comdlg32.lib;advapi32.lib;crypt32.lib</AdditionalDependencies>
       <ProgramDatabaseFile>$(SolutionDir)build\$(Configuration)_$(Platform)\pdb\$(ProjectName).pdb</ProgramDatabaseFile>
       <OutputFile>$(OutDir)$(TargetName)$(TargetExt)</OutputFile>
     </Link>
     <PostBuildEvent>
-      <Command>xcopy $(SolutionDir)\deps\dependencies2015\win32\bin\*.dll $(SolutionDir)build\$(Configuration)_$(Platform)\ /S /Y</Command>
+      <Command>xcopy $(SolutionDir)\deps\dependencies2015\win64\bin\*.dll $(SolutionDir)build\$(Configuration)_$(Platform)\ /S /Y</Command>
     </PostBuildEvent>
     <ProjectReference>
       <LinkLibraryDependencies>false</LinkLibraryDependencies>
@@ -158,7 +158,7 @@
       <OptimizeReferences>true</OptimizeReferences>
       <AdditionalLibraryDirectories>
       </AdditionalLibraryDirectories>
-      <AdditionalDependencies>..\libobs\$(Configuration)\$(Platform)\obs.lib;kernel32.lib;user32.lib;gdi32.lib;winspool.lib;comdlg32.lib;advapi32.lib;shell32.lib;ole32.lib;oleaut32.lib;uuid.lib;odbc32.lib;odbccp32.lib;%(AdditionalDependencies)</AdditionalDependencies>
+      <AdditionalDependencies>..\libobs\$(Configuration)\$(Platform)\obs.lib;..\deps\jansson\$(Configuration)\$(Platform)\jansson.lib;..\deps\blake2\$(Configuration)\$(Platform)\blake2.lib;kernel32.lib;user32.lib;gdi32.lib;winspool.lib;shell32.lib;ole32.lib;oleaut32.lib;uuid.lib;comdlg32.lib;advapi32.lib;crypt32.lib</AdditionalDependencies>
       <ProgramDatabaseFile>$(SolutionDir)build\$(Configuration)_$(Platform)\pdb\$(ProjectName).pdb</ProgramDatabaseFile>
       <OutputFile>$(OutDir)$(TargetName)$(TargetExt)</OutputFile>
     </Link>
@@ -188,12 +188,12 @@
       <OptimizeReferences>true</OptimizeReferences>
       <AdditionalLibraryDirectories>
       </AdditionalLibraryDirectories>
-      <AdditionalDependencies>..\libobs\$(Configuration)\$(Platform)\obs.lib;kernel32.lib;user32.lib;gdi32.lib;winspool.lib;comdlg32.lib;advapi32.lib;shell32.lib;ole32.lib;oleaut32.lib;uuid.lib;odbc32.lib;odbccp32.lib;%(AdditionalDependencies)</AdditionalDependencies>
+      <AdditionalDependencies>..\libobs\$(Configuration)\$(Platform)\obs.lib;..\deps\jansson\$(Configuration)\$(Platform)\jansson.lib;..\deps\blake2\$(Configuration)\$(Platform)\blake2.lib;kernel32.lib;user32.lib;gdi32.lib;winspool.lib;shell32.lib;ole32.lib;oleaut32.lib;uuid.lib;comdlg32.lib;advapi32.lib;crypt32.lib</AdditionalDependencies>
       <ProgramDatabaseFile>$(SolutionDir)build\$(Configuration)_$(Platform)\pdb\$(ProjectName).pdb</ProgramDatabaseFile>
       <OutputFile>$(OutDir)$(TargetName)$(TargetExt)</OutputFile>
     </Link>
     <PostBuildEvent>
-      <Command>xcopy $(SolutionDir)\deps\dependencies2015\win32\bin\*.dll $(SolutionDir)build\$(Configuration)_$(Platform)\ /S /Y</Command>
+      <Command>xcopy $(SolutionDir)\deps\dependencies2015\win64\bin\*.dll $(SolutionDir)build\$(Configuration)_$(Platform)\ /S /Y</Command>
     </PostBuildEvent>
     <ProjectReference>
       <LinkLibraryDependencies>false</LinkLibraryDependencies>
