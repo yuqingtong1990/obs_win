@@ -4,6 +4,7 @@ class OBSApp
 public:
 	OBSApp();
 	~OBSApp();
+	static OBSApp& get();
 public:
 	bool Initialize();
 	void Destory();
@@ -12,7 +13,5 @@ private:
 private:
 	ConfigFile     globalConfig;
 	TextLookup     textLookup;
-	OBSContext     obsContext;
-	profiler_name_store_t* profilerNameStore_ = nullptr;
 };
 
