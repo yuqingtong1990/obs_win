@@ -94,7 +94,7 @@
       <Optimization>Disabled</Optimization>
       <PreprocessorDefinitions>WIN32;_DEBUG;_WINDOWS;%(PreprocessorDefinitions)</PreprocessorDefinitions>
       <SDLCheck>true</SDLCheck>
-      <AdditionalIncludeDirectories>../libobs/;../libobs/util;../third_party/w32-pthreads/;</AdditionalIncludeDirectories>
+      <AdditionalIncludeDirectories>../libobs/;../libobs/util;../deps/w32-pthreads/;../third-lib/glog/src/</AdditionalIncludeDirectories>
       <DisableSpecificWarnings>4091;4267;4312;4311;4302;</DisableSpecificWarnings>
     </ClCompile>
     <Link>
@@ -102,7 +102,7 @@
       <GenerateDebugInformation>true</GenerateDebugInformation>
       <AdditionalLibraryDirectories>
       </AdditionalLibraryDirectories>
-      <AdditionalDependencies>..\libobs\$(Configuration)\$(Platform)\obs.lib;..\deps\jansson\$(Configuration)\$(Platform)\jansson.lib;..\deps\blake2\$(Configuration)\$(Platform)\blake2.lib;kernel32.lib;user32.lib;gdi32.lib;winspool.lib;shell32.lib;ole32.lib;oleaut32.lib;uuid.lib;comdlg32.lib;advapi32.lib;crypt32.lib</AdditionalDependencies>
+      <AdditionalDependencies>..\libobs\$(Configuration)\$(Platform)\obs.lib;..\deps\jansson\$(Configuration)\$(Platform)\jansson.lib;..\deps\blake2\$(Configuration)\$(Platform)\blake2.lib;..\third-lib\glog\$(Configuration)\$(Platform)\libglog.lib;kernel32.lib;user32.lib;gdi32.lib;winspool.lib;shell32.lib;ole32.lib;oleaut32.lib;uuid.lib;comdlg32.lib;advapi32.lib;crypt32.lib</AdditionalDependencies>
       <ProgramDatabaseFile>$(SolutionDir)build\$(Configuration)_$(Platform)\pdb\$(ProjectName).pdb</ProgramDatabaseFile>
       <OutputFile>$(OutDir)$(TargetName)$(TargetExt)</OutputFile>
     </Link>
@@ -120,7 +120,7 @@
       <Optimization>Disabled</Optimization>
       <PreprocessorDefinitions>WIN32;_DEBUG;_WINDOWS;%(PreprocessorDefinitions)</PreprocessorDefinitions>
       <SDLCheck>true</SDLCheck>
-      <AdditionalIncludeDirectories>../libobs/;../libobs/util;../third_party/w32-pthreads/;</AdditionalIncludeDirectories>
+      <AdditionalIncludeDirectories>../libobs/;../libobs/util;../deps/w32-pthreads/;../third-lib/glog/src/</AdditionalIncludeDirectories>
       <DisableSpecificWarnings>4091;4267;4312;4311;4302;</DisableSpecificWarnings>
     </ClCompile>
     <Link>
@@ -128,7 +128,7 @@
       <GenerateDebugInformation>true</GenerateDebugInformation>
       <AdditionalLibraryDirectories>
       </AdditionalLibraryDirectories>
-      <AdditionalDependencies>..\libobs\$(Configuration)\$(Platform)\obs.lib;..\deps\jansson\$(Configuration)\$(Platform)\jansson.lib;..\deps\blake2\$(Configuration)\$(Platform)\blake2.lib;kernel32.lib;user32.lib;gdi32.lib;winspool.lib;shell32.lib;ole32.lib;oleaut32.lib;uuid.lib;comdlg32.lib;advapi32.lib;crypt32.lib</AdditionalDependencies>
+      <AdditionalDependencies>..\libobs\$(Configuration)\$(Platform)\obs.lib;..\deps\jansson\$(Configuration)\$(Platform)\jansson.lib;..\deps\blake2\$(Configuration)\$(Platform)\blake2.lib;..\third-lib\glog\$(Configuration)\$(Platform)\libglog.lib;kernel32.lib;user32.lib;gdi32.lib;winspool.lib;shell32.lib;ole32.lib;oleaut32.lib;uuid.lib;comdlg32.lib;advapi32.lib;crypt32.lib</AdditionalDependencies>
       <ProgramDatabaseFile>$(SolutionDir)build\$(Configuration)_$(Platform)\pdb\$(ProjectName).pdb</ProgramDatabaseFile>
       <OutputFile>$(OutDir)$(TargetName)$(TargetExt)</OutputFile>
     </Link>
@@ -148,7 +148,7 @@
       <IntrinsicFunctions>true</IntrinsicFunctions>
       <PreprocessorDefinitions>WIN32;NDEBUG;_WINDOWS;%(PreprocessorDefinitions)</PreprocessorDefinitions>
       <SDLCheck>true</SDLCheck>
-      <AdditionalIncludeDirectories>../libobs/;../libobs/util;../third_party/w32-pthreads/;</AdditionalIncludeDirectories>
+      <AdditionalIncludeDirectories>../libobs/;../libobs/util;../deps/w32-pthreads/;../third-lib/glog/src/</AdditionalIncludeDirectories>
       <DisableSpecificWarnings>4091;4267;4312;4311;4302;</DisableSpecificWarnings>
     </ClCompile>
     <Link>
@@ -158,7 +158,7 @@
       <OptimizeReferences>true</OptimizeReferences>
       <AdditionalLibraryDirectories>
       </AdditionalLibraryDirectories>
-      <AdditionalDependencies>..\libobs\$(Configuration)\$(Platform)\obs.lib;..\deps\jansson\$(Configuration)\$(Platform)\jansson.lib;..\deps\blake2\$(Configuration)\$(Platform)\blake2.lib;kernel32.lib;user32.lib;gdi32.lib;winspool.lib;shell32.lib;ole32.lib;oleaut32.lib;uuid.lib;comdlg32.lib;advapi32.lib;crypt32.lib</AdditionalDependencies>
+      <AdditionalDependencies>..\libobs\$(Configuration)\$(Platform)\obs.lib;..\deps\jansson\$(Configuration)\$(Platform)\jansson.lib;..\deps\blake2\$(Configuration)\$(Platform)\blake2.lib;..\third-lib\glog\$(Configuration)\$(Platform)\libglog.lib;kernel32.lib;user32.lib;gdi32.lib;winspool.lib;shell32.lib;ole32.lib;oleaut32.lib;uuid.lib;comdlg32.lib;advapi32.lib;crypt32.lib</AdditionalDependencies>
       <ProgramDatabaseFile>$(SolutionDir)build\$(Configuration)_$(Platform)\pdb\$(ProjectName).pdb</ProgramDatabaseFile>
       <OutputFile>$(OutDir)$(TargetName)$(TargetExt)</OutputFile>
     </Link>
@@ -178,7 +178,7 @@
       <IntrinsicFunctions>true</IntrinsicFunctions>
       <PreprocessorDefinitions>WIN32;NDEBUG;_WINDOWS;%(PreprocessorDefinitions)</PreprocessorDefinitions>
       <SDLCheck>true</SDLCheck>
-      <AdditionalIncludeDirectories>../libobs/;../libobs/util;../third_party/w32-pthreads/;</AdditionalIncludeDirectories>
+      <AdditionalIncludeDirectories>../libobs/;../libobs/util;../deps/w32-pthreads/;../third-lib/glog/src/</AdditionalIncludeDirectories>
       <DisableSpecificWarnings>4091;4267;4312;4311;4302;</DisableSpecificWarnings>
     </ClCompile>
     <Link>
@@ -188,7 +188,7 @@
       <OptimizeReferences>true</OptimizeReferences>
       <AdditionalLibraryDirectories>
       </AdditionalLibraryDirectories>
-      <AdditionalDependencies>..\libobs\$(Configuration)\$(Platform)\obs.lib;..\deps\jansson\$(Configuration)\$(Platform)\jansson.lib;..\deps\blake2\$(Configuration)\$(Platform)\blake2.lib;kernel32.lib;user32.lib;gdi32.lib;winspool.lib;shell32.lib;ole32.lib;oleaut32.lib;uuid.lib;comdlg32.lib;advapi32.lib;crypt32.lib</AdditionalDependencies>
+      <AdditionalDependencies>..\libobs\$(Configuration)\$(Platform)\obs.lib;..\deps\jansson\$(Configuration)\$(Platform)\jansson.lib;..\deps\blake2\$(Configuration)\$(Platform)\blake2.lib;..\third-lib\glog\$(Configuration)\$(Platform)\libglog.lib;kernel32.lib;user32.lib;gdi32.lib;winspool.lib;shell32.lib;ole32.lib;oleaut32.lib;uuid.lib;comdlg32.lib;advapi32.lib;crypt32.lib</AdditionalDependencies>
       <ProgramDatabaseFile>$(SolutionDir)build\$(Configuration)_$(Platform)\pdb\$(ProjectName).pdb</ProgramDatabaseFile>
       <OutputFile>$(OutDir)$(TargetName)$(TargetExt)</OutputFile>
     </Link>
@@ -210,6 +210,7 @@
     <ClCompile Include="CqtUtil.cpp" />
     <ClCompile Include="main.cpp" />
     <ClCompile Include="obs-app.cpp" />
+    <ClCompile Include="obs-logging.cpp" />
     <ClCompile Include="obs-path.cpp" />
     <ClCompile Include="stdafx.cpp">
       <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">Create</PrecompiledHeader>
@@ -227,6 +228,7 @@
   <ItemGroup>
     <ClInclude Include="CqtUtil.h" />
     <ClInclude Include="obs-app.h" />
+    <ClInclude Include="obs-logging.h" />
     <ClInclude Include="obs-path.h" />
     <ClInclude Include="ObserContainer.hpp" />
     <ClInclude Include="obs_define.h" />

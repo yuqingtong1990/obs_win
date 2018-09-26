@@ -45,6 +45,9 @@
     <ClCompile Include="obs-app.cpp">
       <Filter>function</Filter>
     </ClCompile>
+    <ClCompile Include="obs-logging.cpp">
+      <Filter>function</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="Resource.h">
@@ -72,6 +75,9 @@
       <Filter>function</Filter>
     </ClInclude>
     <ClInclude Include="obs-app.h">
+      <Filter>function</Filter>
+    </ClInclude>
+    <ClInclude Include="obs-logging.h">
       <Filter>function</Filter>
     </ClInclude>
   </ItemGroup>

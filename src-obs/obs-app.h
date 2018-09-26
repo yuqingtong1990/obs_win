@@ -8,10 +8,12 @@ public:
 public:
 	bool Initialize();
 	void Destory();
+	std::string GetVersionString() const;
 private:
-	bool InitGlobalConfig();
+	bool _InitGlobalConfig();
+	bool _InitLocale();
 private:
-	ConfigFile     globalConfig;
-	TextLookup     textLookup;
+	ConfigFile globalConfig;
+	profiler_name_store_t* profilerNameStore_;
 };
 

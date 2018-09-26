@@ -40,13 +40,11 @@ const char *get_module_extension(void)
 #endif
 
 static const char *module_bin[] = {
-	"plugins/",
-	"../../plugins/",
+	"./plugins/",
 };
 
 static const char *module_data[] = {
-	"data/%module%",
-	"../../data/obs-plugins/%module%"
+	"./data/%module%",
 };
 
 static const int module_patterns_size =

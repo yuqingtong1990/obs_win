@@ -25,6 +25,9 @@ bool checkNecessaryclientPath()
 	if (!ForceDirectoryW(getObsCrashesPath()))
 		return false;
 
+	if (!ForceDirectoryW(getObsLogsPath()))
+		return false;
+
 	return true;
 }
 

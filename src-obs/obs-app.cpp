@@ -3,14 +3,6 @@
 #include "obs-path.h"
 #include "profiler.hpp"
 
-static auto ProfilerNameStoreRelease = [](profiler_name_store_t *store){
-	profiler_name_store_free(store);
-};
-using ProfilerNameStore = std::unique_ptr<profiler_name_store_t,decltype(ProfilerNameStoreRelease)>;
-ProfilerNameStore CreateNameStore(){
-	return ProfilerNameStore{ profiler_name_store_create(),ProfilerNameStoreRelease };
-}
-
 OBSApp::OBSApp()
 {
 }
@@ -29,28 +21,44 @@ OBSApp& OBSApp::get()
 
 bool OBSApp::Initialize()
 {
-	if (!checkNecessaryclientPath())
+	if (!_InitGlobalConfig())
 		return false;
 
-	if (!InitGlobalConfig())
+	if (!_InitLocale())
 		return false;
 
-	auto profilerNameStore = CreateNameStore();
-	obs_startup("zh-CN", _W2A_(getObsPluginCfgPath(), CP_UTF8).c_str(), profilerNameStore.get());
+	profilerNameStore_ = profiler_name_store_create();
+	obs_startup("zh-CN", _W2A_(getObsPluginCfgPath(), CP_UTF8).c_str(), profilerNameStore_);
+
+	LOG_INFO << obs_get_version_string();
+
+	obs_load_all_modules();
 	return true;
 }
 
 void OBSApp::Destory()
 {
+	if (profilerNameStore_)
+		profiler_name_store_free(profilerNameStore_);
+	
 	obs_shutdown();
 }
 
-bool OBSApp::InitGlobalConfig()
+std::string OBSApp::GetVersionString() const
 {
-	int errorcode = globalConfig.Open(_W2A_(getObsPathGlobalConfig(),CP_UTF8).c_str(), CONFIG_OPEN_ALWAYS);
-	if (errorcode != CONFIG_SUCCESS)
-		return false;
+	return obs_get_version_string();
+}
 
+bool OBSApp::_InitGlobalConfig()
+{
+	LOG_INFO << "OBSApp::OBSInit";
+	int errorcode = globalConfig.Open(_W2A_(getObsPathGlobalConfig(),CP_UTF8).c_str(), CONFIG_OPEN_ALWAYS);
+	if (errorcode != CONFIG_SUCCESS) {
+		LOG_ERROR << "globalConfig is error";
+		return false;
+	}	
+
+	LOG_INFO << "set  set default global config";
 	config_set_default_string(globalConfig, "General", "Language", "zh-CN");//默认中文
 	config_set_default_uint(globalConfig, "General", "MaxLogs", 10);
 	config_set_default_int(globalConfig, "General", "InfoIncrement", -1);
@@ -79,5 +87,11 @@ bool OBSApp::InitGlobalConfig()
 	config_set_default_bool(globalConfig, "BasicWindow","MultiviewDrawNames", true);
 	config_set_default_bool(globalConfig, "BasicWindow","MultiviewDrawAreas", true);
 	config_set_default_bool(globalConfig, "Audio", "DisableAudioDucking", true);
+	return true;
+}
+
+bool OBSApp::_InitLocale()
+{
+	//多语言以后再实现
 	return true;
 }

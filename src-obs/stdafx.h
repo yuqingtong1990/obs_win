@@ -40,3 +40,4 @@
 #include "platform.h"
 
 #include "obs_define.h"
+#include "obs-logging.h"
