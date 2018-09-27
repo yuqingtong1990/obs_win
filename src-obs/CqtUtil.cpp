@@ -2289,16 +2289,10 @@ std::string GetWinOSVersion()
 	return strRet;
 }
 */
-bool FileExists1(const wstring &fn)
-{
-	WIN32_FIND_DATAW fd;
-	HANDLE hFile = FindFirstFileW(fn.c_str(), &fd);
-	return (hFile != INVALID_HANDLE_VALUE);
-}
 bool LoadFileToBuffer(const wstring &file,/*outer*/void **buf,/*outer*/DWORD &bufsize)
 {
 	bool bSuccess = false;
-	if (!FileExists1(file))
+	if (!FileExistsW(file))
 		return false;
 	HANDLE h = CreateFileW(file.c_str(), GENERIC_READ, FILE_SHARE_READ, NULL, OPEN_EXISTING, FILE_ATTRIBUTE_NORMAL, NULL);
 	if (h != INVALID_HANDLE_VALUE)
