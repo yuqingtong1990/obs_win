@@ -7,6 +7,7 @@
 #include <util/windows/WinHandle.hpp>
 #include <util/windows/CoTaskMemPtr.hpp>
 #include <util/threading.h>
+#include <audio-monitoring/wasapi-output.h>
 
 using namespace std;
 

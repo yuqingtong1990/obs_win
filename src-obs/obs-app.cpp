@@ -166,7 +166,7 @@ bool OBSApp::_InitGlobalConfig()
 	config_set_default_bool(globalConfig, "BasicWindow","MultiviewDrawNames", true);
 	config_set_default_bool(globalConfig, "BasicWindow","MultiviewDrawAreas", true);
 	config_set_default_bool(globalConfig, "Audio", "DisableAudioDucking", true);
-	config_set_bool(globalConfig, "Audio", "DisableAudioDucking", true);
+	//config_set_bool(globalConfig, "Audio", "DisableAudioDucking", true);
 	globalConfig.Save();
 	return true;
 }
